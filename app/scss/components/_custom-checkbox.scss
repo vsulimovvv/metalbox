@@ -8,11 +8,12 @@
 
   &__box {
     display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 22px;
+    height: 22px;
     position: relative;
     margin-right: 13px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
   }
 
   &__input {
@@ -25,14 +26,14 @@
 
   &__input:checked + &__box::after {
     @include elDef();
-    width: 100%;
-    height: 100%;
+    width: 10px;
+    height: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 7px solid #3c3c3b;
-    border-radius: 50%;
+    @include maskImage(url('../images/icons/check.svg'), contain);
+    background-color: var(--color-dark);
   }
 
   &__text {

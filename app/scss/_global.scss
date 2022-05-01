@@ -360,6 +360,7 @@ svg {
 }
 
 .menu {
+  padding: 20px 0;
   @include breakpointsMaxW($bp-991) {
     display: none;
   }
@@ -381,4 +382,8 @@ svg {
       color: #ffffff;
     }
   }
+}
+
+.simplebar-scrollbar::before {
+  background-color: transparent;
 }

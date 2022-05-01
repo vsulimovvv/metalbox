@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Металлбокс</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <h1 class="visually-hidden">Контакты</h1>
+    <div class="site-wrapper">
+      @include('./components/_header-3.html')
+
+      <main class="main">@include('./components/_product.html')</main>
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>

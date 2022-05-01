@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+  integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Металлбокс</title>
+  </head>
+
+  <body>
+    <div class="popup popup--service">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="service-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="service-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--spec">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Киндер</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="product-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="product-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+    <h1 class="visually-hidden">Контакты</h1>
+    <div class="site-wrapper">
+      <header class="header header--color-dark">
+  <div class="container container--1280">
+    <div class="header__wrapper">
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+      <a class="header__logo logo" href="#">
+        <img src="images/logo-dark.png" alt="Логотип" />
+      </a>
+
+      <div class="header__tools">
+        <a class="header__phone" href="tel:+74951250598">
+          +7 (495) 125-05-98
+        </a>
+        <a class="header__cart" href="#">
+          <svg>
+            <use xlink:href="images/sprite.svg#cart"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#size-child">Киндер</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#size-baby">Малыш</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-cool">Крутыш</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-s">S</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-m">M</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-l">L</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-xl">XL</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-2xl">2XL</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-fat">Толстяк</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#size-neighbors">2 Соседа </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main"><section class="product">
+  <div class="container container--1280">
+    <div class="product__wrapper">
+      <div class="product__content">
+        <div class="product__preview">
+          <div class="product__slider swiper">
+            <ul class="product__slides swiper-wrapper">
+              <li class="product__slide swiper-slide">
+                <div class="product__img">
+                  <img src="images/content/product/1.png" alt="Слайд " />
+                </div>
+              </li>
+              <li class="product__slide swiper-slide">
+                <div class="product__img">
+                  <img src="images/content/product/1.png" alt="Слайд " />
+                </div>
+              </li>
+              <li class="product__slide swiper-slide">
+                <div class="product__img">
+                  <img src="images/content/product/1.png" alt="Слайд " />
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="swiper-button-next"
+            type="button"
+            aria-label="Следующий"
+          ></button>
+          <button
+            class="swiper-button-prev"
+            type="button"
+            aria-label="Предыдущий"
+          ></button>
+        </div>
+
+        <div class="product__info" data-simplebar>
+          <h2 class="product__title">Киндер</h2>
+
+          <div class="product__sizes">
+            <p>Ширина 2200 мм</p>
+            <p>Высота 2500 мм</p>
+            <p>Глубина 600 мм</p>
+          </div>
+
+          <div class="product__colors colors">
+            <ul class="colors__list">
+              <li
+                class="colors__item colors__item--active product__item--white"
+              ></li>
+              <li class="colors__item colors__item--brown"></li>
+              <li class="colors__item colors__item--silver"></li>
+              <li class="colors__item colors__item--beige"></li>
+              <li class="colors__item colors__item--metallic-silver"></li>
+            </ul>
+            <p class="colors__text">Белый</p>
+          </div>
+
+          <div class="product__tabs tabs">
+            <div class="tabs__top">
+              <button class="tabs__top-btn tabs__top-btn--active" type="button">
+                Комплектация
+              </button>
+              <button class="tabs__top-btn" type="button">
+                Изменить размеры
+              </button>
+            </div>
+
+            <div class="tabs__content active">
+              <div class="tabs__box">
+                <ul class="tabs__list">
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text"
+                          >Внутренние наполнение</span
+                        >
+                      </label>
+                    </div>
+
+                    <div class="submenu">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Внутренние наполнение
+                            </span>
+                          </label>
+                          <p class="submenu__price">6 000 ₽</p>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Переставные полки
+                            </span>
+                          </label>
+                          <div class="submenu__price">6 000 ₽</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text">Внешние элементы</span>
+                      </label>
+                    </div>
+
+                    <div class="submenu">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Роллетная система
+                            </span>
+                          </label>
+                          <p class="submenu__price">7 000 ₽</p>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Задняя стенка </span>
+                          </label>
+                          <div class="submenu__price">9 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Правая стенка </span>
+                          </label>
+                          <div class="submenu__price">9 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Левая стенка </span>
+                          </label>
+                          <div class="submenu__price">10 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Крыша </span>
+                          </label>
+                          <div class="submenu__price">5 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Дно </span>
+                          </label>
+                          <div class="submenu__price">5 000 ₽</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text"
+                          >Внутренние наполнение</span
+                        >
+                      </label>
+
+                      <div class="tabs__price">5 000 ₽</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__cart">
+                <div class="">В корзину</div>
+                <div class="tabs__total">Итого:<span> 62 190 ₽</span></div>
+              </div>
+
+              <button class="tabs__btn" type="button">
+                <span class="tabs__btn-text">
+                  при оформлении <br />
+                  и оплате онлайн
+                </span>
+                <span class="tabs__btn-total">57 690 ₽</span>
+              </button>
+
+              <div class="tabs__notify">
+                <p>
+                  *при оформлении онлайн без обращения к менеджеру и за замером,
+                  скидки: 10% - на изделие; 12% - на доставку и установку; 15% -
+                  на дополнительные товары
+                </p>
+              </div>
+            </div>
+            <div class="tabs__content">
+              <div class="tabs__box">
+                <ul class="tabs__list">
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text"
+                          >Внутренние наполнение</span
+                        >
+                      </label>
+                    </div>
+
+                    <div class="submenu">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Внутренние наполнение
+                            </span>
+                          </label>
+                          <p class="submenu__price">6 000 ₽</p>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Переставные полки
+                            </span>
+                          </label>
+                          <div class="submenu__price">6 000 ₽</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text">Внешние элементы</span>
+                      </label>
+                    </div>
+
+                    <div class="submenu">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">
+                              Роллетная система
+                            </span>
+                          </label>
+                          <p class="submenu__price">7 000 ₽</p>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Задняя стенка </span>
+                          </label>
+                          <div class="submenu__price">9 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Правая стенка </span>
+                          </label>
+                          <div class="submenu__price">9 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Левая стенка </span>
+                          </label>
+                          <div class="submenu__price">10 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Крыша </span>
+                          </label>
+                          <div class="submenu__price">5 000 ₽</div>
+                        </li>
+                        <li class="submenu__item">
+                          <label class="checkbox">
+                            <input
+                              class="checkbox__input"
+                              type="checkbox"
+                              required
+                            />
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text"> Дно </span>
+                          </label>
+                          <div class="submenu__price">5 000 ₽</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="tabs__item">
+                    <div class="">
+                      <label class="checkbox">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          required
+                        />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text"
+                          >Внутренние наполнение</span
+                        >
+                      </label>
+
+                      <div class="tabs__price">5 000 ₽</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__cart">
+                <div class="">В корзину</div>
+                <div class="tabs__total">Итого:<span> 62 190 ₽</span></div>
+              </div>
+
+              <button class="tabs__btn" type="button">
+                <span class="tabs__btn-text">
+                  при оформлении <br />
+                  и оплате онлайн
+                </span>
+                <span class="tabs__btn-total">57 690 ₽</span>
+              </button>
+
+              <div class="tabs__notify">
+                <p>
+                  *при оформлении онлайн без обращения к менеджеру и за замером,
+                  скидки: 10% - на изделие; 12% - на доставку и установку; 15% -
+                  на дополнительные товары
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product__spec-btn">
+    <span class="icon"></span>
+    <p>Технические характеристики</p>
+  </div>
+</section>
+</main>
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Full Page Scroll  -->
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+  integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

@@ -104,4 +104,43 @@
       }
     }
   }
+
+  &--color-dark {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    color: var(--color-dark);
+    @include breakpointsMaxW($bp-991) {
+      background-color: var(--color-white);
+    }
+
+    .menu {
+
+
+      &__link {
+        color: #b1b1b1;
+
+        &:hover,
+        &--active {
+          color: #3c3c3b;
+        }
+      }
+    }
+
+    .header {
+      &__toggle {
+        &-line {
+          background-color: var(--color-dark);
+        }
+        &::after {
+          color: var(--color-dark);
+        }
+      }
+
+      &__cart {
+        fill: var(--color-dark);
+      }
+    }
+  }
 }

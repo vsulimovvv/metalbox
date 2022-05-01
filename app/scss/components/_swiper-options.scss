@@ -1,0 +1,29 @@
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #eeeeee;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+
+  &::after {
+    @include elDef();
+    @include maskImage(url('../images/icons/chevron.svg'), contain);
+    background-color: var(--color-dark);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+.swiper-button-next {
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
