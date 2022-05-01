@@ -1,0 +1,128 @@
+<section class="checkout">
+  <div class="container container--1280">
+    <h2 class="checkout__title">Оформление заказа</h2>
+
+    <form class="checkout__wrapper">
+      <div class="checkout__left">
+        <div class="checkout-box">
+          <h3 class="checkout-box__title">Получатель</h3>
+
+          <div class="checkout-box__row checkout-box__row--recipient">
+            <div class="checkout-box__choose checkout-box__choose--active">Я физическое лицо</div>
+            <div class="checkout-box__choose">Я юридическое лицо</div>
+          </div>
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="*Фамилия Имя"
+            />
+          </div>
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="*Почта"
+            />
+          </div>
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="* +7 (999) 999-99-99"
+            />
+          </div>
+        </div>
+
+        <div class="checkout-box">
+          <h3 class="checkout-box__title">Адрес доставки</h3>
+
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="*Населеный пункт, улица, дом"
+            />
+          </div>
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="Квартира/офис/номер машино-места"
+            />
+          </div>
+          <div class="checkout-box__row">
+            <input
+              class="checkout-box__input"
+              type="text"
+              placeholder="Комментарий к доставке"
+            />
+          </div>
+        </div>
+
+        <div class="checkout-box checkout-box--payment">
+          <h3 class="checkout-box__title">Оплата</h3>
+          <ul class="checkout-box__list">
+            <li class="checkout-box__item checkout-box__item--cash">
+              <div class="checkout-box__box checkout-box__box--active">
+                <h4 class="checkout-box__heading">Наличными (в офисе)</h4>
+              </div>
+              <div class="checkout-box__bottom">
+                <p>Экономия 0 ₽</p>
+              </div>
+            </li>
+            <li class="checkout-box__item checkout-box__item--online">
+              <div class="checkout-box__box">
+                <h4 class="checkout-box__heading">Онлайн по QR</h4>
+              </div>
+              <div class="checkout-box__bottom">
+                <p>
+                  Экономия 9 500 ₽ <span>за оформление и оплату онлайн</span>
+                </p>
+              </div>
+            </li>
+            <li class="checkout-box__item checkout-box__item--office">
+              <div class="checkout-box__box">
+                <h4 class="checkout-box__heading">По терминалу (в офисе)</h4>
+              </div>
+              <div class="checkout-box__bottom">
+                <p>Экономия 0 ₽</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="checkout__right">
+        <div class="cart-right">
+          <ul class="cart-right__list">
+            <li class="cart-right__item">
+              <div class="cart-right__left">Товары <span>(1)</span></div>
+              <div class="cart-right__right">25 510 ₽</div>
+            </li>
+            <li class="cart-right__item">
+              <div class="cart-right__left">Доставка</div>
+              <div class="cart-right__right">не учтена</div>
+            </li>
+            <li class="cart-right__item">
+              <div class="cart-right__left">Установка</div>
+              <div class="cart-right__right">5 000 ₽</div>
+            </li>
+          </ul>
+          <div class="cart-right__total">
+            <p class="cart-right__total-text">Итого</p>
+            <p>30 510 <span> ₽</span></p>
+          </div>
+
+          <button class="cart-right__btn" type="button">ОФОРМИТЬ ЗАКАЗ</button>
+          <div class="cart-right__notify">
+            <p>
+              Дата и время не согласовывается. Стоимость доставки определяется
+              исходя из Зонирования адреса.
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

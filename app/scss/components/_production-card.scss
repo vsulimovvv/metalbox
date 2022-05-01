@@ -1,0 +1,33 @@
+.production-card {
+  position: relative;
+  height: 250px;
+  max-width: 360px;
+  width: 100%;
+  @include background(cover);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 250ms ease;
+
+  @include breakpointsMaxW($bp-991){
+    // height: calc(200px + (250 - 200) * ((100vw - 375px) / (991 - 375)));
+  }
+
+  &:hover {
+    transform: scale(1.02);
+
+    .production-card__title {
+      // color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-top: auto;
+  }
+}

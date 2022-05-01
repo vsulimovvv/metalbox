@@ -1,0 +1,29 @@
+.accessories {
+  @include background(cover);
+  color: var(--color-white);
+
+  &__wrapper {
+    @include adaptive-value('padding-top', 100, 50, 1);
+    @include adaptive-value('padding-bottom', 100, 50, 1);
+  }
+
+  &__offer {
+    text-align: center;
+    max-width: 710px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptive-value('gap', 40, 30, 1);
+  }
+
+  &__text {
+ 
+  }
+
+  &__title {
+    @include fz34();
+  }
+}

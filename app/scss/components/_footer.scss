@@ -1,0 +1,102 @@
+.footer {
+  color: var(--color-white);
+  background-color: #424241;
+  font-size: 13px;
+  font-weight: 300;
+  color: #c1c1c1;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+
+    padding: 60px 0;
+    @include adaptive-value('padding-top', 60, 40, 1);
+    @include adaptive-value('padding-bottom', 60, 40, 1);
+    border-bottom: 2px solid #c1c1c1;
+    color: var(--color-white);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 50px;
+      grid-template-columns: repeat(3, auto);
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__name {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  &__bottom {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 60px;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 200px;
+      gap: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__link {
+    color: var(--color-white);
+    position: relative;
+    display: block;
+    transition: 250ms ease;
+
+    &:hover {
+      transform: translateX(3px);
+    }
+  }
+
+  &__col {
+    &--socials {
+      .footer__name {
+        width: 100%;
+        text-align: right;
+        @include breakpointsMaxW($bp-991) {
+          text-align: left;
+        }
+      }
+    }
+
+    &--contact {
+      min-width: 175px;
+
+      .footer__list {
+        text-align: right;
+        @include breakpointsMaxW($bp-991) {
+          text-align: left;
+        }
+      }
+    }
+
+    &--company {
+      min-width: 125px;
+    }
+  }
+}
