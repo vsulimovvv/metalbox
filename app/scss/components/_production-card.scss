@@ -10,16 +10,9 @@
   align-items: flex-start;
   transition: 250ms ease;
 
-  @include breakpointsMaxW($bp-991){
-    // height: calc(200px + (250 - 200) * ((100vw - 375px) / (991 - 375)));
-  }
-
   &:hover {
-    transform: scale(1.02);
-
-    .production-card__title {
-      // color: var(--color-accent);
-    }
+    box-shadow: 7px 7px 5px 0px rgb(50 50 50 / 35%);
+    transform: translate(-3px, -3px);
   }
 
   &__title {
