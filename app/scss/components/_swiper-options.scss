@@ -4,6 +4,7 @@
   width: 33px;
   height: 33px;
   border-radius: 50%;
+  z-index: 3;
 
   &::after {
     @include elDef();

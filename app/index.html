@@ -150,6 +150,55 @@
 
     <div class="site-wrapper">
       <header class="header header">
+  <!-- * Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Малыш</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Киндер</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Крутыш</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">S</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">M</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">L</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">XL</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">2XL</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Толстяк</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">2 Соседа</a>
+      </li>
+    </ul>
+  </div>
+  <!-- * Mobile Menu -->
+
   <div class="container container--1820">
     <nav class="header__wrapper">
       <button class="header__toggle" type="button" aria-label="Открыть меню">
@@ -176,7 +225,66 @@
 
       <main class="main">
         <section class="hero">
-  <div class="container"></div>
+  <button
+    class="swiper-button-next"
+    type="button"
+    aria-label="Следующий"
+  ></button>
+  <button
+    class="swiper-button-prev"
+    type="button"
+    aria-label="Предыдущий"
+  ></button>
+  <div class="hero__slider swiper">
+    <ul class="hero__slides swiper-wrapper">
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('images/content/hero-slider/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h2 class="hero__title">
+              Шкаф роллетный в парикнг, квартиру
+              <span> или загородный дом</span>
+            </h2>
+
+            <a class="hero__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('images/content/hero-slider/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h2 class="hero__title">
+              Шкаф роллетный в парикнг, квартиру
+              <span> или загородный дом</span>
+            </h2>
+
+            <a class="hero__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('images/content/hero-slider/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h2 class="hero__title">
+              Шкаф роллетный в парикнг, квартиру
+              <span> или загородный дом</span>
+            </h2>
+
+            <a class="hero__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
  <div class="tagline">
   <div class="container">
