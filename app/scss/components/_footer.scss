@@ -1,5 +1,4 @@
 .footer {
-  color: var(--color-white);
   background-color: #424241;
   font-size: 13px;
   font-weight: 300;
@@ -40,6 +39,14 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+
+    a {
+      color: #c1c1c1;
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+
     @include breakpointsMaxW($bp-991) {
       flex-direction: column;
       align-items: flex-start;
@@ -97,6 +104,17 @@
 
     &--company {
       min-width: 125px;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

@@ -42,7 +42,7 @@
   </head>
 
   <body>
-    <div class="popup popup--service">
+    <div class="popup popup--cart">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
       <svg width="15" height="15">
@@ -50,44 +50,58 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
-      <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
-      </div>
+      <h2 class="popup__title">Вам потребуется установка изделия?</h2>
 
-      <form class="request__form form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="service-name">Имя</label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--name">
-            <input
-              class="form-submit__input"
-              name="name"
-              id="service-name"
-              type="text"
-              placeholder="Введите ваше имя"
-              required
-            />
-          </div>
+      <form class="popup__form">
+        <div class="checkbox-box">
+          <ul class="checkbox-box__list">
+            <li class="checkbox-box__item">
+              <label class="checkbox-box__checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Нет</span>
+              </label>
+              <span class="checkbox-box__text">0 ₽</span>
+            </li>
+            <li class="checkbox-box__item">
+              <label class="checkbox-box__checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Да</span>
+              </label>
+              <span class="checkbox-box__text">7 500 ₽</span>
+            </li>
+          </ul>
         </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="service-tel">
-            Контактный телефон
-          </label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
-            <input
-              class="form-submit__input"
-              name="tel"
-              id="service-tel"
-              type="tel"
-              placeholder="+7 (___) ___-__-__"
-              required
-            />
-          </div>
+        <div class="cart-btns">
+          <button class="cart-btns__btn" type="button">К ОФОРМЛЕНИЮ</button>
+          <button class="cart-btns__btn cart-btns__btn--continue" type="button">
+            ПРОДОЛЖИТЬ ПОКУПКИ
+          </button>
         </div>
-
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
+        <button class="cart-total" type="button">
+          <span class="cart-total__text">В корзину</span>
+          <span class="cart-total__text">
+            <span class="cart-total__total">Итого:</span>
+            62 190 ₽
+          </span>
         </button>
+
+        <button class="cart-btn" type="button">
+          <span class="cart-btn__text">
+            при оформлении <br />
+            и оплате онлайн
+          </span>
+          <span class="cart-btn__total">57 690 ₽</span>
+        </button>
+
+        <div class="cart-notify">
+          <p>
+            *при оформлении онлайн без обращения к менеджеру и за замером,
+            скидки: 10% - на изделие; 12% - на доставку и установку; 15% - на
+            дополнительные товары
+          </p>
+        </div>
       </form>
     </div>
   </div>
@@ -101,49 +115,298 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Киндер</h2>
+      <h2 class="popup__title">Технические характеристики</h2>
       <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
       </div>
-
-      <form class="request__form form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="product-name">Имя</label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--name">
-            <input
-              class="form-submit__input"
-              name="name"
-              id="product-name"
-              type="text"
-              placeholder="Введите ваше имя"
-              required
-            />
-          </div>
-        </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="product-tel">
-            Контактный телефон
-          </label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
-            <input
-              class="form-submit__input"
-              name="tel"
-              id="product-tel"
-              type="tel"
-              placeholder="+7 (___) ___-__-__"
-              required
-            />
-          </div>
-        </div>
-
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
-      </form>
     </div>
   </div>
 </div>
 
+<div class="popup popup--add-services">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Дополнительные услуги и материалы</h2>
+      <ul class="popup__list" data-simplebar>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="popup__bottom">
+        <div class="popup__bottom-inner">
+          <button class="cart-btn" type="button">
+            <span class="cart-btn__text">
+              при оформлении <br />
+              и оплате онлайн
+            </span>
+            <span class="cart-btn__total">57 690 ₽</span>
+          </button>
+          <div class="popup__total">Итого: <span> 1500 ₽</span></div>
+        </div>
+
+        <button class="popup__btn" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <h1 class="visually-hidden">Контакты</h1>
@@ -257,7 +520,7 @@
 </header>
 
 
-      <main class="main"><section class="product">
+      <main class="main mt100"><section class="product">
   <div class="container container--1280">
     <div class="product__wrapper">
       <div class="product__content">
@@ -318,182 +581,169 @@
 
           <div class="product__tabs tabs">
             <div class="tabs__top">
-              <button class="tabs__top-btn tabs__top-btn--active" type="button">
+              <button class="tabs__top-btn tabs-btn" type="button">
                 Комплектация
               </button>
-              <button class="tabs__top-btn" type="button">
+              <button class="tabs__top-btn tabs-btn" type="button">
                 Изменить размеры
               </button>
             </div>
 
-            <div class="tabs__content active">
+            <div class="tabs-content active">
               <div class="tabs__box">
                 <ul class="tabs__list">
                   <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Непереставные полки</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Непереставные полки</span
+                          > </label
+                        ><span class="checkbox-box__price">6000 ₽</span>
+                      </div>
+                    </div>
+
+                    <div class="tabs__subcheckboxes">
+                      <label class="checkbox-box__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" />
                         <span class="checkbox__box"></span>
-                        <span class="checkbox__text"
-                          >Внутренние наполнение</span
-                        >
+                        <span class="checkbox__text">1 полка</span>
+                      </label>
+                      <label class="checkbox-box__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text">2 полки</span>
                       </label>
                     </div>
 
-                    <div class="submenu">
-                      <ul class="submenu__list">
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Внутренние наполнение
-                            </span>
-                          </label>
-                          <p class="submenu__price">6 000 ₽</p>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Переставные полки
-                            </span>
-                          </label>
-                          <div class="submenu__price">6 000 ₽</div>
-                        </li>
-                      </ul>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Переставные полки</span
+                          > </label
+                        ><span class="checkbox-box__price">6000 ₽</span>
+                      </div>
                     </div>
                   </li>
+
                   <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__text">Внешние элементы</span>
-                      </label>
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Внешние элементы</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Роллетная система</span
+                          > </label
+                        ><span class="checkbox-box__price">7000 ₽</span>
+                      </div>
                     </div>
 
-                    <div class="submenu">
-                      <ul class="submenu__list">
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Роллетная система
-                            </span>
-                          </label>
-                          <p class="submenu__price">7 000 ₽</p>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Задняя стенка </span>
-                          </label>
-                          <div class="submenu__price">9 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Правая стенка </span>
-                          </label>
-                          <div class="submenu__price">9 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Левая стенка </span>
-                          </label>
-                          <div class="submenu__price">10 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Крыша </span>
-                          </label>
-                          <div class="submenu__price">5 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Дно </span>
-                          </label>
-                          <div class="submenu__price">5 000 ₽</div>
-                        </li>
-                      </ul>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Задняя стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">9000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Правая стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">9000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Левая стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Крыша</span> </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Дно</span> </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
                     </div>
                   </li>
-                  <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__text"
-                          >Внутренние наполнение</span
-                        >
-                      </label>
 
-                      <div class="tabs__price">5 000 ₽</div>
+                  <li class="tabs__item">
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Дополнительные услуги и материалы</span
+                          >
+                        </label>
+                        <span class="checkbox-box__price">5000 ₽</span>
+                      </div>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="tabs__cart">
-                <div class="">В корзину</div>
-                <div class="tabs__total">Итого:<span> 62 190 ₽</span></div>
+                <button class="cart-total" type="button">
+                  <span class="cart-total__text">В корзину</span>
+                  <span class="cart-total__text">
+                    <span class="cart-total__total">Итого:</span>
+                    62 190 ₽
+                  </span>
+                </button>
               </div>
 
-              <button class="tabs__btn" type="button">
+              <button class="cart-btn" type="button">
                 <span class="tabs__btn-text">
                   при оформлении <br />
                   и оплате онлайн
@@ -509,174 +759,181 @@
                 </p>
               </div>
             </div>
-            <div class="tabs__content">
+
+            <div class="tabs-content">
+              <div class="tabs__text">
+                <p>
+                  Измените размеры изделия на нужные Вам и выберите требуемую
+                  комплектацию.
+                </p>
+                <p>Стоимость пересчитается"</p>
+              </div>
+
+              <div class="tabs__resizes">
+                <div class="tabs__resize">
+                  <span>Ширина</span>
+                  <input
+                    class="tabs__resize-input"
+                    type="text"
+                    value="2200 мм"
+                  />
+                </div>
+                <div class="tabs__resize">
+                  <span>Высота</span>
+                  <input
+                    class="tabs__resize-input"
+                    type="text"
+                    value="2500 мм"
+                  />
+                </div>
+                <div class="tabs__resize">
+                  <span>Глубина</span>
+                  <input
+                    class="tabs__resize-input"
+                    type="text"
+                    value="600 мм"
+                  />
+                </div>
+              </div>
               <div class="tabs__box">
                 <ul class="tabs__list">
                   <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Непереставные полки</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Непереставные полки</span
+                          > </label
+                        ><span class="checkbox-box__price">6000 ₽</span>
+                      </div>
+                    </div>
+
+                    <div class="tabs__subcheckboxes">
+                      <label class="checkbox-box__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" />
                         <span class="checkbox__box"></span>
-                        <span class="checkbox__text"
-                          >Внутренние наполнение</span
-                        >
+                        <span class="checkbox__text">1 полка</span>
+                      </label>
+                      <label class="checkbox-box__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text">2 полки</span>
                       </label>
                     </div>
 
-                    <div class="submenu">
-                      <ul class="submenu__list">
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Внутренние наполнение
-                            </span>
-                          </label>
-                          <p class="submenu__price">6 000 ₽</p>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Переставные полки
-                            </span>
-                          </label>
-                          <div class="submenu__price">6 000 ₽</div>
-                        </li>
-                      </ul>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Переставные полки</span
+                          > </label
+                        ><span class="checkbox-box__price">6000 ₽</span>
+                      </div>
                     </div>
                   </li>
+
                   <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__text">Внешние элементы</span>
-                      </label>
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Внешние элементы</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Роллетная система</span
+                          > </label
+                        ><span class="checkbox-box__price">7000 ₽</span>
+                      </div>
                     </div>
 
-                    <div class="submenu">
-                      <ul class="submenu__list">
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text">
-                              Роллетная система
-                            </span>
-                          </label>
-                          <p class="submenu__price">7 000 ₽</p>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Задняя стенка </span>
-                          </label>
-                          <div class="submenu__price">9 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Правая стенка </span>
-                          </label>
-                          <div class="submenu__price">9 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Левая стенка </span>
-                          </label>
-                          <div class="submenu__price">10 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Крыша </span>
-                          </label>
-                          <div class="submenu__price">5 000 ₽</div>
-                        </li>
-                        <li class="submenu__item">
-                          <label class="checkbox">
-                            <input
-                              class="checkbox__input"
-                              type="checkbox"
-                              required
-                            />
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__text"> Дно </span>
-                          </label>
-                          <div class="submenu__price">5 000 ₽</div>
-                        </li>
-                      </ul>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Задняя стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">9000 ₽</span>
+                      </div>
                     </div>
-                  </li>
-                  <li class="tabs__item">
-                    <div class="">
-                      <label class="checkbox">
-                        <input
-                          class="checkbox__input"
-                          type="checkbox"
-                          required
-                        />
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__text"
-                          >Внутренние наполнение</span
-                        >
-                      </label>
-
-                      <div class="tabs__price">5 000 ₽</div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Правая стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">9000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Левая стенка</span
+                          > </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Крыша</span> </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="checkbox-box checkbox-box--sub">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Дно</span> </label
+                        ><span class="checkbox-box__price">5000 ₽</span>
+                      </div>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="tabs__cart">
-                <div class="">В корзину</div>
-                <div class="tabs__total">Итого:<span> 62 190 ₽</span></div>
+                <button class="cart-total" type="button">
+                  <span class="cart-total__text">В корзину</span>
+                  <span class="cart-total__text">
+                    <span class="cart-total__total">Итого:</span>
+                    62 190 ₽
+                  </span>
+                </button>
               </div>
 
-              <button class="tabs__btn" type="button">
+              <button class="cart-btn" type="button">
                 <span class="tabs__btn-text">
                   при оформлении <br />
                   и оплате онлайн

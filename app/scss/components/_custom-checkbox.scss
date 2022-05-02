@@ -12,7 +12,7 @@
     height: 22px;
     position: relative;
     margin-right: 13px;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     border-radius: 5px;
   }
 
@@ -41,7 +41,7 @@
     align-items: center;
     gap: 5px;
     color: #9da4a9;
-    font-size: 13px;
+    // font-size: 13px;
     line-height: 1;
 
     @include breakpointsMaxW($bp-576) {

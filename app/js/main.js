@@ -1,5 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-  (function activeClassPayment() {
+  // * ===== Mask input
+  $('input[type="tel"]').mask('+7 (999) 999-99-99');
+
+  (function activeClass() {
     const check = document.querySelectorAll('.checkout-box__box');
     function removeActive() {
       check.forEach((item) => {
@@ -14,23 +17,20 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  (function activeClassPayment() {
-    const check = document.querySelectorAll('.checkout-box__choose');
-    function removeActive() {
-      check.forEach((item) => {
-        item.classList.remove('checkout-box__choose--active');
-      });
-    }
-    check.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        removeActive();
-        item.classList.add('checkout-box__choose--active');
-      });
-    });
-  })();
-  //
-  //
-  //
+  // (function activeClass() {
+  //   const check = document.querySelectorAll('.cart-top__item');
+  //   function removeActive() {
+  //     check.forEach((item) => {
+  //       item.classList.remove('cart-top__item--active');
+  //     });
+  //   }
+  //   check.forEach((item) => {
+  //     item.addEventListener('click', (e) => {
+  //       removeActive();
+  //       item.classList.add('cart-top__item--active');
+  //     });
+  //   });
+  // })();
 
   $.scrollify({
     section: '.catalog-section',
@@ -90,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+
   (function slider() {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
@@ -174,6 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //   });
   // };
   // toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
+
   // // * ===== Mixer
   // (function mixer() {
   //   const mixContent = document.querySelector('.mixer__content');
@@ -214,6 +216,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
     bindModal('.product__spec-btn', '.popup--spec', '.popup__close');
+    bindModal('.cart-total', '.popup--cart', '.popup__close');
   })();
 
   // * ===== Toggle Tabs
@@ -253,10 +256,5 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-  someTabs(
-    '.tabs',
-    '.tabs__top-btn',
-    '.tabs__content',
-    'tabs__top-btn--active'
-  );
+  someTabs('.tabs', '.tabs-btn', '.tabs-content', 'tabs-btn--active');
 });

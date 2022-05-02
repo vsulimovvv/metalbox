@@ -19,6 +19,7 @@
 }
 
 .checkout-box {
+  max-width: 650px;
   &:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -189,7 +190,7 @@
     }
   }
 
-  &__choose {
+  &__btn-tab {
     border: 1px solid #dcdcdc;
     border-radius: 5px;
     padding: 16px 16px 16px 53px;
@@ -211,7 +212,7 @@
       border-radius: 50%;
     }
 
-    &--active {
+    &.tabs-btn--active {
       border-color: var(--color-dark);
 
       &::after {
@@ -228,6 +229,7 @@
     position: relative;
     margin-bottom: 12px;
     cursor: pointer;
+    height: 105px;
 
     &::before {
       @include elDef();

@@ -42,7 +42,7 @@
   </head>
 
   <body>
-    <div class="popup popup--service">
+    <div class="popup popup--cart">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
       <svg width="15" height="15">
@@ -50,44 +50,58 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
-      <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
-      </div>
+      <h2 class="popup__title">Вам потребуется установка изделия?</h2>
 
-      <form class="request__form form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="service-name">Имя</label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--name">
-            <input
-              class="form-submit__input"
-              name="name"
-              id="service-name"
-              type="text"
-              placeholder="Введите ваше имя"
-              required
-            />
-          </div>
+      <form class="popup__form">
+        <div class="checkbox-box">
+          <ul class="checkbox-box__list">
+            <li class="checkbox-box__item">
+              <label class="checkbox-box__checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Нет</span>
+              </label>
+              <span class="checkbox-box__text">0 ₽</span>
+            </li>
+            <li class="checkbox-box__item">
+              <label class="checkbox-box__checkbox checkbox">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Да</span>
+              </label>
+              <span class="checkbox-box__text">7 500 ₽</span>
+            </li>
+          </ul>
         </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="service-tel">
-            Контактный телефон
-          </label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
-            <input
-              class="form-submit__input"
-              name="tel"
-              id="service-tel"
-              type="tel"
-              placeholder="+7 (___) ___-__-__"
-              required
-            />
-          </div>
+        <div class="cart-btns">
+          <button class="cart-btns__btn" type="button">К ОФОРМЛЕНИЮ</button>
+          <button class="cart-btns__btn cart-btns__btn--continue" type="button">
+            ПРОДОЛЖИТЬ ПОКУПКИ
+          </button>
         </div>
-
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
+        <button class="cart-total" type="button">
+          <span class="cart-total__text">В корзину</span>
+          <span class="cart-total__text">
+            <span class="cart-total__total">Итого:</span>
+            62 190 ₽
+          </span>
         </button>
+
+        <button class="cart-btn" type="button">
+          <span class="cart-btn__text">
+            при оформлении <br />
+            и оплате онлайн
+          </span>
+          <span class="cart-btn__total">57 690 ₽</span>
+        </button>
+
+        <div class="cart-notify">
+          <p>
+            *при оформлении онлайн без обращения к менеджеру и за замером,
+            скидки: 10% - на изделие; 12% - на доставку и установку; 15% - на
+            дополнительные товары
+          </p>
+        </div>
       </form>
     </div>
   </div>
@@ -101,55 +115,303 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Киндер</h2>
+      <h2 class="popup__title">Технические характеристики</h2>
       <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <form class="request__form form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="product-name">Имя</label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--name">
-            <input
-              class="form-submit__input"
-              name="name"
-              id="product-name"
-              type="text"
-              placeholder="Введите ваше имя"
-              required
-            />
+<div class="popup popup--add-services">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Дополнительные услуги и материалы</h2>
+      <ul class="popup__list" data-simplebar>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
           </div>
-        </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="product-tel">
-            Контактный телефон
-          </label>
-          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
-            <input
-              class="form-submit__input"
-              name="tel"
-              id="product-tel"
-              type="tel"
-              placeholder="+7 (___) ___-__-__"
-              required
-            />
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
           </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn">ДОБАВИТЬ К ЗАКАЗУ</button>
+          </div>
+        </li>
+        <li class="popup__item">
+          <div class="services-card">
+            <div class="services-card__left">
+              <div class="services-card__img">
+                <img src="images/content/product/1.png" alt="Услуга" />
+              </div>
+              <div class="services-card__info">
+                <h3 class="services-card__title">
+                  Название услуги или материала
+                </h3>
+                <div class="services-card__text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card__count">
+              <span class="services-card__heading">Количество</span>
+              <div class="counter">
+                <button class="counter__btn counter__btn--increase">+</button>
+                <input class="counter__number" type="text" value="1" />
+                <button class="counter__btn counter__btn--decrease">-</button>
+              </div>
+            </div>
+            <div class="services-card__price services-card__price--unit">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <div class="services-card__price">
+              <span class="services-card__heading">Цена за единицу</span>
+              <p>1500 ₽</p>
+            </div>
+            <button class="services-card__btn services-card__btn--added">
+              добавлен
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="popup__bottom">
+        <div class="popup__bottom-inner">
+          <button class="cart-btn" type="button">
+            <span class="cart-btn__text">
+              при оформлении <br />
+              и оплате онлайн
+            </span>
+            <span class="cart-btn__total">57 690 ₽</span>
+          </button>
+          <div class="popup__total">Итого: <span> 1500 ₽</span></div>
         </div>
 
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
-      </form>
+        <button class="popup__btn" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </div>
     </div>
   </div>
 </div>
 
 
-
     <h1 class="visually-hidden">Контакты</h1>
     <div class="site-wrapper">
-      <header class="header header">
-  <!-- * Mobile Menu -->
+      <header class="header header--color-dark">  <!-- * Mobile Menu -->
   <div class="overlay"></div>
 
   <div class="mobile-menu">
@@ -197,21 +459,18 @@
     </ul>
   </div>
   <!-- * Mobile Menu -->
-
-  <div class="container container--1820">
-    <nav class="header__wrapper">
+  <div class="container container--1280">
+    <div class="header__wrapper">
       <button class="header__toggle" type="button" aria-label="Открыть меню">
         <span class="header__toggle-line"></span>
       </button>
       <a class="header__logo logo" href="#">
-        <img src="images/logo.png" alt="Логотип" />
+        <img src="images/logo-dark.png" alt="Логотип" />
       </a>
 
       <div class="header__tools">
         <a class="header__phone" href="tel:+74951250598">
           +7 (495) 125-05-98
-
-          <span></span>
         </a>
         <a class="header__cart" href="#">
           <svg>
@@ -219,7 +478,8 @@
           </svg>
         </a>
       </div>
-    </nav>
+    </div>
+
   </div>
 </header>
 
@@ -243,90 +503,104 @@
         </div>
       </div> -->
 
-      <main class="main"><section class="checkout">
+      <main class="main mt100"><section class="checkout checkout--pickup">
   <div class="container container--1280">
     <h2 class="checkout__title">Оформление заказа</h2>
 
     <form class="checkout__wrapper">
-      <div class="checkout__left">
+      <div class="checkout__left tabs">
         <div class="checkout-box">
           <h3 class="checkout-box__title">Получатель</h3>
 
           <div class="checkout-box__row checkout-box__row--recipient">
-            <div class="checkout-box__choose">Я физическое лицо</div>
-            <div class="checkout-box__choose checkout-box__choose--active">
-              Я юридическое лицо
+            <div class="checkout-box__btn-tab tabs-btn">Я физическое лицо</div>
+            <div class="checkout-box__btn-tab tabs-btn">Я юридическое лицо</div>
+          </div>
+          <div class="tabs-content active">
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Фамилия Имя"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Почта"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="tel"
+                placeholder="* +7 (999) 999-99-99"
+              />
             </div>
           </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*ИНН организации"
-            />
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*Фамилия и имя"
-            />
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*Фамилия и имя"
-            />
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*+7 (999) 999-99-99"
-            />
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*Юридический адрес"
-            />
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*Фактический адрес"
-            />
+          <div class="tabs-content">
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*ИНН организации"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Фамилия и имя"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Фамилия и имя"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="tel"
+                placeholder="*+7 (999) 999-99-99"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Юридический адрес"
+              />
+            </div>
+            <div class="checkout-box__row">
+              <input
+                class="checkout-box__input"
+                type="text"
+                placeholder="*Фактический адрес"
+              />
+            </div>
           </div>
         </div>
 
         <div class="checkout-box">
-          <h3 class="checkout-box__title">Адрес доставки</h3>
-
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="*Населеный пункт, улица, дом"
-            />
+          <h3 class="checkout-box__title">Выберите пункт самовывоза</h3>
+          <div class="checkout-box__text">
+            <p>
+              Забор возможен после поступления заказа на выбранную точку выдачи.
+              Уведомление о поступлении Вы получите письмом на почту или по
+              контактному телефону.
+            </p>
           </div>
-          <div class="checkout-box__row checkout-box__row--double">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="Квартира/офис/номер машино-места"
-            />
 
-            <a class="checkout-box__btn" href="#">Указать точку на карте</a>
-          </div>
-          <div class="checkout-box__row">
-            <input
-              class="checkout-box__input"
-              type="text"
-              placeholder="Комментарий к доставке"
-            />
+          <div class="checkout-box__map map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A5084e412301d147c1ba88ac0ff76213b6cc71cae02f3e91781d9687f46adcced&amp;source=constructor"
+              width="710"
+              height="435"
+            ></iframe>
           </div>
         </div>
 
@@ -364,7 +638,7 @@
       </div>
 
       <div class="checkout__right">
-        <div class="cart-right">
+        <div class="cart-right cart-right--discount">
           <ul class="cart-right__list">
             <li class="cart-right__item">
               <div class="cart-right__left">Товары <span>(1)</span></div>
@@ -379,12 +653,22 @@
               <div class="cart-right__right">5 000 ₽</div>
             </li>
           </ul>
+
+          <div class="cart-right__discount">
+            <p class="cart-right__discount-text">
+              Скидка за онлайн оформление и оплату
+            </p>
+            <p class="cart-right__discount-price">- 7 500 ₽</p>
+          </div>
+
           <div class="cart-right__total">
             <p class="cart-right__total-text">Итого</p>
             <p>30 510 <span> ₽</span></p>
           </div>
 
-          <button class="cart-right__btn" type="button">ОФОРМИТЬ ЗАКАЗ</button>
+          <button class="cart-right__btn" type="button">
+            Перейти к оплате
+          </button>
           <div class="cart-right__notify">
             <p>
               Дата и время не согласовывается. Стоимость доставки определяется
@@ -505,7 +789,9 @@
         <img src="images/logo-light-gray.png" alt="Логотип" />
       </a>
       <div class="footer__copy">
-        <p>© 1993—2022 ООО ПК «Металлбокс» «Металлбокс» — межкомнатные двери</p>
+        <p>© 1993—2022</p>
+        <p>ООО ПК «Металлбокс»</p>
+        <p>«Металлбокс» — межкомнатные двери</p>
       </div>
 
       <div class="footer__bottom-right">
