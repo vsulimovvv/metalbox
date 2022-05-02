@@ -7,4 +7,4 @@
 Контакты: https://vsulimovvv.github.io/metalbox/app/contacts.html  
 Корзина: https://vsulimovvv.github.io/metalbox/app/cart.html  
 Корзина для физ. и юр. лиц: https://vsulimovvv.github.io/metalbox/app/checkout.html  
-Корзина при самовывозе: https://vsulimovvv.github.io/metalbox/app/checkout.html  
+Корзина при самовывозе: https://vsulimovvv.github.io/metalbox/app/checkout-2.html  
