@@ -2,14 +2,13 @@
   padding-top: 30px;
   height: calc(100vh - 100px);
   position: relative;
+  
   @include breakpointsMaxW($bp-991) {
     height: auto;
     padding: 20px 0 80px 0;
   }
 
   &__wrapper {
-    // height: calc(100vh - 220px);
-
     @include breakpointsMaxW($bp-991) {
       height: auto;
     }
