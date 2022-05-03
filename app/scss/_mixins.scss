@@ -98,8 +98,8 @@ $maxWidthContainer: 1150;
   }
 }
 
-//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 375px) / (1150 - 375)));
-
+//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 375px) / (1310 - 375)));
+// right: max(15px, calc((100% - 1400px) / 2));
 @mixin fz34 {
   font-family: $EuclidCircularA;
   @include adaptive-value('font-size', 34, 24, 1);

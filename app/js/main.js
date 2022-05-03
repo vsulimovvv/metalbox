@@ -16,6 +16,20 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   })();
+  (function activeClass() {
+    const check = document.querySelectorAll('.colors__item');
+    function removeActive() {
+      check.forEach((item) => {
+        item.classList.remove('colors__item--active');
+      });
+    }
+    check.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        removeActive();
+        item.classList.add('colors__item--active');
+      });
+    });
+  })();
 
   // (function activeClass() {
   //   const check = document.querySelectorAll('.cart-top__item');
@@ -81,7 +95,10 @@ window.addEventListener('DOMContentLoaded', () => {
   (function slider() {
     const sliderEl = document.querySelector('.product__slider');
     new Swiper(sliderEl, {
-      mousewheel: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       loop: true,
       grabCursor: true,
       navigation: {

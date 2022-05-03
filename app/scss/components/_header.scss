@@ -160,30 +160,49 @@
   }
 
   &--catalog {
-    background-color: transparent;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+    // background-color: var(--color-white);
+    // position: fixed;
+    // width: 100%;
+    // z-index: 10;
 
-    .header {
-      &__wrapper {
-        border-bottom: 1px solid #9b9a98;
-      }
+    // .header {
+    //   &.scroll-header {
+    //     background-color: var(--color-dark);
 
-      &__bottom {
-        padding: 20px 0;
-        @include breakpointsMaxW($bp-991) {
-          display: none;
-        }
-      }
-    }
+    //     .header__wrapper {
+    //       border-bottom: none;
+    //     }
+
+    //     &.header--color-dark {
+    //       background-color: var(--color-white);
+    //       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    //     }
+
+    //     &.header--catalog {
+    //       background-color: inherit;
+    //       .header__wrapper {
+    //         border-bottom: 1px solid #a6a5a4;
+    //       }
+    //     }
+    //   }
+    //   &__wrapper {
+    //     border-bottom: 1px solid #9b9a98;
+    //   }
+
+    //   &__bottom {
+    //     padding: 20px 0;
+    //     @include breakpointsMaxW($bp-991) {
+    //       display: none;
+    //     }
+    //   }
+    // }
   }
 
   &--color-dark {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     color: var(--color-dark);
 
     @include breakpointsMaxW($bp-991) {
@@ -191,6 +210,9 @@
     }
 
     .header {
+      &__wrapper {
+        z-index: 5;
+      }
       &__phone {
         color: var(--color-dark);
 
