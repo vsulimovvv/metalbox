@@ -2,6 +2,29 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
+  function removeHeader() {
+    const sections = document.querySelectorAll('.catalog-section');
+    const headerCatalog = document.querySelector('.header--catalog');
+    //
+    const catalogFooter = document.querySelector('.catalog-section--footer');
+    // console.log(catalogFooter.offsetHeight);
+
+    let length = sections.length - 1;
+    sections.forEach((el) => {
+      const sectionHeight = el.offsetHeight;
+      const sectionTop = el.offsetTop - 100;
+    
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        headerCatalog.style.opacity = '0';
+        headerCatalog.style.visibility = 'hidden';
+      } else {
+        headerCatalog.style.opacity = '1';
+        headerCatalog.style.visibility = 'visible';
+      }
+    });
+  }
+  window.addEventListener('scroll', removeHeader);
+
   (function activeClass() {
     const check = document.querySelectorAll('.checkout-box__box');
     function removeActive() {
@@ -16,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   })();
+
   (function activeClass() {
     const check = document.querySelectorAll('.colors__item');
     function removeActive() {
