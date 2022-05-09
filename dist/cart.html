@@ -16,7 +16,6 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
 />
 
-
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
@@ -32,6 +31,11 @@
 <link
   rel="stylesheet"
   href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
 />
 
 <!-- Custom Link -->
@@ -74,18 +78,17 @@
           </ul>
         </div>
         <div class="cart-btns">
-          <button class="cart-btns__btn" type="button">К ОФОРМЛЕНИЮ</button>
+          <button class="cart-total cart-total--small" type="button">
+            <span class="cart-total__text">В корзину</span>
+            <span class="cart-total__text">
+              <span class="cart-total__total">Итого:</span>
+              <span>62 190 ₽</span>
+            </span>
+          </button>
           <button class="cart-btns__btn cart-btns__btn--continue" type="button">
             ПРОДОЛЖИТЬ ПОКУПКИ
           </button>
         </div>
-        <button class="cart-total" type="button">
-          <span class="cart-total__text">В корзину</span>
-          <span class="cart-total__text">
-            <span class="cart-total__total">Итого:</span>
-            62 190 ₽
-          </span>
-        </button>
 
         <button class="cart-btn" type="button">
           <span class="cart-btn__text">
@@ -421,13 +424,276 @@
               при оформлении <br />
               и оплате онлайн
             </span>
-            <span class="cart-btn__total">57 690 ₽</span>
+            <span class="cart-btn__total">1300 ₽</span>
           </button>
           <div class="popup__total">Итого: <span> 1500 ₽</span></div>
         </div>
 
-        <button class="popup__btn" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+        <button class="popup__btn" type="button">
+          Продолжить оформление заказа
+        </button>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--individual">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Индивидуальные решения</h2>
+      <div class="popup__text">
+        <p>
+          С 2012 года реализовано боле 1500 тысяч индивидуальных проектов.
+          Ознакомитясь
+          <span>
+            с уже реализованными проектами и разработать собственный вы можете
+            на сайте eurogar.ru</span
+          >
+        </p>
+      </div>
+
+      <div class="individual-card">
+        <div class="individual-card__left">
+          <img
+            src="images/content/individual-card/1.jpg"
+            alt="индивидуальные решения"
+          />
+        </div>
+        <div class="individual-card__right">
+          <h3 class="individual-card__title">Название проекта</h3>
+          <div class="individual-card__text">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially.
+            </p>
+          </div>
+          <div class="individual-card__content">
+            <div class="individual-card__slider swiper">
+              <ul class="individual-card__slides swiper-wrapper">
+                <li
+                  class="individual-card__slide individual-card__slide--active swiper-slide"
+                >
+                  <div class="individual-card__img">
+                    <img
+                      src="images/content/individual-card/1.jpg"
+                      alt="индивидуальные решения"
+                    />
+                  </div>
+                </li>
+                <li class="individual-card__slide swiper-slide">
+                  <div class="individual-card__img">
+                    <img
+                      src="images/content/individual-card/2.jpg"
+                      alt="индивидуальные решения"
+                    />
+                  </div>
+                </li>
+                <li class="individual-card__slide swiper-slide">
+                  <div class="individual-card__img">
+                    <img
+                      src="images/content/individual-card/1.jpg"
+                      alt="индивидуальные решения"
+                    />
+                  </div>
+                </li>
+                <li class="individual-card__slide swiper-slide">
+                  <div class="individual-card__img">
+                    <img
+                      src="images/content/individual-card/2.jpg"
+                      alt="индивидуальные решения"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="swiper-button-next"
+              type="button"
+              aria-label="Следующий"
+            ></button>
+            <button
+              class="swiper-button-prev"
+              type="button"
+              aria-label="Предыдущий"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--сertification">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Сертификация изделий и гарантия</h2>
+      <div class="popup__text">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </div>
+
+      <div class="certifications-box" data-simplebar>
+        <ul class="certifications-box__list">
+          <li class="certifications-box__item">
+            <div
+              class="certifications-card"
+              data-fancybox
+              data-src="images/content/certifications/1.jpg"
+              data-caption="Название сертификата"
+            >
+              <div class="certifications-card__img">
+                <img
+                  src="images/content/certifications/1.jpg"
+                  width="225"
+                  height="300"
+                />
+              </div>
+
+              <h3 class="certifications-card__title">Название сертификата</h3>
+            </div>
+          </li>
+          <li class="certifications-box__item">
+            <div
+              class="certifications-card"
+              data-fancybox
+              data-src="images/content/certifications/1.jpg"
+              data-caption="Название сертификата"
+            >
+              <div class="certifications-card__img">
+                <img
+                  src="images/content/certifications/1.jpg"
+                  width="225"
+                  height="300"
+                />
+              </div>
+
+              <h3 class="certifications-card__title">Название сертификата</h3>
+            </div>
+          </li>
+          <li class="certifications-box__item">
+            <div
+              class="certifications-card"
+              data-fancybox
+              data-src="images/content/certifications/1.jpg"
+              data-caption="Название сертификата"
+            >
+              <div class="certifications-card__img">
+                <img
+                  src="images/content/certifications/1.jpg"
+                  width="225"
+                  height="300"
+                />
+              </div>
+
+              <h3 class="certifications-card__title">Название сертификата</h3>
+            </div>
+          </li>
+          <li class="certifications-box__item">
+            <div
+              class="certifications-card"
+              data-fancybox
+              data-src="images/content/certifications/1.jpg"
+              data-caption="Название сертификата"
+            >
+              <div class="certifications-card__img">
+                <img
+                  src="images/content/certifications/1.jpg"
+                  width="225"
+                  height="300"
+                />
+              </div>
+
+              <h3 class="certifications-card__title">Название сертификата</h3>
+            </div>
+          </li>
+          <li class="certifications-box__item">
+            <div
+              class="certifications-card"
+              data-fancybox
+              data-src="images/content/certifications/1.jpg"
+              data-caption="Название сертификата"
+            >
+              <div class="certifications-card__img">
+                <img
+                  src="images/content/certifications/1.jpg"
+                  width="225"
+                  height="300"
+                />
+              </div>
+
+              <h3 class="certifications-card__title">Название сертификата</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--request">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Оставить заявку</h2>
+      <form class="popup__form form-submit">
+        <div class="form-submit__group">
+          <input class="form-submit__input" type="text" placeholder="ФИО" />
+        </div>
+        <div class="form-submit__group">
+          <input class="form-submit__input" type="text" placeholder="Адрес" />
+        </div>
+        <div class="form-submit__group form-submit__group--textarea">
+          <textarea
+            class="form-submit__input"
+            placeholder="Описание"
+          ></textarea>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="file-upload">
+            Прикрепить файл
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+
+        <button class="form-submit__btn btn" type="submit">
+          ОСТАВИТЬ ЗАЯВКУ
+        </button>
+
+        <div class="form-submit__notify">
+          Нажимая кнопку, я даю <a>согласие</a> на обработку персональных
+          данных, в соответсвии с <a href="#">Политикой</a> и соглашаюсь с
+          <a href="#">Правислами</a>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -767,7 +1033,7 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 ></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
   integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="

@@ -504,10 +504,6 @@ svg {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      // @include breakpointsMaxW($bp-768) {
-      //   width: 50px;
-      //   height: 75px;
-      // }
     }
   }
 
@@ -880,5 +876,230 @@ svg {
   &.active {
     display: block;
     animation: opacity-visibility 700ms ease forwards;
+  }
+}
+
+.form-submit {
+  display: grid;
+  gap: 20px;
+  &__group {
+    width: 100%;
+
+    &--textarea {
+      height: 100px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--color-white);
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    transition: 150ms ease;
+
+    &:hover {
+      color: var(--color-dark);
+      background-color: #f4f4fb;
+    }
+
+    &::placeholder {
+      color: #b0b0b0;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    height: 52px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__notify {
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #8c8c8c;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+
+    a {
+      font-weight: 500;
+      color: #343434;
+    }
+  }
+}
+
+input[type='file'] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.custom-file-upload {
+  width: 100%;
+
+  height: 100%;
+  display: inline-block;
+  padding: 15px;
+  cursor: pointer;
+
+  background-color: var(--color-white);
+  border: 2px dashed #cfcfde;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: #a1a1aa;
+
+  transition: 150ms ease;
+
+  &:hover {
+    color: var(--color-dark);
+    background-color: #f4f4fb;
+  }
+}
+
+.individual-card {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 35px;
+  align-items: center;
+
+  @include breakpointsMaxW($bp-768) {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #2f2f2f;
+    margin-bottom: 15px;
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #6b6b6b;
+    margin-bottom: 30px;
+  }
+
+  &__left {
+    max-width: 450px;
+    width: 100%;
+    height: 335px;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 100%;
+      height: calc(250px + (335 - 250) * ((100vw - 375px) / (768 - 375)));
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      order: 1;
+    }
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      top: 70%;
+      transform: translateY(-50%);
+
+      &::after {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+  }
+
+  &__slider {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    max-width: 140px;
+    height: 110px;
+    cursor: pointer;
+
+    @include breakpointsMaxW($bp-768) {
+      height: calc(80px + (110 - 80) * ((100vw - 375px) / (768 - 375)));
+      max-width: calc(110px + (140 - 110) * ((100vw - 375px) / (768 - 375)));
+    }
+
+    &--active {
+      border: 5px solid #6b6b6b;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 100%;
+
+    img {
+      @include img(cover);
+    }
+  }
+}
+
+.certifications-box {
+  overflow-x: auto;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    min-width: 1150px;
+  }
+}
+
+.certifications-card {
+  text-align: center;
+  max-width: 225px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.1;
+    font-weight: 300;
+    color: #2f2f2f;
   }
 }

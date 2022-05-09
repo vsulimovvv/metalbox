@@ -9,7 +9,7 @@
 
   &__offer {
     text-align: center;
-    max-width: 710px;
+    max-width: 750px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
@@ -25,5 +25,10 @@
 
   &__title {
     @include fz34();
+  }
+
+  &__btn{
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
