@@ -1,5 +1,5 @@
 .cart {
-  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-top', 50, 40, 1);
   @include adaptive-value('padding-bottom', 80, 40, 1);
 
   &__count {

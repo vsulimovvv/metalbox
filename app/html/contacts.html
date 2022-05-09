@@ -11,11 +11,26 @@
     @include('./components/popups/_popups.html')
 
     <h1 class="visually-hidden">Контакты</h1>
-    
+
     <div class="site-wrapper">
       @include('./components/_header-4.html')
 
-      <main class="main mt100">@include('./components/_contacts.html')</main>
+      <div class="breadcrumbs">
+        <div class="container container--1280">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--active">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">@include('./components/_contacts.html')</main>
       @include('./components/_footer.html')
     </div>
 
