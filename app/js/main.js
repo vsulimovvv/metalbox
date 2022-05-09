@@ -255,6 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.cart-total', '.popup--cart', '.popup__close');
     bindModal('.btn-request', '.popup--request', '.popup__close');
     bindModal('.btn-individual', '.popup--individual', '.popup__close');
+    bindModal('.btn-certification', '.popup--сertification', '.popup__close');
   })();
 
   // * ===== Toggle Tabs
