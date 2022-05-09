@@ -118,8 +118,7 @@
   }
 
   &--add-services {
-
-
+    
     .popup {
       &__container {
         max-width: 1280px;
@@ -197,11 +196,18 @@
         font-size: 17px;
         line-height: 1;
         font-weight: 500;
-        color: #282828;
-        background-color: var(--color-white);
-        border: 2px solid #9b8066;
-        border-radius: 29px;
+        color: var(--color-white);
         padding: 20px 25px;
+        background-image: linear-gradient(
+          0deg,
+          #896a4b -24%,
+          #9d8269 35%,
+          #c7aa8e 66%,
+          #a1876f 96%,
+          #a1876f 126%
+        );
+        box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 28.5px;
       }
     }
   }

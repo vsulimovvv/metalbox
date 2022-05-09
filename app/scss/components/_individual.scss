@@ -1,4 +1,4 @@
-.offices {
+.individual {
   @include background(cover);
   color: var(--color-white);
 
@@ -9,7 +9,7 @@
 
   &__offer {
     text-align: center;
-    max-width: 800px;
+    max-width: 650px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
