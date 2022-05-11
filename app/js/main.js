@@ -42,22 +42,47 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', removeHeader);
 
-  (function activeClass() {
-    const check = document.querySelectorAll('.checkout-box__box');
+  function activeClass(handler, activeClass) {
+    const handlerEl = document.querySelectorAll(handler);
+    const ACTIVE_CLASS = activeClass;
+
     function removeActive() {
-      check.forEach((item) => {
-        item.classList.remove('checkout-box__box--active');
+      handlerEl.forEach((item) => {
+        item.classList.remove(ACTIVE_CLASS);
       });
     }
-    check.forEach((item) => {
+    handlerEl.forEach((item) => {
       item.addEventListener('click', (e) => {
         removeActive();
-        item.classList.add('checkout-box__box--active');
+        item.classList.add(ACTIVE_CLASS);
       });
     });
-  })();
+  }
 
-  (function activeClass() {
+  activeClass('.checkout-box__box', 'checkout-box__box--active');
+  activeClass('.cart-top__item', 'cart-top__item--active');
+
+  // function activeClass() {
+  //   const check = document.querySelectorAll('.checkout-box__box');
+  //   // const check = document.querySelectorAll('.checkout-box__box');
+  //   const ACTIVE_CLASS = activeClass;
+
+  //   function removeActive() {
+  //     check.forEach((item) => {
+  //       item.classList.remove('checkout-box__box--active');
+  //     });
+  //   }
+  //   check.forEach((item) => {
+  //     item.addEventListener('click', (e) => {
+  //       removeActive();
+  //       item.classList.add('checkout-box__box--active');
+  //     });
+  //   });
+  // }
+
+  // activeClass();
+
+  (function activeClassColor() {
     const check = document.querySelectorAll('.colors__item');
     const colorText = document.querySelector('.colors__text');
 
