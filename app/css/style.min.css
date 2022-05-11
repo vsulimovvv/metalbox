@@ -3525,12 +3525,8 @@ input[type='file'] {
   -o-transition: 250ms ease;
   transition: 250ms ease;
 }
-.contacts-card:hover .contacts-card__top img {
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  transform: scale(1.15);
-}
 .contacts-card__top {
+  display: block;
   width: 100%;
   position: relative;
   margin-bottom: 30px;
@@ -3546,6 +3542,11 @@ input[type='file'] {
   .contacts-card__top {
     height: calc(280px + 115 * ((100vw - 375px) / 775));
   }
+}
+.contacts-card__top:hover img {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 .contacts-card__top img {
   width: 100%;

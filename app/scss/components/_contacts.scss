@@ -27,22 +27,19 @@
   height: 100%;
   transition: 250ms ease;
 
-  &:hover {
-    .contacts-card {
-      &__top {
-        img {
-          transform: scale(1.15);
-        }
-      }
-    }
-  }
-
   &__top {
+    display: block;
     width: 100%;
     position: relative;
     @include adaptive-value('margin-bottom', 30, 20, 1);
     @include adaptive-value('height', 395, 280, 1);
     overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
 
     img {
       @include img(cover);
