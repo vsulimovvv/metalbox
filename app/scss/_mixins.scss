@@ -102,7 +102,7 @@ $maxWidthContainer: 1150;
 // right: max(15px, calc((100% - 1400px) / 2));
 @mixin fz34 {
   font-family: $EuclidCircularA;
-  @include adaptive-value('font-size', 34, 24, 1);
+  @include adaptive-value('font-size', 34, 22, 1);
   font-weight: 500;
   text-transform: uppercase;
 }

@@ -28,7 +28,7 @@
     text-transform: uppercase;
     margin-bottom: 10px;
 
-    @include adaptive-value('font-size', 19, 16, 1);
+    @include adaptive-value('font-size', 19, 14, 1);
 
     &--mb0 {
       margin-bottom: 0;
@@ -42,8 +42,9 @@
   }
 
   &__top {
+    display: block;
     width: 100%;
-    @include adaptive-value('height', 415, 300, 1);
+    @include adaptive-value('height', 415, 120, 1);
     overflow: hidden;
 
     img {
@@ -72,7 +73,6 @@
         margin-top: 0;
       }
       .product-card__left {
-   
         align-items: center;
         justify-content: center;
       }
@@ -103,6 +103,14 @@
   }
 
   &__btn {
+    display: block;
+
     width: 160px;
+    @include adaptive-value('font-size', 12, 8, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 160px;
+      width: 100%;
+    }
   }
 }

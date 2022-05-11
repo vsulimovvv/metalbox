@@ -119,6 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
   (function slider() {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

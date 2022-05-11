@@ -4,15 +4,14 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 545px));
+    grid-template-columns: repeat(2, 1fr);
     gap: 35px 30px;
 
-    @include breakpointsMaxW($bp-768) {
-      grid-template-columns: minmax(auto, 545px);
-      justify-content: center;
-    }
+    @include adaptive-value('column-gap', 30, 10, 1);
+    @include adaptive-value('column-row', 30, 20, 1);
+
   }
-  
+
   &__item {
     width: 100%;
     height: 100%;

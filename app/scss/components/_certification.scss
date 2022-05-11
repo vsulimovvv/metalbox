@@ -1,6 +1,6 @@
 .certification {
-  @include background(cover);
   color: var(--color-white);
+  @include background(cover);
 
   &__wrapper {
     @include adaptive-value('padding-top', 100, 50, 1);
@@ -27,7 +27,7 @@
     @include fz34();
   }
 
-  &__btn{
+  &__btn {
     padding-left: 50px;
     padding-right: 50px;
   }

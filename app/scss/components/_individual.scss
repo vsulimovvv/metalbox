@@ -1,6 +1,6 @@
 .individual {
-  @include background(cover);
   color: var(--color-white);
+  @include background(cover);
 
   &__wrapper {
     @include adaptive-value('padding-top', 100, 50, 1);
