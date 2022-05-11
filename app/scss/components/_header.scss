@@ -7,6 +7,27 @@
   left: 0;
   background-color: transparent;
 
+  &__location {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    position: relative;
+    max-width: 215px;
+    margin: 20px auto 0 auto;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+
+    &-btn {
+      color: var(--color-white);
+      border-bottom: 1px dashed var(--color-white);
+    }
+  }
+
   .header__logo-small,
   .big-btn,
   .discount-badge {
@@ -16,7 +37,10 @@
   &.scroll-header {
     background-color: var(--color-white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    
+
+    .header__location {
+      display: none;
+    }
     .header {
       &__logo-other,
       &__logo,

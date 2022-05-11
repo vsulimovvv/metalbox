@@ -2,6 +2,24 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
+  // * ==== Dropdown
+  document.addEventListener('click', (e) => {
+    const isDropdownButton = e.target.matches('[data-dropdown-button]');
+    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null)
+      return;
+
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = e.target.closest('[data-dropdown]');
+      currentDropdown.classList.toggle('active');
+    }
+
+    document.querySelectorAll('[data-dropdown].active').forEach((dropdown) => {
+      if (dropdown === currentDropdown) return;
+      dropdown.classList.remove('active');
+    });
+  });
+
   function removeHeader() {
     const sections = document.querySelectorAll('.catalog-section');
     const headerCatalog = document.querySelector('.header--catalog');
@@ -41,15 +59,40 @@ window.addEventListener('DOMContentLoaded', () => {
 
   (function activeClass() {
     const check = document.querySelectorAll('.colors__item');
+    const colorText = document.querySelector('.colors__text');
+
+    const ACTIVE_CLASS = 'colors__item--active';
+
     function removeActive() {
       check.forEach((item) => {
-        item.classList.remove('colors__item--active');
+        item.classList.remove(ACTIVE_CLASS);
       });
     }
+
     check.forEach((item) => {
       item.addEventListener('click', (e) => {
         removeActive();
-        item.classList.add('colors__item--active');
+        item.classList.add(ACTIVE_CLASS);
+
+        if (item.classList.contains('colors__item--white')) {
+          colorText.innerText = 'Белый';
+        }
+
+        if (item.classList.contains('colors__item--brown')) {
+          colorText.innerText = 'Коричневый';
+        }
+
+        if (item.classList.contains('colors__item--silver')) {
+          colorText.innerText = 'Серый';
+        }
+
+        if (item.classList.contains('colors__item--beige')) {
+          colorText.innerText = 'Бежевый';
+        }
+
+        if (item.classList.contains('colors__item--metallic-silver')) {
+          colorText.innerText = 'Серебряный металик';
+        }
       });
     });
   })();
@@ -185,17 +228,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (window.pageYOffset >= 100) {
     header.classList.add('scroll-header');
   }
-
-  // // * ===== Custom select
-  // (function customSelect() {
-  //   const selects = document.querySelectorAll('.select');
-  //   selects.forEach((el) => {
-  //     const select = new Choices(el, {
-  //       itemSelectText: '',
-  //       searchEnabled: false,
-  //     });
-  //   });
-  // })();
 
   // * ===== Show Menu
   (function showMenu() {
