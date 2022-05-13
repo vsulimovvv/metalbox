@@ -3530,21 +3530,13 @@ input[type=file] {
 }
 
 .contacts {
-  padding-top: 50px;
-  padding-bottom: 80px;
-}
-@media (max-width: 1150px) {
-  .contacts {
-    padding-top: calc(
-        40px + 10 *
-          ((100vw - 375px) / 775)
-      );
-  }
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 @media (max-width: 1150px) {
   .contacts {
     padding-bottom: calc(
-        40px + 40 *
+        40px + 30 *
           ((100vw - 375px) / 775)
       );
   }
@@ -3570,7 +3562,7 @@ input[type=file] {
 @media (max-width: 1150px) {
   .contacts__title {
     margin-bottom: calc(
-        40px + 20 *
+        30px + 30 *
           ((100vw - 375px) / 775)
       );
   }
