@@ -54,6 +54,10 @@
     @include adaptive-value('height', 415, 120, 1);
     overflow: hidden;
 
+    @include breakpointsMaxW($bp-360) {
+      height: 180px;
+    }
+
     img {
       @include img(cover);
       transition: 350ms ease;
@@ -77,16 +81,23 @@
       align-items: flex-start;
     }
 
+    @include breakpointsMaxW($bp-768) {
+      padding: 15px 10px;
+    }
+
     &--aic {
       min-height: 100px;
+
       .product-card__left {
         justify-content: center;
+        width: calc(100% - 170px);
 
-        @include breakpointsMaxW($bp-991){
+        @include breakpointsMaxW($bp-991) {
           margin-bottom: 10px;
           justify-content: flex-start;
         }
       }
+
       .product-card__btn {
         bottom: 0;
         top: 50%;
@@ -102,7 +113,6 @@
     justify-content: flex-start;
     height: 100%;
     width: 100%;
-    
   }
 
   &__btn {

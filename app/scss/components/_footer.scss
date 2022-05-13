@@ -103,12 +103,18 @@
 
     &--contact {
       min-width: 175px;
-      text-align: right;
+
       .footer__name {
         margin-bottom: 25px;
+
+        @include breakpointsMaxW($bp-991) {
+          text-align: left;
+        }
       }
+
       .footer__list {
         text-align: right;
+
         @include breakpointsMaxW($bp-991) {
           text-align: left;
         }

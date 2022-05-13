@@ -4,14 +4,16 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: repeat(2, minmax(auto, 360px));
       justify-content: center;
+      gap: 10px;
     }
-    @include breakpointsMaxW($bp-576) {
+    
+    @include breakpointsMaxW($bp-360) {
       grid-template-columns: minmax(auto, 360px);
     }
   }

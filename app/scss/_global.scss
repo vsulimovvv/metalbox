@@ -181,13 +181,13 @@ svg {
     color: #3c3c3b;
     @include adaptive-value('font-size', 20, 16, 1);
 
-span{
-  display: block;
+    span {
+      display: block;
 
-  @include breakpointsMaxW($bp-768){
-    display: inline;
-  }
-}
+      @include breakpointsMaxW($bp-768) {
+        display: inline;
+      }
+    }
 
     p {
       &:not(:last-child) {
@@ -205,16 +205,27 @@ span{
   height: 100%;
   z-index: 2;
 }
+
 .cart-right {
   background-color: #f9f9f9;
   border-radius: 0px 5px 5px 0px;
-  padding: 30px;
+  padding: 30px 28px;
+
   @include breakpointsMaxW($bp-991) {
     max-width: 350px;
     margin: 0 auto;
   }
+
+  &__title {
+    @include adaptive-value('font-size', 21, 18, 1);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
   &__list {
     @include adaptive-value('margin-bottom', 30, 20, 1);
+    display: grid;
+    gap: 25px;
   }
 
   &__item {
@@ -225,7 +236,6 @@ span{
     font-size: 13px;
     line-height: 1;
     font-weight: 300;
-    line-height: 2.5;
   }
 
   &__left {
@@ -296,9 +306,11 @@ span{
 
   &--discount {
     .cart-right__list {
-      padding-bottom: 15px;
+      padding-bottom: 18px;
       border-bottom: 1px solid #d8d8d8;
+      margin-bottom: 20px;
     }
+
     .cart-right__discount {
       display: flex;
       align-items: center;
@@ -306,7 +318,7 @@ span{
       gap: 30px;
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
 
       &-text {
         color: #9c8168;
@@ -368,18 +380,22 @@ span{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpointsMaxW($bp-576) {
+      max-height: 350px;
+    }
   }
 
   &__title {
     @include fz34();
     text-transform: none;
-    @include adaptive-value('margin-bottom', 30, 20, 1);
+    @include adaptive-value('margin-bottom', 20, 15, 1);
   }
 
   &__text {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     font-size: 16px;
     font-weight: 500;
 

@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    @include breakpointsMaxW($bp-360){
+      grid-template-columns: 1fr;
+    }
+
     @include adaptive-value('column-gap', 30, 10, 1);
     @include adaptive-value('row-gap', 30, 20, 1);
   }

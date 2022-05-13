@@ -1,11 +1,11 @@
 .payment {
-  @include adaptive-value('padding-top', 70, 40, 1);
-  @include adaptive-value('padding-bottom', 70, 40, 1);
+  @include adaptive-value('padding-top', 47, 30, 1);
+  padding-bottom: 30px;
 
   &__title {
     @include fz30();
     text-align: center;
-    @include adaptive-value('margin-bottom', 60, 30, 1);
+    @include adaptive-value('margin-bottom', 70, 40, 1);
   }
 
   &__list {
@@ -39,7 +39,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 45px;
+  padding: 20px;
+  padding-bottom: 65px;
   text-align: center;
   height: 380px;
   @include background(cover);
@@ -47,11 +48,13 @@
   width: 100%;
   position: relative;
 
+  @include adaptive-value('height', 360, 300, 1);
+
   &__wrap {
     display: grid;
-    gap: 20px;
+    gap: 18px;
     position: relative;
-    padding-top: 83px;
+    padding-top: 77px;
 
     &::after {
       @include elDef();
@@ -88,6 +91,10 @@
   }
 
   &--terminal {
+    @include breakpointsMaxW($bp-container) {
+      padding-bottom: 20px;
+    }
+
     .payment-card__wrap {
       &::after {
         @include backgroundImage(url('../images/content/payment.png'), contain);
@@ -96,6 +103,12 @@
   }
 
   &--money {
+    padding-bottom: 85px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-bottom: 20px;
+    }
+
     .payment-card__wrap {
       &::after {
         @include backgroundImage(url('../images/content/money.png'), contain);
@@ -104,18 +117,27 @@
   }
 
   &--qr {
+    padding-bottom: 45px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-bottom: 20px;
+    }
+
     .payment-card__wrap {
       padding-top: 135px;
+      @include adaptive-value('padding-top', 135, 115, 1);
       &::after {
         width: 115px;
         height: 115px;
+        @include adaptive-value('width', 115, 80, 1);
+        @include adaptive-value('height', 115, 80, 1);
         @include backgroundImage(url('../images/content/qr.png'), contain);
       }
     }
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
@@ -124,5 +146,12 @@
   &__text {
     font-size: 14px;
     font-weight: 300;
+
+    span {
+      display: block;
+      @include breakpointsMaxW($bp-container) {
+        display: inline;
+      }
+    }
   }
 }
