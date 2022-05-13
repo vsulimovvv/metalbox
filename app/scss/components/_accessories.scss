@@ -9,20 +9,33 @@
 
   &__offer {
     text-align: center;
-    max-width: 710px;
+    max-width: 720px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include adaptive-value('gap', 40, 30, 1);
+    @include adaptive-value('gap', 20, 15, 1);
   }
 
   &__text {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+    @include adaptive-value('font-size', 19, 14, 1);
   }
 
   &__title {
     @include fz34();
+  }
+  &__btn {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include adaptive-value('font-size', 13, 10, 1);
+    @include adaptive-value('width', 220, 150, 1);
+    @include adaptive-value('height', 54, 40, 1);
+    @include adaptive-value('padding', 20, 5, 1);
   }
 }

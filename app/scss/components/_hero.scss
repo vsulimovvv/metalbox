@@ -66,7 +66,7 @@
       top: 0;
     }
 
-    @include breakpointsMaxW($bp-991) {
+    @include breakpointsMaxW($bp-768) {
       display: none;
     }
   }
@@ -85,13 +85,22 @@
 
   &__slide {
     @include background(cover);
-    padding-top: 10vh;
+    padding-top: 120px;
     height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include breakpointsMaxW($bp-991) {
+      height: 460px;
+      padding-top: 90px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding-top: 60px;
+    }
   }
 
   &__title {
@@ -103,7 +112,17 @@
     color: #ffffff;
     text-align: center;
     margin-bottom: 30px;
-    @include adaptive-value('font-size', 35, 25, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      width: 100%;
+      font-size: 26px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      font-size: 24px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      font-size: 22px;
+    }
 
     span {
       display: block;

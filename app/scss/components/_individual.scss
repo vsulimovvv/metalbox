@@ -26,4 +26,13 @@
   &__title {
     @include fz34();
   }
+
+  &__btn {
+    line-height: 1;
+    width: 220px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

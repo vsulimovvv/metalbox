@@ -4,7 +4,7 @@
 
   &__wrapper {
     @include adaptive-value('padding-top', 100, 50, 1);
-    @include adaptive-value('padding-bottom', 100, 50, 1);
+    @include adaptive-value('padding-bottom', 110, 50, 1);
   }
 
   &__offer {
@@ -16,10 +16,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include adaptive-value('gap', 40, 30, 1);
+    @include adaptive-value('gap', 30, 20, 1);
   }
 
   &__title {
     @include fz34();
+  }
+
+  &__text {
+    font-weight: 400;
+    @include adaptive-value('font-size', 19, 14, 1);
+
+    span {
+      display: block;
+
+      @include breakpointsMaxW($bp-768) {
+        display: inline;
+      }
+    }
+  }
+
+  &__btn {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include adaptive-value('font-size', 13, 10, 1);
+    @include adaptive-value('width', 220, 150, 1);
+    @include adaptive-value('height', 54, 40, 1);
+    @include adaptive-value('padding', 20, 5, 1);
   }
 }

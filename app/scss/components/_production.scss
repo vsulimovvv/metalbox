@@ -1,6 +1,6 @@
 .production {
-  @include adaptive-value('padding-top', 70, 40, 1);
-  @include adaptive-value('padding-bottom', 70, 40, 1);
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
 
   &__list {
     display: grid;
