@@ -171,10 +171,10 @@ window.addEventListener('DOMContentLoaded', () => {
   (function slider() {
     const sliderEl = document.querySelector('.product__slider');
     new Swiper(sliderEl, {
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       loop: true,
       grabCursor: true,
       navigation: {
@@ -240,7 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function scrollHeader() {
     const nav = document.querySelector('header');
 
-    if (this.scrollY >= 100) {
+    if (this.scrollY >= 50) {
       nav.classList.add('scroll-header');
     } else {
       nav.classList.remove('scroll-header');
@@ -250,7 +250,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ! Change
   const header = document.querySelector('header');
-  if (window.pageYOffset >= 100) {
+  if (window.pageYOffset >= 50) {
     header.classList.add('scroll-header');
   }
 

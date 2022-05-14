@@ -1,5 +1,6 @@
 .breadcrumbs {
   margin-top: 105px;
+  z-index: 1;
   
   @include breakpointsMaxW($bp-768) {
     margin-top: 70px;
