@@ -210,6 +210,9 @@ svg {
   background-color: #f9f9f9;
   border-radius: 0px 5px 5px 0px;
   padding: 30px 28px;
+  position: sticky;
+  top: 100px;
+  right: 0;
 
   @include breakpointsMaxW($bp-991) {
     max-width: 350px;
@@ -1163,6 +1166,10 @@ input[type='file'] {
     font-size: 10px;
     line-height: 1;
     font-weight: 300;
+  }
+
+  &--ml-a{
+    margin-left: auto;
   }
 }
 

@@ -4,78 +4,121 @@
 
     <form class="checkout__wrapper">
       <div class="checkout__left tabs">
-        <div class="checkout-box">
+        <div class="checkout-box checkout-box--top">
           <h3 class="checkout-box__title">Получатель</h3>
 
           <div class="checkout-box__row checkout-box__row--recipient">
             <div class="checkout-box__btn-tab tabs-btn">Я физическое лицо</div>
             <div class="checkout-box__btn-tab tabs-btn">Я юридическое лицо</div>
           </div>
+
           <div class="tabs-content active">
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Фамилия Имя"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Фамилия Имя"
+                />
+                <label class="checkout-box__label">Фамилия Имя</label>
+              </div>
             </div>
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Почта"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Почта"
+                />
+                <label class="checkout-box__label">Почта</label>
+              </div>
             </div>
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="tel"
-                placeholder="* +7 (999) 999-99-99"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="tel"
+                  placeholder="+7 (999) 999-99-99"
+                />
+                <label
+                  class="checkout-box__label checkout-box__label--first-letter"
+                >
+                  <span>+7</span> (999) 999-99-99
+                </label>
+              </div>
             </div>
           </div>
+
           <div class="tabs-content">
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*ИНН организации"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="ИНН организации"
+                />
+                <label class="checkout-box__label">ИНН организации</label>
+              </div>
             </div>
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Фамилия и имя"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Название организации"
+                />
+                <label class="checkout-box__label">Название организации</label>
+              </div>
             </div>
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Фамилия и имя"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Фамилия и имя"
+                />
+                <label class="checkout-box__label">Фамилия и имя</label>
+              </div>
+            </div>
+            <div class="checkout-box__row checkout-box__row--double">
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="tel"
+                  placeholder="+7 (999) 999-99-99"
+                />
+                <label class="checkout-box__label">+7 (999) 999-99-99</label>
+              </div>
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Почта"
+                />
+                <label class="checkout-box__label">Почта</label>
+              </div>
+            </div>
+
+            <div class="checkout-box__row">
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Юридический адрес"
+                />
+                <label class="checkout-box__label">Юридический адрес</label>
+              </div>
             </div>
             <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="tel"
-                placeholder="*+7 (999) 999-99-99"
-              />
-            </div>
-            <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Юридический адрес"
-              />
-            </div>
-            <div class="checkout-box__row">
-              <input
-                class="checkout-box__input"
-                type="text"
-                placeholder="*Фактический адрес"
-              />
+              <div class="checkout-box__group checkout-box__group--required">
+                <input
+                  class="checkout-box__input"
+                  type="text"
+                  placeholder="Фактический адрес"
+                />
+
+                <label class="checkout-box__label">Фактический адрес</label>
+              </div>
             </div>
           </div>
         </div>

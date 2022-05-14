@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 0.385fr;
     gap: 25px;
+position: relative;
 
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: 1fr;
