@@ -7,7 +7,8 @@
   left: 0;
   background-color: transparent;
 
-  &__location {
+  &__location,
+  &__location-mobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,13 +17,19 @@
     max-width: 220px;
     margin: 15px auto 0 auto;
 
-    @include breakpointsMaxW($bp-991) {
-      display: none;
-    }
-
     &-btn {
       color: var(--color-white);
       border-bottom: 1px dashed var(--color-white);
+    }
+  }
+
+  &__location-mobile {
+    color: var(--color-dark);
+    display: none;
+
+    .header__location-btn {
+      color: var(--color-dark);
+      border-bottom: 1px dashed var(--color-dark);
     }
   }
 
@@ -36,15 +43,54 @@
     background-color: var(--color-white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 
+    .header__left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header__location-mobile {
+      display: flex !important;
+      color: var(--color-dark);
+      width: 200px;
+      margin: 0;
+      @include breakpointsMaxW($bp-991){
+        display: none !important;
+      }
+    }
+
     .header__location {
       display: none;
     }
+
     .header {
       &__logo-other,
-      &__logo,
-      &__phone {
+      // &__phone,
+       &__logo {
         display: none;
+        color: var(--color-dark);
       }
+
+      // ! Hover для всего
+      &__phone {
+        color: var(--color-dark);
+        &::after {
+          background-color: var(--color-dark);
+        }
+
+        &:hover {
+          color: var(--color-white);
+        }
+      }
+
+      &__cart {
+        &:hover {
+          background-color: var(--color-dark);
+          fill: var(--color-white);
+        }
+      }
+
+      //  ! > Hover для всего
 
       &__toggle {
         padding-right: 5px;
@@ -52,6 +98,13 @@
 
         &-line {
           background-color: var(--color-dark);
+        }
+
+        &:hover {
+          background-color: var(--color-dark);
+          .header__toggle-line {
+            background-color: var(--color-white);
+          }
         }
 
         @include breakpointsMaxW($bp-container) {
@@ -96,12 +149,31 @@
 
     .header__wrapper {
       border-bottom: none;
-      // justify-content: space-evenly;
     }
 
     &.header--color-dark {
       background-color: var(--color-white);
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+      .header__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+
+        @include breakpointsMaxW($bp-991) {
+          display: none;
+        }
+      }
+      .header__logo-dark {
+        width: 150px;
+      }
+
+      .header__location-mobile {
+        @include breakpointsMaxW($bp-991) {
+          display: none !important;
+        }
+      }
     }
 
     &.header--catalog {
@@ -301,7 +373,8 @@
     }
   }
 
-  &--color-dark {
+  &--color-dark,
+  &--product {
     background-color: transparent;
     position: fixed;
     width: 100%;
@@ -386,8 +459,4 @@
       }
     }
   }
-
- &--catalog{
-   
- }
 }

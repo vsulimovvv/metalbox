@@ -388,6 +388,10 @@
     padding-left: 62px;
     justify-content: flex-start;
 
+    .checkbox-box__checkbox{
+      width: 100px;
+    }
+
     .checkbox-box__checkbox {
       .checkbox__text {
         color: #757575;
