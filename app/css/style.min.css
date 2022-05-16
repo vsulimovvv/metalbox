@@ -944,12 +944,74 @@ svg {
   position: relative;
   padding-top: 18px;
   padding-bottom: 18px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-24%, #896a4b), color-stop(126%, #a1876f));
+  background-image: -o-linear-gradient(bottom, #896a4b -24%, #a1876f 126%);
+  background-image: linear-gradient(0deg, #896a4b -24%, #a1876f 126%);
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 26px;
+  color: var(--color-white);
+  overflow: hidden;
+  z-index: 1;
+}
+.catalog-section__btn::before {
+  position: absolute;
+  content: "";
+  background-color: var(--color-white);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  z-index: -1;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.catalog-section__btn:hover {
+  color: var(--color-dark);
+}
+.catalog-section__btn:hover::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .catalog-section__btn--cart {
   font-size: 17px;
   font-weight: 500;
   color: #2f2f2f;
   padding-left: 60px;
+  background: var(--color-white);
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.catalog-section__btn--cart::before {
+  position: absolute;
+  content: "";
+  background-color: var(--color-dark);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  z-index: -1;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.catalog-section__btn--cart:hover {
+  color: var(--color-white);
 }
 .catalog-section__btn--cart:hover::after {
   background-color: var(--color-white);
