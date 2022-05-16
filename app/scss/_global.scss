@@ -354,7 +354,7 @@ svg {
 .cart-right {
   background-color: #f9f9f9;
   border-radius: 0px 5px 5px 0px;
-  padding: 30px 28px;
+  padding: 30px 25px;
   position: sticky;
   top: 100px;
   right: 0;
@@ -373,7 +373,7 @@ svg {
   &__list {
     @include adaptive-value('margin-bottom', 30, 20, 1);
     display: grid;
-    gap: 25px;
+    gap: 20px;
   }
 
   &__item {
@@ -384,6 +384,10 @@ svg {
     font-size: 13px;
     line-height: 1;
     font-weight: 300;
+
+    &.mt {
+      margin-top: 10px;
+    }
   }
 
   &__left {
@@ -391,6 +395,7 @@ svg {
   }
   &__right {
     color: #4b4b4b;
+    font-weight: 400;
   }
 
   &__total {
@@ -448,14 +453,26 @@ svg {
     font-weight: 300;
     color: #8c8c8c;
     text-align: center;
-    max-width: 270px;
     margin: 0 auto;
+
+    span {
+      color: #343434;
+      font-weight: 400;
+    }
   }
 
   &--discount {
+    .cart-right__title {
+      margin-bottom: 15px;
+    }
     .cart-right__list {
-      padding-bottom: 18px;
+      padding-bottom: 28px;
       border-bottom: 1px solid #d8d8d8;
+      margin-bottom: 13px;
+      gap: 17px;
+    }
+
+    .cart-right__total {
       margin-bottom: 20px;
     }
 
@@ -466,7 +483,7 @@ svg {
       gap: 30px;
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 16px;
+      margin-bottom: 26px;
 
       &-text {
         color: #9c8168;
@@ -476,7 +493,12 @@ svg {
       &-price {
         flex-shrink: 0;
         color: #4b4b4b;
+        font-weight: 500;
       }
+    }
+
+    .cart-right__btn {
+      margin-bottom: 9px;
     }
   }
 }
@@ -1395,10 +1417,6 @@ input[type='file'] {
     @include breakpointsMaxW(1100px) {
       font-size: 9px;
     }
-  }
-
-  &--ml-a {
-    margin-left: auto;
   }
 }
 

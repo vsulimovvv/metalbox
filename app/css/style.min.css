@@ -648,7 +648,7 @@ svg {
 .cart-right {
   background-color: #f9f9f9;
   border-radius: 0px 5px 5px 0px;
-  padding: 30px 28px;
+  padding: 30px 25px;
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
@@ -677,7 +677,7 @@ svg {
   margin-bottom: 30px;
   display: -ms-grid;
   display: grid;
-  gap: 25px;
+  gap: 20px;
 }
 @media (max-width: 1150px) {
   .cart-right__list {
@@ -702,11 +702,15 @@ svg {
   line-height: 1;
   font-weight: 300;
 }
+.cart-right__item.mt {
+  margin-top: 10px;
+}
 .cart-right__left {
   color: #999999;
 }
 .cart-right__right {
   color: #4b4b4b;
+  font-weight: 400;
 }
 .cart-right__total {
   display: -webkit-box;
@@ -761,12 +765,22 @@ svg {
   font-weight: 300;
   color: #8c8c8c;
   text-align: center;
-  max-width: 270px;
   margin: 0 auto;
 }
+.cart-right__notify span {
+  color: #343434;
+  font-weight: 400;
+}
+.cart-right--discount .cart-right__title {
+  margin-bottom: 15px;
+}
 .cart-right--discount .cart-right__list {
-  padding-bottom: 18px;
+  padding-bottom: 28px;
   border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 13px;
+  gap: 17px;
+}
+.cart-right--discount .cart-right__total {
   margin-bottom: 20px;
 }
 .cart-right--discount .cart-right__discount {
@@ -782,7 +796,7 @@ svg {
   gap: 30px;
   font-size: 13px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 .cart-right--discount .cart-right__discount-text {
   color: #9c8168;
@@ -792,6 +806,10 @@ svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   color: #4b4b4b;
+  font-weight: 500;
+}
+.cart-right--discount .cart-right__btn {
+  margin-bottom: 9px;
 }
 
 .catalog-section {
@@ -1909,9 +1927,6 @@ input[type=file] {
   .big-btn small {
     font-size: 9px;
   }
-}
-.big-btn--ml-a {
-  margin-left: auto;
 }
 
 .discount-badge {
