@@ -720,54 +720,54 @@
 
     <div class="site-wrapper">
       <header class="header header--color-dark">
-  <!-- * Mobile Menu -->
-  <div class="overlay"></div>
+    <!-- * Mobile Menu -->
+    <div class="overlay"></div>
 
-  <div class="mobile-menu">
-    <a class="mobile-menu__logo logo" href="#">
-      <img src="images/logo.png" alt="Логотип" />
-    </a>
-
-    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
-      <svg width="19" height="19">
-        <use xlink:href="images/sprite.svg#close"></use>
-      </svg>
-    </button>
-
-    <ul class="mobile-menu__body">
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Малыш</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Киндер</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Крутыш</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">S</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">M</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">L</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">XL</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">2XL</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Толстяк</a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">2 Соседа</a>
-      </li>
-    </ul>
-  </div>
-  <!-- * Mobile Menu -->
+    <div class="mobile-menu">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+  
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+        <svg width="19" height="19">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+  
+      <ul class="mobile-menu__body">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>Киндер</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>Малыш</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>Крутыш</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>S</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>M</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>L</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>XL</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>2XL</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>Толстяк</span></a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#"><span>2 Соседа</span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- * Mobile Menu -->
 
   <div class="container container--1820">
     <div class="header__wrapper">
@@ -848,9 +848,29 @@
       </div>
 
       <div class="discount-badge">
-        <div class="discount-badge__left">-10%</div>
-        <div class="discount-badge__right">
-          <span>на все роллетные шкафы</span> при оформлении заказа онлайн
+        <div class="discount-badge__slider swiper">
+          <div class="discount-badge__slides swiper-wrapper">
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-10%</div>
+              <div class="discount-badge__right">
+                <span>на все роллетные шкафы</span> при оформлении заказа онлайн
+              </div>
+            </div>
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-12%</div>
+              <div class="discount-badge__right">
+                <span>на УСЛУГИ ДОСТАВКИ И УСТАНОВКИ</span> при оформлении
+                заказа онлайн
+              </div>
+            </div>
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-15%</div>
+              <div class="discount-badge__right">
+                <span>на ВСЕ ДОПОЛНИТЕЛЬНЫЕ ТОВАРЫ И УСЛУГИ</span> при
+                оформлении заказа онлайн
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -876,19 +896,12 @@
         <img src="images/logo-dark.png" width="180" alt="Логотип" />
       </a>
 
-      <!-- <a class="header__logo-dark" href="#">
-        <img src="images/logo-dark.png" width="180" alt="Логотип" />
-      </a> -->
-
       <div class="header__tools">
         <a class="header__phone" href="tel:+74951250598">
           +7 (495) 125-05-98
         </a>
-        <a class="header__cart" href="#">
-          <svg>
-            <use xlink:href="images/sprite.svg#cart"></use>
-          </svg>
-        </a>
+
+        <a class="header__cart" href="#" aria-label="Корзина"></a>
       </div>
     </div>
   </div>

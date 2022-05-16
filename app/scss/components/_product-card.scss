@@ -7,9 +7,6 @@
   align-items: flex-start;
   transition: 200ms ease;
 
-  @include breakpointsMaxW($bp-991) {
-  }
-
   &:hover {
     box-shadow: 0 0 20px 5px rgb(80 85 86 / 50%);
   }
@@ -78,10 +75,12 @@
     @include breakpointsMaxW($bp-991) {
       flex-direction: column;
       align-items: flex-start;
+
+      padding-bottom: 75px;
     }
 
     @include breakpointsMaxW($bp-768) {
-      padding: 15px 10px;
+      padding: 15px 10px 65px 10px;
     }
 
     &--aic {
@@ -94,6 +93,7 @@
         @include breakpointsMaxW($bp-991) {
           margin-bottom: 10px;
           justify-content: flex-start;
+          width: 100%;
         }
       }
 
@@ -101,6 +101,12 @@
         bottom: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @include breakpointsMaxW($bp-991) {
+          top: initial;
+          transform: translateY(0);
+          bottom: 15px;
+        }
       }
     }
   }
@@ -126,13 +132,16 @@
     @include adaptive-value('font-size', 12, 8, 1);
 
     @include breakpointsMaxW($bp-991) {
-      position: static;
+      bottom: 15px;
+      left: 15px;
     }
+
     @include breakpointsMaxW($bp-768) {
-      max-width: 160px;
+      max-width: 140px;
       width: 100%;
       height: 37px;
       padding: 10px;
+      left: 10px;
     }
   }
 }

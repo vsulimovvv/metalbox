@@ -93,6 +93,50 @@
     align-items: center;
     justify-content: center;
 
+    &--second {
+      font-family: $EuclidCircularA;
+
+      .hero__title {
+        font-family: $EuclidCircularA;
+
+        font-weight: 300;
+
+        span {
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &--third {
+      .hero__title {
+        font-family: $EuclidCircularA;
+        font-weight: 300;
+      }
+    }
+
+    &--fourth {
+      .hero__title {
+        font-family: $EuclidCircularA;
+        font-weight: 300;
+      }
+    }
+
+    &--fifth {
+      font-family: $EuclidCircularA;
+
+      .hero__title {
+        font-family: $EuclidCircularA;
+
+        font-weight: 300;
+
+        span {
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
     @include breakpointsMaxW($bp-991) {
       height: 460px;
       padding-top: 90px;

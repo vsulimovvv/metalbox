@@ -62,26 +62,6 @@ window.addEventListener('DOMContentLoaded', () => {
   activeClass('.checkout-box__box', 'checkout-box__box--active');
   activeClass('.cart-top__item', 'cart-top__item--active');
 
-  // function activeClass() {
-  //   const check = document.querySelectorAll('.checkout-box__box');
-  //   // const check = document.querySelectorAll('.checkout-box__box');
-  //   const ACTIVE_CLASS = activeClass;
-
-  //   function removeActive() {
-  //     check.forEach((item) => {
-  //       item.classList.remove('checkout-box__box--active');
-  //     });
-  //   }
-  //   check.forEach((item) => {
-  //     item.addEventListener('click', (e) => {
-  //       removeActive();
-  //       item.classList.add('checkout-box__box--active');
-  //     });
-  //   });
-  // }
-
-  // activeClass();
-
   (function activeClassColor() {
     const check = document.querySelectorAll('.colors__item');
     const colorText = document.querySelector('.colors__text');
@@ -183,16 +163,28 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+  // * ===== Slider
+  (function sliderDiscount() {
+    const sliderEl = document.querySelector('.discount-badge__slider');
+    new Swiper(sliderEl, {
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      cssMode: true,
+      loop: true,
+    });
+  })();
 
   (function slider() {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
       loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      speed: 800,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      speed: 1000,
 
       // effect: "creative",
       // creativeEffect: {
