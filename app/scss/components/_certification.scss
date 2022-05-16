@@ -1,5 +1,6 @@
 .certification {
   color: var(--color-white);
+  background-attachment: fixed;
   @include background(cover);
 
   &__wrapper {

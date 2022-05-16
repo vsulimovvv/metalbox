@@ -7,6 +7,10 @@
   left: 0;
   background-color: transparent;
 
+  &__logo {
+    margin-left: 50px;
+  }
+
   &__location,
   &__location-mobile {
     display: flex;
@@ -14,8 +18,9 @@
     justify-content: space-between;
     font-size: 18px;
     position: relative;
-    max-width: 220px;
-    margin: 15px auto 0 auto;
+    max-width: 255px;
+    margin: 20px auto 0 auto;
+
 
     &-btn {
       color: var(--color-white);
@@ -75,10 +80,8 @@
       }
 
       &__cart {
-        &:hover {
-          background-color: var(--color-dark);
-          fill: var(--color-white);
-        }
+        background-color: var(--color-dark);
+        margin-left: 10px;
       }
 
       //  ! > Hover для всего
@@ -89,13 +92,6 @@
 
         &-line {
           background-color: var(--color-dark);
-        }
-
-        &:hover {
-          background-color: var(--color-dark);
-          .header__toggle-line {
-            background-color: var(--color-white);
-          }
         }
 
         @include breakpointsMaxW($bp-container) {
@@ -130,7 +126,7 @@
       }
     }
 
-    .discount-badge{
+    .discount-badge {
       margin: 0 auto;
     }
 
@@ -193,7 +189,6 @@
 
         &__toggle {
           width: 100px;
-          padding: 10px 5px;
           padding-right: 60px;
 
           &::after {
@@ -202,14 +197,6 @@
 
           &-line {
             background-color: var(--color-white);
-          }
-
-          &:hover {
-            background-color: var(--color-white);
-
-            .header__toggle-line {
-              background-color: var(--color-dark);
-            }
           }
         }
       }
@@ -275,26 +262,23 @@
     }
 
     &:hover {
-      color: var(--color-dark);
+      // color: var(--color-dark);
 
-      &::after {
-        transform: translateY(-50%) translateX(-10px);
-      }
+      // &::after {
+      //   transform: translateY(-50%) translateX(-10px);
+      // }
     }
   }
 
   &__cart {
-    width: 35px;
-    height: 35px;
-    fill: var(--color-white);
+    width: 25px;
+    height: 25px;
     transition: 200ms ease;
     padding: 5px;
     border-radius: 3px;
 
-    &:hover {
-      fill: var(--color-dark);
-      background-color: var(--color-white);
-    }
+    @include maskImage(url('../images/cart.png'), contain);
+    background-color: var(--color-white);
   }
 
   &__toggle {
@@ -349,18 +333,6 @@
         bottom: -7px;
       }
     }
-
-    &:hover {
-      background-color: var(--color-white);
-
-      &::after {
-        color: var(--color-dark);
-      }
-
-      .header__toggle-line {
-        background-color: var(--color-dark);
-      }
-    }
   }
 
   &--color-dark,
@@ -407,18 +379,6 @@
 
         &-line {
           background-color: var(--color-dark);
-        }
-
-        &:hover {
-          background-color: var(--color-dark);
-
-          &::after {
-            color: var(--color-white);
-          }
-
-          .header__toggle-line {
-            background-color: var(--color-white);
-          }
         }
       }
     }

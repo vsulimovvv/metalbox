@@ -188,6 +188,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
       loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+
+      // effect: "creative",
+      // creativeEffect: {
+      //   prev: {
+      //     shadow: true,
+      //     translate: ["-20%", 0, -1],
+      //   },
+      //   next: {
+      //     translate: ["100%", 0, 0],
+      //   },
+      // },
+
+      cssMode: true,
+
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

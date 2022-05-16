@@ -1,5 +1,6 @@
 .offices {
   @include background(cover);
+  background-attachment: fixed;
   color: var(--color-white);
 
   &__wrapper {
@@ -39,6 +40,6 @@
     @include adaptive-value('font-size', 13, 10, 1);
     @include adaptive-value('width', 240, 180, 1);
     @include adaptive-value('height', 54, 40, 1);
-    @include adaptive-value('padding', 20, 5, 1); 
+    @include adaptive-value('padding', 20, 5, 1);
   }
 }

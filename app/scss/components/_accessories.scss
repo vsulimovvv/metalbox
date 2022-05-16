@@ -1,4 +1,5 @@
 .accessories {
+  background-attachment: fixed;
   @include background(cover);
   color: var(--color-white);
 
