@@ -1,9 +1,17 @@
 .socials {
+  &__name {
+    font-size: 18px;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+    display: block;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     gap: 12px;
   }
+
   &__link {
     display: block;
     width: 40px;
@@ -43,10 +51,9 @@
         @include maskImage(url('../images/icons/youtube.svg'), contain);
       }
     }
-    
+
     &:hover {
       background-color: var(--color-white);
-      transform: scale(1.05);
 
       &::after {
         background-color: #424241;

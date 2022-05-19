@@ -69,7 +69,7 @@
             </li>
             <li class="checkbox-box__item">
               <label class="checkbox-box__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" />
+                <input class="checkbox__input" type="checkbox" checked />
                 <span class="checkbox__box"></span>
                 <span class="checkbox__text">Да</span>
               </label>
@@ -78,11 +78,11 @@
           </ul>
         </div>
         <div class="cart-btns">
-          <button class="cart-total cart-total--small" type="button">
+          <button class="cart-total cart-total--fd-c" type="button">
             <span class="cart-total__text">В корзину</span>
-            <span class="cart-total__text">
-              <span class="cart-total__total">Итого:</span>
-              <span>62 190 ₽</span>
+            <span class="cart-total__total">
+              <span>Итого:</span>
+              62 190 ₽
             </span>
           </button>
           <button class="cart-btns__btn cart-btns__btn--continue" type="button">
@@ -449,7 +449,7 @@
       <div class="popup__text">
         <p>
           С 2012 года реализовано боле 1500 тысяч индивидуальных проектов.
-          Ознакомитясь
+          Ознакомиться
           <span>
             с уже реализованными проектами и разработать собственный вы можете
             на сайте eurogar.ru</span
@@ -528,6 +528,10 @@
             ></button>
           </div>
         </div>
+      </div>
+
+      <div class="popup__bottom">
+        <a class="popup__btn btn" href="#">Ознакомиться</a>
       </div>
     </div>
   </div>
@@ -707,74 +711,119 @@
   <div class="overlay"></div>
 
   <div class="mobile-menu">
-    <a class="mobile-menu__logo logo" href="#">
-      <img src="images/logo.png" alt="Логотип" />
-    </a>
-
-    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
-      <svg width="19" height="19">
-        <use xlink:href="images/sprite.svg#close"></use>
-      </svg>
-    </button>
+    <div class="mobile-menu__top">
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg width="19" height="19">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
 
     <ul class="mobile-menu__body">
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Малыш</a>
+        <a class="mobile-menu__link" href="#"><span>Киндер</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Киндер</a>
+        <a class="mobile-menu__link" href="#"><span>Малыш</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Крутыш</a>
+        <a class="mobile-menu__link" href="#"><span>Крутыш</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">S</a>
+        <a class="mobile-menu__link" href="#"><span>S</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">M</a>
+        <a class="mobile-menu__link" href="#"><span>M</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">L</a>
+        <a class="mobile-menu__link" href="#"><span>L</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">XL</a>
+        <a class="mobile-menu__link" href="#"><span>XL</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">2XL</a>
+        <a class="mobile-menu__link" href="#"><span>2XL</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Толстяк</a>
+        <a class="mobile-menu__link" href="#"><span>Толстяк</span></a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">2 Соседа</a>
+        <a class="mobile-menu__link" href="#"><span>2 Соседа</span></a>
       </li>
     </ul>
+
+    <div class="mobile-menu__bottom">
+      <div class="socials">
+        <span class="socials__name">Мы в соц.сетях</span>
+
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram" href="#"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="#"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <!-- * Mobile Menu -->
 
   <div class="container container--1820">
     <nav class="header__wrapper">
-      <a class="header__logo-small" href="#">
-        <img src="images/logo-small.png" alt="Логотип" />
-      </a>
+      <div class="header__left">
+        <a class="header__logo-small" href="#">
+          <img src="images/logo-small.png" alt="Логотип" />
+        </a>
 
-      <button class="header__toggle" type="button" aria-label="Открыть меню">
-        <span class="header__toggle-line"></span>
-      </button>
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
 
-      <a class="big-btn" href="#">
-        <span>ОНЛАЙН КАЛЬКУЛЯТОР</span>
-        <small>рассчитайте изделие без обращения к менеджеру</small>
-      </a>
+        <a class="big-btn" href="#">
+          <span>ОНЛАЙН КАЛЬКУЛЯТОР</span>
+          <small>рассчитайте изделие без обращения к менеджеру</small>
+        </a>
+      </div>
 
       <div class="discount-badge">
-        <div class="discount-badge__left">-10%</div>
-        <div class="discount-badge__right">
-          <span>на все роллетные шкафы</span> при оформлении заказа онлайн
+        <div class="discount-badge__slider swiper">
+          <div class="discount-badge__slides swiper-wrapper">
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-10%</div>
+              <div class="discount-badge__right">
+                <span>на все роллетные шкафы</span> при оформлении заказа онлайн
+              </div>
+            </div>
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-12%</div>
+              <div class="discount-badge__right">
+                <span>на УСЛУГИ ДОСТАВКИ И УСТАНОВКИ</span> при оформлении
+                заказа онлайн
+              </div>
+            </div>
+            <div class="discount-badge__slide swiper-slide">
+              <div class="discount-badge__left">-15%</div>
+              <div class="discount-badge__right">
+                <span>на ВСЕ ДОПОЛНИТЕЛЬНЫЕ ТОВАРЫ И УСЛУГИ</span> при
+                оформлении заказа онлайн
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <a class="big-btn" href="#">
+      <a class="big-btn big-btn--ml-a" href="#">
         <span>КАТАЛОГ РОЛЛЕТНЫХ ШКАФОВ</span>
         <small>оформите заказ из предложенных вариантов</small>
       </a>
@@ -791,6 +840,7 @@
       <a class="header__logo logo" href="#">
         <img src="images/logo.png" alt="Логотип" />
       </a>
+
       <a class="header__logo-dark" href="#">
         <img src="images/logo-dark.png" width="180" alt="Логотип" />
       </a>
@@ -807,17 +857,19 @@
       <div class="header__tools">
         <a class="header__phone" href="tel:+74951250598">
           +7 (495) 125-05-98
-
-          <span></span>
         </a>
-        <a class="header__cart" href="#">
-          <svg>
-            <use xlink:href="images/sprite.svg#cart"></use>
-          </svg>
+        
+        <a
+          class="header__cart header__cart--white"
+          href="#"
+          aria-label="Корзина"
+        >
+          <span class="header__cart-left"></span>
+          <span class="header__cart-right"></span>
         </a>
       </div>
     </nav>
-    
+
     <div class="header__location">
       <div class="dropdown" data-dropdown>
         <span>Выбор города</span>
@@ -889,7 +941,7 @@
     <ul class="hero__slides swiper-wrapper">
       <li
         class="hero__slide swiper-slide"
-        style="background-image: url('images/content/hero-slider/1.jpg')"
+        style="background-image: url('images/content/hero-slider/slider/1.jpg')"
       >
         <div class="container">
           <div class="hero__offer">
@@ -903,14 +955,15 @@
         </div>
       </li>
       <li
-        class="hero__slide swiper-slide"
-        style="background-image: url('images/content/hero-slider/1.jpg')"
+        class="hero__slide hero__slide--second swiper-slide"
+        style="background-image: url('images/content/hero-slider/slider/2.jpg')"
       >
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              Шкаф роллетный в парикнг, квартиру
-              <span> или загородный дом</span>
+              <span> НиКакого общения!</span>
+              -10% на расчет через калькулятор и оплату через <br />
+              сайт без замера в день обращения
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -918,14 +971,45 @@
         </div>
       </li>
       <li
-        class="hero__slide swiper-slide"
-        style="background-image: url('images/content/hero-slider/1.jpg')"
+        class="hero__slide hero__slide--third swiper-slide"
+        style="background-image: url('images/content/hero-slider/slider/3.jpg')"
       >
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              Шкаф роллетный в парикнг, квартиру
-              <span> или загородный дом</span>
+              -15% на ВСЕ дополнительные аксесуары <br />
+              при одновременном заказе с изделием <br />
+              при олпате онлайн без замера в день обращения
+            </h2>
+
+            <a class="hero__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide hero__slide--fourth swiper-slide"
+        style="background-image: url('images/content/hero-slider/slider/4.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h2 class="hero__title">
+              -15% на онлайн оплату и самовывоз <br />
+              изделия со склада
+            </h2>
+
+            <a class="hero__link" href="#">подробнее</a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide hero__slide--fifth swiper-slide"
+        style="background-image: url('images/content/hero-slider/slider/5.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h2 class="hero__title">
+              <span>Ничего лишнего только полки!</span> 10 типовых констуркций
+              по уникальным ценам с полками до 2,5 метров
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -1059,6 +1143,9 @@
         </div>
         <a class="calculation__btn btn btn--white" href="#">
           Рассчитать стоимость
+
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
         </a>
       </div>
     </div>
@@ -1146,7 +1233,11 @@
             требованиям на заказ
           </p>
         </div>
-        <button class="terms__btn btn btn--white btn-individual">ОФОРМИТЬ ЗАЯВКУ</button>
+        <button class="terms__btn btn btn--white btn-individual">
+          ОФОРМИТЬ ЗАЯВКУ
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
+        </button>
       </div>
     </div>
   </div>
@@ -1234,7 +1325,12 @@
             согласовываются отдельно.
           </p>
         </div>
-        <a class="terms__btn btn btn--white" href="#">Перейти в каталог</a>
+        <a class="terms__btn btn btn--white" href="#"
+          >Перейти в каталог
+
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1341,6 +1437,8 @@
         </div>
         <button class="certification__btn btn btn--white btn-certification">
           подробнее
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
         </button>
       </div>
     </div>
@@ -1447,7 +1545,12 @@
             10 типовых констуркций по уникальным ценам с полками до 2,5 метров.
           </p>
         </div>
-        <a class="standart__btn btn btn--white" href="#">Перейти в каталог</a>
+        <a class="standart__btn btn btn--white" href="#"
+          >Перейти в каталог
+
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1549,7 +1652,12 @@
             изделием при олпате онлайн без замера в день обращения
           </p>
         </div>
-        <a class="accessories__btn btn btn--white" href="#">Подробнее</a>
+        <a class="accessories__btn btn btn--white" href="#"
+          >Подробнее
+
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1678,6 +1786,9 @@
         </div>
         <button class="offices__btn btn btn--white btn-request">
           Заявка на сотрудничество
+
+          <span class="btn__left"></span>
+          <span class="btn__right"></span>
         </button>
       </div>
     </div>

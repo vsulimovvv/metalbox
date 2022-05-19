@@ -9,6 +9,11 @@
 
   &__logo {
     margin-left: 50px;
+
+    @include breakpointsMaxW($bp-991) {
+      margin-left: 0;
+      margin-right: 10px;
+    }
   }
 
   &__location,
@@ -20,6 +25,15 @@
     position: relative;
     max-width: 245px;
     margin: 20px auto 0 auto;
+
+    @include breakpointsMaxW($bp-991) {
+      font-size: 16px;
+      max-width: 200px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      font-size: 14px;
+      max-width: 155px;
+    }
 
     &-btn {
       color: var(--color-white);
@@ -83,8 +97,18 @@
       }
 
       &__cart {
-        background-color: var(--color-dark);
         margin-left: 10px;
+        &::after {
+          background-color: var(--color-dark);
+        }
+
+        .header__cart-right,
+        .header__cart-left {
+          &::after,
+          &::before {
+            background-color: var(--color-dark);
+          }
+        }
       }
 
       //  ! > Hover для всего
@@ -107,10 +131,6 @@
         &::after {
           display: none;
         }
-      }
-
-      &__cart {
-        background-color: var(--color-dark);
       }
 
       &__logo-dark {
@@ -173,7 +193,7 @@
         &__wrapper {
           border-bottom: 1px solid #a6a5a4;
         }
-        
+
         &__logo {
           display: block;
         }
@@ -233,13 +253,6 @@
     display: flex;
     align-items: center;
     gap: 20px;
-
-    @include breakpointsMaxW(1100px) {
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      display: none;
-    }
   }
 
   &__phone {
@@ -251,6 +264,11 @@
     overflow: hidden;
     padding: 5px;
     border-radius: 3px;
+    transition: 300ms ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     &::after {
       @include elDef();
@@ -264,20 +282,153 @@
 
       transform: translateY(-50%) translateX(-101%);
     }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
   }
 
   &__cart {
-    width: 25px;
-    height: 25px;
-    transition: 200ms ease;
-    padding: 5px;
-    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+    transition: 300ms ease;
+    position: relative;
+    overflow: hidden;
 
-    @include maskImage(url('../images/cart.png'), contain);
-    background-color: var(--color-dark);
+    &::after {
+      @include elDef();
+      width: 25px;
+      height: 25px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include maskImage(url('../images/cart.png'), contain);
+      background-color: var(--color-dark);
+    }
+
+    &::before {
+      @include elDef();
+      width: 35px;
+      height: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background-color: hsla(0, 0%, 87%, 0.3);
+      transition: 300ms ease;
+    }
+
+    &-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        @include elDef();
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-white);
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: 300ms ease;
+      }
+
+      &::before {
+        @include elDef();
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-white);
+        left: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transition: 300ms ease;
+      }
+    }
+
+    &-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        @include elDef();
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-white);
+        bottom: 0;
+        right: 0;
+        transform: scaleX(0);
+        transition: 300ms ease;
+      }
+
+      &::before {
+        @include elDef();
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-white);
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transition: 300ms ease;
+      }
+    }
+
+    &--dark {
+      .header__cart-left {
+        &::after {
+          background-color: var(--color-dark);
+        }
+
+        &::before {
+          background-color: var(--color-dark);
+        }
+      }
+
+      .header__cart-right {
+        &::after {
+          background-color: var(--color-dark);
+        }
+
+        &::before {
+          background-color: var(--color-dark);
+        }
+      }
+    }
+
+    &:hover {
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .header__cart-left {
+        &::after {
+          transform: scaleX(1);
+        }
+
+        &::before {
+          transform: scaleY(1);
+        }
+      }
+
+      .header__cart-right {
+        &::after {
+          transform: scaleX(1);
+        }
+
+        &::before {
+          transform: scaleY(1);
+        }
+      }
+    }
 
     &--white {
-      background-color: var(--color-white);
+      &::after {
+        background-color: var(--color-white);
+      }
     }
   }
 
@@ -294,6 +445,12 @@
     padding-right: 70px;
     border-radius: 3px;
 
+    @include breakpointsMaxW($bp-991) {
+      width: 30px;
+      padding: 0;
+      margin-right: 15px;
+    }
+
     &::after {
       position: absolute;
       content: 'Меню';
@@ -302,6 +459,10 @@
       transform: translateY(-50%);
       font-size: 18px;
       color: var(--color-white);
+
+      @include breakpointsMaxW($bp-991) {
+        display: none;
+      }
     }
 
     &-line {
@@ -356,15 +517,6 @@
         color: var(--color-dark);
       }
 
-      &__cart {
-        fill: var(--color-dark);
-
-        &:hover {
-          fill: var(--color-white);
-          background-color: var(--color-dark);
-        }
-      }
-
       &__toggle {
         &::after {
           color: var(--color-dark);
@@ -395,10 +547,6 @@
         &::after {
           color: var(--color-dark);
         }
-      }
-
-      &__cart {
-        fill: var(--color-dark);
       }
     }
   }

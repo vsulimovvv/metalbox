@@ -5,12 +5,12 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: var(--color-dark);
+  background-color: var(--color-white);
   z-index: 11;
-  width: 400px;
+  width: 440px;
 
-  @include breakpointsMaxW($bp-991) {
-    width: 80%;
+  @include breakpointsMaxW($bp-768) {
+    width: 100%;
   }
 
   transform: translateX(-100%);
@@ -19,8 +19,6 @@
   transition: 350ms ease-in-out;
   overflow-x: auto;
 
-  @include adaptive-value('padding', 40, 20, 1);
-
   &.active {
     opacity: 1;
     visibility: visible;
@@ -28,23 +26,59 @@
     box-shadow: 0px 36px 51px 0px rgba(0, 0, 0, 0.5);
   }
 
+  &__top {
+    height: 80px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    @include adaptive-value('padding-left', 40, 20, 1);
+    @include adaptive-value('padding-right', 40, 20, 1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   &__logo {
     margin-bottom: 40px;
   }
 
   &__close {
-    position: absolute;
     display: block;
-    top: 22px;
-    right: 20px;
-    width: 28px;
-    height: 28px;
-    fill: var(--color-white);
+    width: 20px;
+    height: 20px;
+    fill: var(--color-dark);
     z-index: 999;
+  }
+
+  &__body {
+    @include adaptive-value('padding-left', 40, 20, 1);
+    @include adaptive-value('padding-right', 40, 20, 1);
+    padding-bottom: 20px;
   }
 
   &__bottom {
     margin-top: auto;
+    @include adaptive-value('padding-left', 40, 20, 1);
+    @include adaptive-value('padding-right', 40, 20, 1);
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .socials {
+      &__link {
+        transition: 200ms ease;
+        background-color: #898989;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+
+          &::after {
+            background-color: var(--color-white);
+          }
+        }
+      }
+    }
   }
 
   &__item {
@@ -55,10 +89,10 @@
 
   &__link {
     display: block;
-    color: var(--color-white);
+    color: var(--color-dark);
     font-size: 18px;
     width: 100%;
-    
+
     &:hover {
       span {
         &::after {
@@ -77,7 +111,7 @@
         height: 1px;
         left: 0;
         bottom: -3px;
-        background-color: var(--color-white);
+        background-color: var(--color-dark);
         transform-origin: left;
         transform: scaleX(0);
         transition: 200ms ease;
