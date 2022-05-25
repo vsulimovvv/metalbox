@@ -143,6 +143,7 @@
     .big-btn,
     .discount-badge {
       display: flex;
+      margin: 0 auto;
 
       @include breakpointsMaxW($bp-991) {
         display: none;
@@ -547,6 +548,36 @@
         &::after {
           color: var(--color-dark);
         }
+      }
+    }
+  }
+
+  &--catalog {
+    .header__cart {
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.header.scroll-header.header--catalog {
+  .header__cart {
+    background-color: transparent !important;
+    &::after {
+      background-color: var(--color-white);
+    }
+
+    .header__cart-left {
+      &::after,
+      &::before {
+        background-color: var(--color-white);
+      }
+    }
+    .header__cart-right {
+      &::after,
+      &::before {
+        background-color: var(--color-white);
       }
     }
   }

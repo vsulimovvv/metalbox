@@ -790,6 +790,12 @@ svg {
   color: var(--color-white);
   width: calc(100% - 10px);
 
+  &--upper {
+    text-transform: uppercase;
+    padding: 0px 10px;
+    justify-content: center;
+  }
+
   &--fd-c {
     flex-direction: column;
     align-items: flex-start;
@@ -801,6 +807,7 @@ svg {
     .cart-total {
       &__text {
         font-size: 13px;
+        text-transform: uppercase;
       }
       &__total {
         font-size: 15px;
@@ -1548,5 +1555,18 @@ input[type='file'] {
         transform: translateY(-50%) rotate(180deg);
       }
     }
+  }
+}
+
+.total-row {
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  &__price {
+    font-weight: 400;
   }
 }

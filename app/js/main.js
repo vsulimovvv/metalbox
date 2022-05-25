@@ -62,6 +62,36 @@ window.addEventListener('DOMContentLoaded', () => {
   activeClass('.checkout-box__box', 'checkout-box__box--active');
   activeClass('.cart-top__item', 'cart-top__item--active');
 
+  (function changeBtn() {
+    const parent = document.querySelector('.checkout__wrapper');
+
+    if (parent) {
+      const checkoutBox = parent.querySelectorAll('.checkout-box__box');
+      const cartRightBtn = parent.querySelector('.cart-right__btn');
+
+      checkoutBox.forEach((el) => {
+        el.addEventListener('click', (e) => {
+          if (el.classList.contains('checkout-box__box--active')) {
+            if (
+              el.querySelector('.checkout-box__heading').textContent ===
+                'Наличными (в офисе)' ||
+              el.querySelector('.checkout-box__heading').textContent ===
+                'По терминалу (в офисе)'
+            ) {
+              cartRightBtn.innerText = 'оформить заказ';
+            }
+            if (
+              el.querySelector('.checkout-box__heading').textContent ===
+              'Онлайн по QR'
+            ) {
+              cartRightBtn.innerText = 'перейти к оплате';
+            }
+          }
+        });
+      });
+    }
+  })();
+
   (function activeClassColor() {
     const check = document.querySelectorAll('.colors__item');
     const colorText = document.querySelector('.colors__text');
@@ -186,14 +216,14 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       speed: 1000,
 
-      effect: "creative",
+      effect: 'creative',
       creativeEffect: {
         prev: {
           shadow: false,
-          translate: ["0%", 0, -1],
+          translate: ['0%', 0, -1],
         },
         next: {
-          translate: ["100%", 0, 0],
+          translate: ['100%', 0, 0],
         },
       },
 
