@@ -100,6 +100,12 @@
     }
   }
 
+  &--cooperation {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+  }
+
   &--cart {
     .popup {
       &__container {
@@ -279,5 +285,367 @@
         }
       }
     }
+  }
+
+  &--learn-more {
+    .more-block {
+      &__title {
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #2f2f2f;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__slider {
+        margin-bottom: 20px;
+        height: 290px;
+      }
+
+      &__slide {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+        img {
+          @include img(cover);
+        }
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 300;
+        color: #313131;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      &__btn {
+        width: 175px;
+        height: 50px;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+
+        &::after {
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-white);
+          @include maskImage(url('../images/icons/chevron-big.svg'), contain);
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+      .swiper-button-next {
+        &::after {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+
+    .popup {
+      &__container {
+        padding: 40px 0 20px;
+      }
+    }
+  }
+  &--video {
+    .more-block {
+      &__title {
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #2f2f2f;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__slider {
+        height: 290px;
+      }
+
+      &__slide {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+        img {
+          @include img(cover);
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+
+        &::after {
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-white);
+          @include maskImage(url('../images/icons/chevron-big.svg'), contain);
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+      .swiper-button-next {
+        &::after {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+
+    .popup {
+      &__container {
+        padding: 40px 0 0 0;
+      }
+    }
+  }
+
+  &--projects {
+    .popup {
+      &__container {
+        max-width: 950px;
+      }
+    }
+
+    .projects-block {
+      &__title {
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #2f2f2f;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 15px;
+
+        @include breakpointsMaxW($bp-991) {
+          grid-template-columns: repeat(3, minmax(auto, 205px));
+          justify-content: center;
+        }
+
+        @include breakpointsMaxW($bp-768) {
+          grid-template-columns: repeat(2, minmax(auto, 205px));
+        }
+
+        @include breakpointsMaxW($bp-576) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px 10px;
+        }
+      }
+
+      .projects-card {
+        max-width: 205px;
+        width: 100%;
+        transition: 500ms ease;
+
+        &__top {
+          width: 100%;
+          height: 145px;
+          margin-bottom: 14px;
+          display: block;
+          transition: 400ms ease;
+
+          @include adaptive-value('height', 145, 110, 1);
+          &:hover {
+            opacity: 0.8;
+          }
+
+          img {
+            @include img(cover);
+          }
+        }
+
+        &__title {
+          font-size: 16px;
+          line-height: 1.2;
+          font-weight: 500;
+          color: #2f2f2f;
+          margin-bottom: 8px;
+          @include adaptive-value('font-size', 16, 14, 1);
+        }
+
+        &__address {
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 300;
+          color: #4a4a4a;
+          @include adaptive-value('font-size', 12, 10, 1);
+        }
+      }
+    }
+  }
+
+  &--reviews {
+    .popup {
+      &__container {
+        max-width: 570px;
+      }
+    }
+
+    .reviews-block {
+      &__title {
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #2f2f2f;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__slider {
+        min-width: 0;
+        height: 100%;
+        max-height: 515px;
+        max-width: 620px;
+        width: 100%;
+
+        @include breakpointsMaxW($bp-991) {
+          margin: 0 auto;
+        }
+      }
+
+      .slider-thumbs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 10px;
+        height: 100%;
+        min-width: 0;
+        min-height: 485px;
+        position: relative;
+        background-color: var(--color-white);
+        border-radius: 5px;
+
+        &__main {
+          max-width: 100%;
+          height: 100%;
+          min-width: 0;
+
+          .swiper-slide {
+            border-radius: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .slider-thumbs__img {
+              width: 99%;
+              height: 99%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #d7d7d7;
+
+              img {
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+
+                object-fit: contain;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+
+        &__nav {
+          &-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            margin: auto;
+            gap: 10px;
+
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: relative !important;
+              background-color: transparent;
+
+              left: 0 !important;
+              right: 0 !important;
+              bottom: 0 !important;
+              top: 30px !important;
+              margin-top: 0 !important;
+              transform: translateY(-50%) rotate(90deg) !important;
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+
+        &__nav-wrap {
+          flex-shrink: 0;
+          width: 100%;
+          height: 400px;
+          min-width: 0;
+          position: relative;
+
+          .swiper-slide {
+            cursor: pointer;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 95px;
+            border-radius: 10px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+
+            &-thumb-active {
+              border: 2px solid var(--color-accent);
+            }
+
+            img {
+              @include img(contain);
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    @include maskImage(url('../images/icons/play.svg'), contain);
+    background-color: var(--color-white);
+    z-index: 5;
   }
 }

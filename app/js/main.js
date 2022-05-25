@@ -177,6 +177,51 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', scrollActive);
 
+  (function playVideos() {
+    const videos = document.querySelectorAll('.video');
+
+    videos.forEach((video) => {
+      if (video) {
+        video.addEventListener('mouseover', (e) => {
+          if (e.target.classList.contains('video__img')) {
+            e.target.play();
+            video.querySelector('.video__btn-play').style.display = 'none';
+          }
+        });
+
+        video.addEventListener('mouseout', (e) => {
+          if (e.target.classList.contains('video__img')) {
+            e.target.pause();
+            video.querySelector('.video__btn-play').style.display = 'block';
+          }
+        });
+      }
+    });
+  })();
+
+  // * ==== Single Product
+  (function verticalSlider() {
+    let mySwiperNav = new Swiper('#slider-nav', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      direction: 'vertical',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: document.querySelector('.slider-thumbs__nav .swiper-button-next'),
+        prevEl: document.querySelector('.slider-thumbs__nav .swiper-button-prev'),
+      },
+    });
+
+    let mySwiper = new Swiper('#slider-main', {
+      spaceBetween: 10,
+      loopedSlides: 4,
+      thumbs: {
+        swiper: mySwiperNav,
+      },
+    });
+  })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.product__slider');
@@ -193,6 +238,20 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+  // * ===== Slider
+  (function slider() {
+    const sliderEl = document.querySelectorAll('.more-block__slider');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        loop: true,
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev'),
+        },
+      });
+    });
+  })();
+
   // * ===== Slider
   (function sliderDiscount() {
     const sliderEl = document.querySelector('.discount-badge__slider');
