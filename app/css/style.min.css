@@ -6564,6 +6564,12 @@ input[type=file] {
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 30px;
 }
+@media (max-width: 767.98px) {
+  .checkout-box__row--point {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .checkout-box__row--double {
   -ms-grid-columns: minmax(auto, 350px) minmax(auto, 210px);
   grid-template-columns: minmax(auto, 350px) minmax(auto, 210px);

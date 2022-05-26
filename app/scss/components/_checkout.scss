@@ -130,6 +130,10 @@
     &--point {
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: 30px;
+
+      @include breakpointsMaxW($bp-768){
+        grid-template-columns: 1fr;
+      }
     }
 
     &--double {
