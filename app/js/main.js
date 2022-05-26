@@ -273,10 +273,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
       loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
       speed: 1000,
 
       effect: 'creative',
@@ -464,4 +464,5 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   someTabs('.tabs', '.tabs-btn', '.tabs-content', 'tabs-btn--active');
+  someTabs('.tabs-map', '.tabs-map-btn', '.tabs-map-content', 'tabs-map-btn--active');
 });

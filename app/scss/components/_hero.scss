@@ -94,15 +94,51 @@
     justify-content: center;
 
     &--second {
-      font-family: $EuclidCircularA;
-
       .hero__title {
-        font-family: $EuclidCircularA;
-
         font-weight: 300;
+        &-left {
+          font-size: 16px;
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+          &::after {
+            height: 100%;
+          }
+        }
+
+        &-right {
+          @include breakpointsMaxW($bp-container-big) {
+            font-size: 28px;
+
+            font-size: calc(
+              25px + (35 - 25) * ((100vw - 991px) / (1240 - 991))
+            );
+          }
+
+          @include breakpointsMaxW($bp-991) {
+            font-size: 20px;
+          }
+          @include breakpointsMaxW($bp-768) {
+            font-size: 16px;
+          }
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+        }
+
+        &-percent {
+          font-size: 50px;
+          line-height: 1.2;
+
+          @include adaptive-value('font-size', 50, 10, 1);
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 20px;
+          }
+        }
 
         span {
-          font-weight: 500;
           margin-bottom: 10px;
         }
       }
@@ -110,29 +146,129 @@
 
     &--third {
       .hero__title {
-        font-family: $EuclidCircularA;
         font-weight: 300;
+
+        &-left {
+          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          &::after {
+            @include breakpointsMaxW($bp-768) {
+              height: 100%;
+            }
+          }
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+        }
+
+        &-right {
+          @include breakpointsMaxW($bp-container-big) {
+            font-size: 28px;
+
+            font-size: calc(
+              25px + (35 - 25) * ((100vw - 991px) / (1240 - 991))
+            );
+          }
+
+          @include breakpointsMaxW($bp-991) {
+            font-size: calc(17px + (23 - 17) * ((100vw - 768px) / (991 - 768)));
+          }
+          @include breakpointsMaxW($bp-768) {
+            font-size: 16px;
+          }
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+        }
+
+        &-percent {
+          font-size: 50px;
+          line-height: 1.2;
+
+          @include adaptive-value('font-size', 50, 10, 1);
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 22px;
+            margin-bottom: 5px;
+          }
+        }
+
+        span {
+          margin-bottom: 10px;
+        }
       }
     }
 
     &--fourth {
       .hero__title {
-        font-family: $EuclidCircularA;
         font-weight: 300;
-      }
-    }
 
-    &--fifth {
-      font-family: $EuclidCircularA;
+        &-left {
+          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
 
-      .hero__title {
-        font-family: $EuclidCircularA;
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+        }
 
-        font-weight: 300;
+        &-right {
+          @include breakpointsMaxW($bp-container-big) {
+            font-size: 28px;
+
+            font-size: calc(
+              25px + (35 - 25) * ((100vw - 991px) / (1240 - 991))
+            );
+          }
+
+          @include breakpointsMaxW($bp-991) {
+            font-size: calc(17px + (23 - 17) * ((100vw - 768px) / (991 - 768)));
+          }
+          @include breakpointsMaxW($bp-768) {
+            font-size: 16px;
+          }
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 14px;
+          }
+        }
+
+        &-percent {
+          font-size: 50px;
+          line-height: 1.2;
+
+          @include adaptive-value('font-size', 50, 10, 1);
+
+          @include breakpointsMaxW($bp-576) {
+            font-size: 22px;
+            margin-bottom: 5px;
+          }
+        }
 
         span {
-          font-weight: 500;
           margin-bottom: 10px;
+        }
+      }
+    }
+    &--fifth {
+      .hero__title {
+        font-family: $EuclidCircularA;
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.5;
+        @include adaptive-value('font-size', 35, 13, 1);
+        span {
+          font-weight: 300;
+        }
+
+        @include breakpointsMaxW($bp-576){
+          font-size: 16px;
         }
       }
     }
@@ -154,18 +290,57 @@
     font-weight: 400;
     text-transform: uppercase;
     color: #ffffff;
-    text-align: center;
+    // text-align: center;
     margin-bottom: 30px;
+    gap: 66px;
 
-    @include breakpointsMaxW($bp-991) {
-      width: 100%;
-      font-size: 26px;
+    display: flex;
+    align-items: center;
+
+    &-percent {
+      font-family: $EuclidFlex;
     }
+
     @include breakpointsMaxW($bp-768) {
-      font-size: 24px;
+      gap: 30px;
+      font-size: 23px;
     }
+
     @include breakpointsMaxW($bp-576) {
-      font-size: 22px;
+      font-size: 16px;
+      gap: 20px;
+    }
+
+    &-left {
+      text-align: right;
+      position: relative;
+
+      &::after {
+        @include elDef();
+        width: 4px;
+        height: calc(100% - 10px);
+        background-color: var(--color-white);
+        top: 50%;
+        transform: translateY(-50%);
+        right: -35px;
+
+        @include breakpointsMaxW($bp-991) {
+          width: 3px;
+        }
+        @include breakpointsMaxW($bp-768) {
+          width: 2px;
+          right: -15px;
+        }
+
+        @include breakpointsMaxW($bp-576) {
+          width: 2px;
+          right: -12px;
+        }
+      }
+    }
+
+    &-right {
+      text-align-last: left;
     }
 
     span {
@@ -181,5 +356,9 @@
     font-weight: 300;
     text-decoration: underline;
     color: #ffffff;
+
+    @include breakpointsMaxW($bp-576) {
+      font-size: 16px;
+    }
   }
 }

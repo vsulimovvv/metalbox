@@ -127,6 +127,11 @@
       }
     }
 
+    &--point {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 30px;
+    }
+
     &--double {
       grid-template-columns: minmax(auto, 350px) minmax(auto, 210px);
       justify-content: space-between;
@@ -362,5 +367,21 @@
     height: 435px;
     border-radius: 3px;
     @include adaptive-value('height', 435, 250, 1);
+  }
+}
+
+.tabs-map {
+  .checkout-box__btn-tab {
+    &.tabs-map-btn--active {
+      border-color: black;
+    }
+  }
+
+  .tabs-map-content {
+    display: none;
+    &.active {
+      display: block;
+      animation: opacity-visibility 700ms ease forwards;
+    }
   }
 }
