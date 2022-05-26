@@ -2509,13 +2509,6 @@ input[type=file] {
 .popup--request .form-submit__input {
   padding: 13px 20px;
 }
-.popup--cooperation {
-  opacity: 1;
-  visibility: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 .popup--cart .popup__container {
   max-width: 410px;
 }
@@ -2700,6 +2693,9 @@ input[type=file] {
     display: inline;
   }
 }
+.popup--learn-more .popup__container {
+  max-width: 535px;
+}
 .popup--learn-more .more-block__title {
   font-size: 25px;
   line-height: 1.2;
@@ -2731,6 +2727,12 @@ input[type=file] {
   color: #313131;
   text-align: center;
   margin-bottom: 20px;
+  width: calc(100% - 100px);
+}
+@media (max-width: 767.98px) {
+  .popup--learn-more .more-block__text {
+    width: calc(100% - 40px);
+  }
 }
 .popup--learn-more .more-block__btns {
   display: -webkit-box;
@@ -2747,6 +2749,14 @@ input[type=file] {
 .popup--learn-more .more-block__btn {
   width: 175px;
   height: 50px;
+  line-height: 1;
+  padding: 15px;
+}
+@media (max-width: 767.98px) {
+  .popup--learn-more .more-block__btn {
+    width: 150px;
+    padding: 15px;
+  }
 }
 .popup--learn-more .more-block .swiper-button-prev,
 .popup--learn-more .more-block .swiper-button-next {
@@ -2773,6 +2783,96 @@ input[type=file] {
 .popup--learn-more .popup__container {
   padding: 40px 0 20px;
 }
+.popup--learn-more-without-btns .popup__container {
+  max-width: 535px;
+}
+.popup--learn-more-without-btns .more-block__title {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #2f2f2f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.popup--learn-more-without-btns .more-block__top {
+  margin-bottom: 20px;
+}
+.popup--learn-more-without-btns .more-block__top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popup--learn-more-without-btns .more-block__text {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #313131;
+  text-align: center;
+  margin-bottom: 20px;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .popup--learn-more-without-btns .more-block__text {
+    width: calc(100% - 40px);
+  }
+}
+.popup--learn-more-without-btns .more-block__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+.popup--learn-more-without-btns .more-block__btn {
+  width: 175px;
+  height: 50px;
+  line-height: 1;
+  padding: 15px;
+}
+@media (max-width: 767.98px) {
+  .popup--learn-more-without-btns .more-block__btn {
+    width: 150px;
+    padding: 15px;
+  }
+}
+.popup--learn-more-without-btns .more-block .swiper-button-prev,
+.popup--learn-more-without-btns .more-block .swiper-button-next {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+.popup--learn-more-without-btns .more-block .swiper-button-prev::after,
+.popup--learn-more-without-btns .more-block .swiper-button-next::after {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  -webkit-mask: url("../images/icons/chevron-big.svg") no-repeat center/contain;
+          mask: url("../images/icons/chevron-big.svg") no-repeat center/contain;
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+      -ms-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0);
+}
+.popup--learn-more-without-btns .more-block .swiper-button-next::after {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+      -ms-transform: translate(-50%, -50%) rotate(180deg);
+          transform: translate(-50%, -50%) rotate(180deg);
+}
+.popup--learn-more-without-btns .popup__container {
+  padding: 40px 0 20px;
+}
+.popup--video .popup__container {
+  max-width: 700px;
+}
+.popup--video .more-block {
+  min-height: 400px;
+}
 .popup--video .more-block__title {
   font-size: 25px;
   line-height: 1.2;
@@ -2782,7 +2882,7 @@ input[type=file] {
   margin-bottom: 30px;
 }
 .popup--video .more-block__slider {
-  height: 290px;
+  height: 100%;
 }
 .popup--video .more-block__slide {
   -webkit-box-sizing: border-box;
@@ -3551,6 +3651,9 @@ input[type=file] {
           ((100vw - 375px) / 775)
       );
   }
+}
+.product-card__btn--individual {
+  line-height: 1.2;
 }
 @media (max-width: 991.98px) {
   .product-card__btn {

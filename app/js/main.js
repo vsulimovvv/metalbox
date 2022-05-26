@@ -208,8 +208,12 @@ window.addEventListener('DOMContentLoaded', () => {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       navigation: {
-        nextEl: document.querySelector('.slider-thumbs__nav .swiper-button-next'),
-        prevEl: document.querySelector('.slider-thumbs__nav .swiper-button-prev'),
+        nextEl: document.querySelector(
+          '.slider-thumbs__nav .swiper-button-next'
+        ),
+        prevEl: document.querySelector(
+          '.slider-thumbs__nav .swiper-button-prev'
+        ),
       },
     });
 
@@ -414,6 +418,12 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.btn-request', '.popup--request', '.popup__close');
     bindModal('.btn-individual', '.popup--individual', '.popup__close');
     bindModal('.btn-certification', '.popup--сertification', '.popup__close');
+    bindModal('.btn-more', '.popup--learn-more', '.popup__close');
+    bindModal('.btn-more-2', '.popup--learn-more-without-btns', '.popup__close');
+    bindModal('.btn-reviews', '.popup--reviews', '.popup__close');
+    bindModal('.btn-photos', '.popup--projects', '.popup__close');
+    bindModal('.btn-video', '.popup--video', '.popup__close');
+    bindModal('.btn-cooperation', '.popup--cooperation', '.popup__close');
   })();
 
   // * ===== Toggle Tabs

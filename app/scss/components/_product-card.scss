@@ -131,6 +131,10 @@
     justify-content: center;
     @include adaptive-value('font-size', 12, 8, 1);
 
+    &--individual{
+      line-height: 1.2;
+    }
+
     @include breakpointsMaxW($bp-991) {
       bottom: 15px;
       left: 15px;
