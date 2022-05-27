@@ -39,6 +39,11 @@ body {
   &--1280 {
     max-width: 1310px;
   }
+
+  &--100 {
+    max-width: 100%;
+    padding-right: 40px;
+  }
 }
 
 .logo {

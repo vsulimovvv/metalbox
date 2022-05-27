@@ -35,8 +35,10 @@
     width: 100%;
     min-width: 0;
     position: relative;
-    max-width: 780px;
+    // max-width: 780px;
+    max-width: max(880px, calc((150%) / 2));
     position: absolute;
+    height: 100%;
     z-index: -1;
 
     @include breakpointsMaxW(1310px) {
@@ -89,6 +91,13 @@
 
   &__slider {
     width: 100%;
+    height: 100%;
+    max-height: 1000px;
+
+    .swiper-slide {
+      max-width: 100%;
+      height: 100%;
+    }
 
     @include breakpointsMaxW($bp-991) {
       max-width: 880px;
@@ -109,7 +118,7 @@
   }
 
   &__img {
-    max-width: 700px;
+    max-width: 100%;
     height: 100%;
 
     @include breakpointsMaxW($bp-991) {
@@ -127,10 +136,12 @@
     height: calc(100vh - 130px);
     padding-left: 930px;
     z-index: 1;
+    padding-left: max(880px, calc((150%) / 2));
 
     @include breakpointsMaxW(1310px) {
+      min-width: 350px;
       padding-left: calc(
-        650px + (880 - 650) * ((100vw - 991px) / (1310 - 991))
+        580px + (880 - 580) * ((100vw - 991px) / (1310 - 991))
       );
     }
 
@@ -388,7 +399,7 @@
     padding-left: 62px;
     justify-content: flex-start;
 
-    .checkbox-box__checkbox{
+    .checkbox-box__checkbox {
       width: 100px;
     }
 
