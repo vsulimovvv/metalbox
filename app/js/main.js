@@ -230,10 +230,10 @@ window.addEventListener('DOMContentLoaded', () => {
   (function slider() {
     const sliderEl = document.querySelector('.product__slider');
     new Swiper(sliderEl, {
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       loop: true,
       grabCursor: true,
       navigation: {
