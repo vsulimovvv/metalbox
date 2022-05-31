@@ -45,19 +45,17 @@
       </li>
       <li class="catalog__item">
         <article class="product-card">
-          <a class="product-card__top" href="#">
+          <a class="product-card__top">
             <div class="video">
-              <button
-                class="video__btn-play"
-                type="button"
-                aria-label="Запустить видео"
-              ></button>
               <video
-                class="video__img"
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
                 preload="none"
                 loop="1"
                 poster="images/content/products/19.jpg"
                 muted
+                data-setup="{}"
+                controls
               >
                 <source src="images/content/video.mp4" type="video/mp4" />
               </video>

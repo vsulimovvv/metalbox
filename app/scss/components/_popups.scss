@@ -286,6 +286,9 @@
 
   &--learn-more {
     .popup {
+      &__wrapper {
+        width: calc(100% - 50px);
+      }
       &__container {
         max-width: 535px;
       }
@@ -321,9 +324,10 @@
         font-weight: 300;
         color: #313131;
         text-align: center;
-        margin-bottom: 20px;
+        margin: 0 auto;
         width: calc(100% - 100px);
-        
+        margin-bottom: 20px;
+
         @include breakpointsMaxW($bp-768) {
           width: calc(100% - 40px);
         }
@@ -376,6 +380,10 @@
     .popup {
       &__container {
         max-width: 535px;
+      }
+
+      &__wrapper {
+        width: calc(100% - 50px);
       }
     }
     .more-block {
@@ -593,6 +601,59 @@
     }
   }
 
+  &--projects-videos {
+    .popup {
+      &__container {
+        max-width: 950px;
+      }
+    }
+
+    .projects-block {
+      &__title {
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #2f2f2f;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 15px;
+
+        @include breakpointsMaxW($bp-991) {
+          grid-template-columns: repeat(3, minmax(auto, 205px));
+          justify-content: center;
+        }
+
+        @include breakpointsMaxW($bp-768) {
+          grid-template-columns: repeat(2, minmax(auto, 205px));
+        }
+
+        @include breakpointsMaxW($bp-576) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px 10px;
+        }
+      }
+
+      .video {
+        position: relative;
+        width: 100%;
+        max-width: 210px;
+        height: 120px;
+
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   &--reviews {
     .popup {
       &__container {
@@ -732,23 +793,11 @@
 .video {
   width: 100%;
   height: 100%;
-  position: relative;
 
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  &__btn-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    @include maskImage(url('../images/icons/play.svg'), contain);
-    background-color: var(--color-white);
-    z-index: 5;
+    cursor: pointer;
   }
 }

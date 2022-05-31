@@ -177,29 +177,60 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', scrollActive);
 
-  (function playVideos() {
-    const videos = document.querySelectorAll('.video');
+  // (function playVideos() {
+  //   const videos = document.querySelectorAll('.video');
 
-    videos.forEach((video) => {
-      if (video) {
-        video.addEventListener('mouseover', (e) => {
-          if (e.target.classList.contains('video__img')) {
-            e.target.play();
-            video.querySelector('.video__btn-play').style.display = 'none';
-          }
-        });
+  //   videos.forEach((video) => {
+  //     if (video) {
+  //       video.addEventListener('mouseover', (e) => {
+  //         if (e.target.classList.contains('video__img')) {
+  //           e.target.play();
+  //           video.querySelector('.video__btn-play').style.display = 'none';
+  //         }
+  //       });
 
-        video.addEventListener('mouseout', (e) => {
-          if (e.target.classList.contains('video__img')) {
-            e.target.pause();
-            video.querySelector('.video__btn-play').style.display = 'block';
-          }
-        });
-      }
-    });
-  })();
+  //       video.addEventListener('mouseout', (e) => {
+  //         if (e.target.classList.contains('video__img')) {
+  //           e.target.pause();
+  //           video.querySelector('.video__btn-play').style.display = 'block';
+  //         }
+  //       });
+  //     }
+  //   });
+  // })();
 
   // * ==== Single Product
+
+  // (function playVideos() {
+  //   const videos = document.querySelectorAll('.video');
+  //   let isStart = false;
+
+  //   videos.forEach((video) => {
+  //     if (video) {
+  //       video.addEventListener('click', (e) => {
+  //         // if (e.target.classList.contains('video__img')) {
+  //         // isStart = true;
+  //         // e.target.play();
+  //         // video.querySelector('.video__btn-play').style.display = 'none';
+
+  //         if (e.target.classList.contains('video__img').paused) {
+  //           document.querySelector('.video__img').play();
+  //         } else {
+  //           // e.target.classList.contains('video__img').pause();
+  //         }
+  //         // }
+  //       });
+
+  //       // video.addEventListener('mouseout', (e) => {
+  //       //   if (e.target.classList.contains('video__img')) {
+  //       //     e.target.pause();
+  //       //     video.querySelector('.video__btn-play').style.display = 'block';
+  //       //   }
+  //       // });
+  //     }
+  //   });
+  // })();
+
   (function verticalSlider() {
     let mySwiperNav = new Swiper('#slider-nav', {
       slidesPerView: 'auto',
@@ -419,11 +450,20 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.btn-individual', '.popup--individual', '.popup__close');
     bindModal('.btn-certification', '.popup--сertification', '.popup__close');
     bindModal('.btn-more', '.popup--learn-more', '.popup__close');
-    bindModal('.btn-more-2', '.popup--learn-more-without-btns', '.popup__close');
+    bindModal(
+      '.btn-more-2',
+      '.popup--learn-more-without-btns',
+      '.popup__close'
+    );
     bindModal('.btn-reviews', '.popup--reviews', '.popup__close');
     bindModal('.btn-photos', '.popup--projects', '.popup__close');
-    bindModal('.btn-video', '.popup--video', '.popup__close');
+    // bindModal('.btn-video', '.popup--video', '.popup__close');
     bindModal('.btn-cooperation', '.popup--cooperation', '.popup__close');
+    bindModal(
+      '.btn-video',
+      '.popup--projects-videos',
+      '.popup__close'
+    );
   })();
 
   // * ===== Toggle Tabs
@@ -464,5 +504,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   someTabs('.tabs', '.tabs-btn', '.tabs-content', 'tabs-btn--active');
-  someTabs('.tabs-map', '.tabs-map-btn', '.tabs-map-content', 'tabs-map-btn--active');
+  someTabs(
+    '.tabs-map',
+    '.tabs-map-btn',
+    '.tabs-map-content',
+    'tabs-map-btn--active'
+  );
 });

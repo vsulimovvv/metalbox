@@ -131,7 +131,7 @@
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: 30px;
 
-      @include breakpointsMaxW($bp-768){
+      @include breakpointsMaxW($bp-768) {
         grid-template-columns: 1fr;
       }
     }
@@ -377,7 +377,11 @@
 .tabs-map {
   .checkout-box__btn-tab {
     &.tabs-map-btn--active {
-      border-color: black;
+      border-color: var(--color-dark);
+
+      &::after {
+        background-color: var(--color-dark);
+      }
     }
   }
 

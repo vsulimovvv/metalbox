@@ -38,6 +38,8 @@
   href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
 />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.0/video-js.min.css" integrity="sha512-D/n19dhr+LY8HOoGuybX+bJYsZOFKb0r7YpAWBMPg5Hnke6lxdHl6q21d7qiwIsMgdSnBG9pSMQlwTtZ+6ISmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- Custom Link -->
 <link rel="stylesheet" href="css/style.min.css" />
 
@@ -929,6 +931,151 @@
   </div>
 </div>
 
+<div class="popup popup--projects-videos">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="projects-block">
+        <h2 class="projects-block__title">Видеогалерея</h2>
+        <ul class="projects-block__list">
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="popup popup--projects">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
@@ -1634,69 +1781,48 @@
             </div>
 
             <div class="tabs-content">
-              <div class="tabs__text">
-                <p>
-                  Измените размеры изделия на нужные Вам и выберите требуемую
-                  комплектацию.
-                </p>
-                <p>Стоимость пересчитается"</p>
-              </div>
-
-              <div class="tabs__resizes">
-                <div class="tabs__resize">
-                  <span>Ширина</span>
-                  <input
-                    class="tabs__resize-input"
-                    type="text"
-                    value="2200 мм"
-                  />
-                </div>
-                <div class="tabs__resize">
-                  <span>Высота</span>
-                  <input
-                    class="tabs__resize-input"
-                    type="text"
-                    value="2500 мм"
-                  />
-                </div>
-                <div class="tabs__resize">
-                  <span>Глубина</span>
-                  <input
-                    class="tabs__resize-input"
-                    type="text"
-                    value="600 мм"
-                  />
-                </div>
-              </div>
               <div class="tabs__box">
                 <ul class="tabs__list">
                   <li class="tabs__item">
                     <div class="checkbox-box">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Непереставные полки</span
-                          >
+                          <span class="checkbox__text">
+                            Внутренние наполнение
+                          </span>
                         </label>
                       </div>
                     </div>
                     <div class="checkbox-box checkbox-box--sub">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Непереставные полки</span
-                          > </label
-                        ><span class="checkbox-box__price">6000 ₽</span>
+                          <span class="checkbox__text">
+                            Непереставные полки
+                          </span>
+                        </label>
+                        <span class="checkbox-box__price">6000 ₽</span>
                       </div>
                     </div>
 
                     <div class="tabs__subcheckboxes">
                       <label class="checkbox-box__checkbox checkbox">
-                        <input class="checkbox__input" type="checkbox" />
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked
+                        />
                         <span class="checkbox__box"></span>
                         <span class="checkbox__text">1 полка</span>
                       </label>
@@ -1712,10 +1838,9 @@
                         <label class="checkbox-box__checkbox checkbox">
                           <input class="checkbox__input" type="checkbox" />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Переставные полки</span
-                          > </label
-                        ><span class="checkbox-box__price">6000 ₽</span>
+                          <span class="checkbox__text">Переставные полки</span>
+                        </label>
+                        <span class="checkbox-box__price">6000 ₽</span>
                       </div>
                     </div>
                   </li>
@@ -1724,7 +1849,11 @@
                     <div class="checkbox-box">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
                           <span class="checkbox__text">Внешние элементы</span>
                         </label>
@@ -1733,12 +1862,15 @@
                     <div class="checkbox-box checkbox-box--sub">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Роллетная система</span
-                          > </label
-                        ><span class="checkbox-box__price">7000 ₽</span>
+                          <span class="checkbox__text">Роллетная система</span>
+                        </label>
+                        <span class="checkbox-box__price">7000 ₽</span>
                       </div>
                     </div>
 
@@ -1747,38 +1879,47 @@
                         <label class="checkbox-box__checkbox checkbox">
                           <input class="checkbox__input" type="checkbox" />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Задняя стенка</span
-                          > </label
-                        ><span class="checkbox-box__price">9000 ₽</span>
+                          <span class="checkbox__text">Задняя стенка</span>
+                        </label>
+                        <span class="checkbox-box__price">9000 ₽</span>
                       </div>
                     </div>
                     <div class="checkbox-box checkbox-box--sub">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Правая стенка</span
-                          > </label
-                        ><span class="checkbox-box__price">9000 ₽</span>
+                          <span class="checkbox__text"> Правая стенка </span>
+                        </label>
+                        <span class="checkbox-box__price">9000 ₽</span>
                       </div>
                     </div>
                     <div class="checkbox-box checkbox-box--sub">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
-                          <span class="checkbox__text"
-                            >Левая стенка</span
-                          > </label
-                        ><span class="checkbox-box__price">5000 ₽</span>
+                          <span class="checkbox__text"> Левая стенка </span>
+                        </label>
+                        <span class="checkbox-box__price">5000 ₽</span>
                       </div>
                     </div>
                     <div class="checkbox-box checkbox-box--sub">
                       <div class="checkbox-box__item">
                         <label class="checkbox-box__checkbox checkbox">
-                          <input class="checkbox__input" type="checkbox" />
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            checked
+                          />
                           <span class="checkbox__box"></span>
                           <span class="checkbox__text">Крыша</span> </label
                         ><span class="checkbox-box__price">5000 ₽</span>
@@ -1794,24 +1935,39 @@
                       </div>
                     </div>
                   </li>
+
+                  <li class="tabs__item">
+                    <div class="checkbox-box">
+                      <div class="checkbox-box__item">
+                        <label class="checkbox-box__checkbox checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">
+                            Дополнительные услуги <br />
+                            и материалы
+                          </span>
+                        </label>
+                        <span class="checkbox-box__price">5000 ₽</span>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
-
               <button class="cart-total" type="button">
                 <span class="cart-total__text">В корзину</span>
-                <span class="cart-total__text">
-                  <span class="cart-total__total">Итого:</span>
+                <span class="cart-total__total">
+                  <span>Итого:</span>
                   62 190 ₽
                 </span>
               </button>
 
-              <button class="cart-btn" type="button">
-                <span class="tabs__btn-text">
+              <div class="cart-btn">
+                <span class="cart-btn__text">
                   при оформлении <br />
                   и оплате онлайн
                 </span>
-                <span class="tabs__btn-total">57 690 ₽</span>
-              </button>
+                <span class="cart-btn__total">57 690 ₽</span>
+              </div>
 
               <div class="tabs__notify">
                 <p>
@@ -1868,6 +2024,8 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.0/video.min.js" integrity="sha512-K4iKTKq1qwm75WIsJkvci8Vccyw9SxOeb6za+RDLvCg/+oIYg/74PNSmoXLfF6ezSVbxeiiDsY66qfSvcrC85Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- JS -->
 <script src="js/main.min.js"></script>
