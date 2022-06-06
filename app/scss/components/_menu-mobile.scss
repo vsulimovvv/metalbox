@@ -9,15 +9,15 @@
   z-index: 11;
   width: 440px;
 
-  @include breakpointsMaxW($bp-768) {
-    width: 100%;
-  }
-
   transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
   transition: 350ms ease-in-out;
   overflow-x: auto;
+
+  @include breakpointsMaxW($bp-768) {
+    width: 100%;
+  }
 
   &.active {
     opacity: 1;

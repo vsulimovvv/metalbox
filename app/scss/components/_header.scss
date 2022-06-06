@@ -30,6 +30,7 @@
       font-size: 16px;
       max-width: 200px;
     }
+
     @include breakpointsMaxW($bp-768) {
       font-size: 14px;
       max-width: 155px;
@@ -98,6 +99,7 @@
 
       &__cart {
         margin-left: 10px;
+        
         &::after {
           background-color: var(--color-dark);
         }
@@ -128,6 +130,7 @@
         @include breakpointsMaxW($bp-991) {
           width: 40px;
         }
+
         &::after {
           display: none;
         }
@@ -245,6 +248,7 @@
     @include breakpointsMaxW($bp-container) {
       width: 160px;
     }
+
     @include breakpointsMaxW($bp-991) {
       display: none;
     }
@@ -280,7 +284,6 @@
       transition: 350ms ease;
       background-color: var(--color-white);
       z-index: -1;
-
       transform: translateY(-50%) translateX(-101%);
     }
 
@@ -564,6 +567,7 @@
 .header.scroll-header.header--catalog {
   .header__cart {
     background-color: transparent !important;
+   
     &::after {
       background-color: var(--color-white);
     }
@@ -574,6 +578,7 @@
         background-color: var(--color-white);
       }
     }
+    
     .header__cart-right {
       &::after,
       &::before {

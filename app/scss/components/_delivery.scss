@@ -21,6 +21,7 @@
       grid-template-columns: repeat(2, minmax(auto, max-content));
       justify-content: center;
     }
+
     @include breakpointsMaxW($bp-768) {
       grid-template-columns: minmax(auto, max-content);
       justify-content: center;
@@ -50,7 +51,6 @@
   overflow: hidden;
   z-index: 1;
   position: relative;
-
   @include adaptive-value('height', 380, 300, 1);
 
   @include breakpointsMaxW($bp-container) {

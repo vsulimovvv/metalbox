@@ -101,7 +101,6 @@
 
     @include breakpointsMaxW($bp-991) {
       max-width: 880px;
-
       height: 500px;
     }
 
@@ -295,6 +294,7 @@
 
 .tabs {
   padding-left: 10px;
+
   &__text {
     font-size: 13px;
     font-weight: 300;
@@ -353,6 +353,7 @@
       color: #313131;
     }
   }
+
   &__top {
     max-width: 340px;
     margin: 0 auto;
@@ -458,6 +459,7 @@
       font-weight: 300;
       width: 50%;
       position: relative;
+      
       &::after {
         @include elDef();
         background-color: #d5d5d5;

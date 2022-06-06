@@ -35,7 +35,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     @include adaptive-value('font-size', 13, 10, 1);
     @include adaptive-value('width', 220, 150, 1);
     @include adaptive-value('height', 54, 40, 1);

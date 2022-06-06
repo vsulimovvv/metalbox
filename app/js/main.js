@@ -177,60 +177,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', scrollActive);
 
-  // (function playVideos() {
-  //   const videos = document.querySelectorAll('.video');
-
-  //   videos.forEach((video) => {
-  //     if (video) {
-  //       video.addEventListener('mouseover', (e) => {
-  //         if (e.target.classList.contains('video__img')) {
-  //           e.target.play();
-  //           video.querySelector('.video__btn-play').style.display = 'none';
-  //         }
-  //       });
-
-  //       video.addEventListener('mouseout', (e) => {
-  //         if (e.target.classList.contains('video__img')) {
-  //           e.target.pause();
-  //           video.querySelector('.video__btn-play').style.display = 'block';
-  //         }
-  //       });
-  //     }
-  //   });
-  // })();
-
-  // * ==== Single Product
-
-  // (function playVideos() {
-  //   const videos = document.querySelectorAll('.video');
-  //   let isStart = false;
-
-  //   videos.forEach((video) => {
-  //     if (video) {
-  //       video.addEventListener('click', (e) => {
-  //         // if (e.target.classList.contains('video__img')) {
-  //         // isStart = true;
-  //         // e.target.play();
-  //         // video.querySelector('.video__btn-play').style.display = 'none';
-
-  //         if (e.target.classList.contains('video__img').paused) {
-  //           document.querySelector('.video__img').play();
-  //         } else {
-  //           // e.target.classList.contains('video__img').pause();
-  //         }
-  //         // }
-  //       });
-
-  //       // video.addEventListener('mouseout', (e) => {
-  //       //   if (e.target.classList.contains('video__img')) {
-  //       //     e.target.pause();
-  //       //     video.querySelector('.video__btn-play').style.display = 'block';
-  //       //   }
-  //       // });
-  //     }
-  //   });
-  // })();
-
   (function verticalSlider() {
     let mySwiperNav = new Swiper('#slider-nav', {
       slidesPerView: 'auto',
@@ -320,8 +266,6 @@ window.addEventListener('DOMContentLoaded', () => {
           translate: ['100%', 0, 0],
         },
       },
-
-      // cssMode: true,
 
       pagination: {
         el: '.swiper-pagination',
@@ -457,7 +401,6 @@ window.addEventListener('DOMContentLoaded', () => {
     );
     bindModal('.btn-reviews', '.popup--reviews', '.popup__close');
     bindModal('.btn-photos', '.popup--projects', '.popup__close');
-    // bindModal('.btn-video', '.popup--video', '.popup__close');
     bindModal('.btn-cooperation', '.popup--cooperation', '.popup__close');
     bindModal(
       '.btn-video',

@@ -240,6 +240,7 @@
         }
       }
     }
+    
     &--online {
       .checkout-box__box {
         &::before {
@@ -250,6 +251,7 @@
         }
       }
     }
+
     &--office {
       .checkout-box__box {
         &::before {
@@ -387,6 +389,7 @@
 
   .tabs-map-content {
     display: none;
+
     &.active {
       display: block;
       animation: opacity-visibility 700ms ease forwards;

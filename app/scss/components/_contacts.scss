@@ -103,11 +103,13 @@
         @include maskImage(url('../images/icons/location.svg'), contain);
       }
     }
+
     &--clock {
       &::after {
         @include maskImage(url('../images/icons/clock.svg'), contain);
       }
     }
+
     &--phone {
       &:hover {
         color: var(--color-accent);
@@ -116,6 +118,7 @@
           background-color: var(--color-accent);
         }
       }
+      
       &::after {
         @include maskImage(url('../images/icons/phone.svg'), contain);
       }

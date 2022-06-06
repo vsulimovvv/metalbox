@@ -166,7 +166,6 @@
         &-right {
           @include breakpointsMaxW($bp-container-big) {
             font-size: 28px;
-
             font-size: calc(
               25px + (35 - 25) * ((100vw - 991px) / (1240 - 991))
             );
@@ -175,6 +174,7 @@
           @include breakpointsMaxW($bp-991) {
             font-size: calc(17px + (23 - 17) * ((100vw - 768px) / (991 - 768)));
           }
+
           @include breakpointsMaxW($bp-768) {
             font-size: 16px;
           }
@@ -187,7 +187,6 @@
         &-percent {
           font-size: 50px;
           line-height: 1.2;
-
           @include adaptive-value('font-size', 50, 10, 1);
 
           @include breakpointsMaxW($bp-576) {
@@ -229,6 +228,7 @@
           @include breakpointsMaxW($bp-991) {
             font-size: calc(17px + (23 - 17) * ((100vw - 768px) / (991 - 768)));
           }
+
           @include breakpointsMaxW($bp-768) {
             font-size: 16px;
           }
@@ -241,7 +241,6 @@
         &-percent {
           font-size: 50px;
           line-height: 1.2;
-
           @include adaptive-value('font-size', 50, 10, 1);
 
           @include breakpointsMaxW($bp-576) {
@@ -255,6 +254,7 @@
         }
       }
     }
+
     &--fifth {
       .hero__title {
         font-family: $EuclidCircularA;
@@ -263,11 +263,12 @@
         font-weight: 500;
         line-height: 1.5;
         @include adaptive-value('font-size', 35, 13, 1);
+
         span {
           font-weight: 300;
         }
 
-        @include breakpointsMaxW($bp-576){
+        @include breakpointsMaxW($bp-576) {
           font-size: 16px;
         }
       }
@@ -289,8 +290,7 @@
     line-height: 1.3;
     font-weight: 400;
     text-transform: uppercase;
-    color: #ffffff;
-    // text-align: center;
+    color: var(--color-white);
     margin-bottom: 30px;
     gap: 66px;
 
@@ -327,6 +327,7 @@
         @include breakpointsMaxW($bp-991) {
           width: 3px;
         }
+
         @include breakpointsMaxW($bp-768) {
           width: 2px;
           right: -15px;
@@ -355,7 +356,7 @@
     line-height: 1;
     font-weight: 300;
     text-decoration: underline;
-    color: #ffffff;
+    color: var(--color-white);
 
     @include breakpointsMaxW($bp-576) {
       font-size: 16px;

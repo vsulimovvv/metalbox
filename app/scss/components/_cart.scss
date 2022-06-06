@@ -40,6 +40,7 @@
       @include breakpointsMaxW($bp-768) {
         grid-template-columns: repeat(2, 1fr);
       }
+      
       @include breakpointsMaxW($bp-576) {
         grid-template-columns: 1fr;
       }

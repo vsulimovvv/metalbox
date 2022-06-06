@@ -3,7 +3,6 @@
   font-size: 13px;
   font-weight: 300;
   color: #c1c1c1;
-
   font-family: $EuclidFlex;
 
   &__top {
@@ -34,7 +33,6 @@
     text-transform: uppercase;
     margin-bottom: 5px;
     display: inline-block;
-
     font-family: $EuclidFlex;
   }
 
@@ -82,10 +80,6 @@
     transition: 250ms ease;
     font-family: $EuclidCircularA;
     font-size: 13px;
-
-    // &:hover {
-    //   transform: translateX(3px);
-    // }
   }
 
   &__col {
@@ -179,18 +173,22 @@
           }
         }
       }
+
       &__top {
         grid-template-columns: repeat(6, auto);
 
         @include breakpointsMaxW($bp-container) {
           grid-template-columns: repeat(5, auto);
         }
+
         @include breakpointsMaxW($bp-991) {
           grid-template-columns: repeat(3, auto);
         }
+
         @include breakpointsMaxW($bp-768) {
           grid-template-columns: repeat(2, auto);
         }
+
         @include breakpointsMaxW($bp-576) {
           grid-template-columns: 1fr;
           width: 100%;
@@ -205,6 +203,7 @@
         @include breakpointsMaxW($bp-768) {
           max-width: 100%;
         }
+        
         &--double {
           align-items: flex-start;
           grid-template-columns: repeat(2, auto);
