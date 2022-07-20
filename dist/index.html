@@ -38,6 +38,8 @@
   href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
 />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.0/video-js.min.css" integrity="sha512-D/n19dhr+LY8HOoGuybX+bJYsZOFKb0r7YpAWBMPg5Hnke6lxdHl6q21d7qiwIsMgdSnBG9pSMQlwTtZ+6ISmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- Custom Link -->
 <link rel="stylesheet" href="css/style.min.css" />
 
@@ -76,27 +78,28 @@
               <span class="checkbox-box__text">7 500 ₽</span>
             </li>
           </ul>
+
+          <div class="total-row">
+            <span class="total-row__text">Итого:</span>
+            <span class="total-row__price">62 190 ₽</span>
+          </div>
         </div>
         <div class="cart-btns">
-          <button class="cart-total cart-total--fd-c" type="button">
-            <span class="cart-total__text">В корзину</span>
-            <span class="cart-total__total">
-              <span>Итого:</span>
-              62 190 ₽
-            </span>
+          <button class="cart-total cart-total--upper" type="button">
+            В корзину
           </button>
           <button class="cart-btns__btn cart-btns__btn--continue" type="button">
             ПРОДОЛЖИТЬ ПОКУПКИ
           </button>
         </div>
 
-        <button class="cart-btn" type="button">
+        <div class="cart-btn">
           <span class="cart-btn__text">
             при оформлении <br />
             и оплате онлайн
           </span>
           <span class="cart-btn__total">57 690 ₽</span>
-        </button>
+        </div>
 
         <div class="cart-notify">
           <p>
@@ -702,6 +705,638 @@
   </div>
 </div>
 
+<div class="popup popup--cooperation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на сотрудничество</h2>
+      <form class="popup__form form-submit">
+        <div class="form-submit__group">
+          <input class="form-submit__input" type="text" placeholder="ФИО" />
+        </div>
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="tel"
+            placeholder="Контактный телефон"
+          />
+        </div>
+        <div class="form-submit__group">
+          <input class="form-submit__input" type="email" placeholder="E-mail" />
+        </div>
+
+        <button class="form-submit__btn btn" type="submit">
+          ОСТАВИТЬ ЗАЯВКУ
+        </button>
+
+        <div class="form-submit__notify">
+          Нажимая кнопку, я даю <a>согласие</a> на обработку персональных
+          данных, в соответсвии с <a href="#">Политикой</a> и соглашаюсь с
+          <a href="#">Правислами</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--learn-more">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="more-block">
+        <h2 class="more-block__title">Название</h2>
+
+        <div class="more-block__slider swiper">
+          <ul class="more-block__slides swiper-wrapper">
+            <li class="more-block__slide swiper-slide">
+              <img src="images/content/more-block.jpg" alt="Название" />
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <img src="images/content/more-block.jpg" alt="Название" />
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <img src="images/content/more-block.jpg" alt="Название" />
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <img src="images/content/more-block.jpg" alt="Название" />
+            </li>
+          </ul>
+
+          <button
+            class="swiper-button-prev"
+            type="button"
+            aria-label="Предыдущий"
+          ></button>
+          <button
+            class="swiper-button-next"
+            type="button"
+            aria-label="Следующий"
+          ></button>
+        </div>
+
+        <div class="more-block__text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="more-block__btns">
+          <button class="more-block__btn btn" type="button">
+            ОСТАВИТЬ ЗАЯВКУ
+          </button>
+          <a class="more-block__btn btn" href="tel:+74951250598">ПОЗВОНИТЬ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--learn-more-without-btns">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="more-block">
+        <h2 class="more-block__title">Название</h2>
+
+        <div class="more-block__top">
+          <img src="images/content/more-block.jpg" alt="Название" />
+        </div>
+
+        <div class="more-block__text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--video">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="more-block">
+        <h2 class="more-block__title">Название объекта</h2>
+
+        <div class="more-block__slider swiper">
+          <ul class="more-block__slides swiper-wrapper">
+            <li class="more-block__slide swiper-slide">
+              <div class="video">
+                <button
+                  class="video__btn-play"
+                  type="button"
+                  aria-label="Запустить видео"
+                ></button>
+                <video
+                  class="video__img"
+                  preload="none"
+                  loop="1"
+                  poster="images/content/more-block.jpg"
+                  muted
+                >
+                  <source src="images/content/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <div class="video">
+                <button
+                  class="video__btn-play"
+                  type="button"
+                  aria-label="Запустить видео"
+                ></button>
+                <video
+                  class="video__img"
+                  preload="none"
+                  loop="1"
+                  poster="images/content/more-block.jpg"
+                  muted
+                >
+                  <source src="images/content/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <div class="video">
+                <button
+                  class="video__btn-play"
+                  type="button"
+                  aria-label="Запустить видео"
+                ></button>
+                <video
+                  class="video__img"
+                  preload="none"
+                  loop="1"
+                  poster="images/content/more-block.jpg"
+                  muted
+                >
+                  <source src="images/content/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </li>
+            <li class="more-block__slide swiper-slide">
+              <div class="video">
+                <button
+                  class="video__btn-play"
+                  type="button"
+                  aria-label="Запустить видео"
+                ></button>
+                <video
+                  class="video__img"
+                  preload="none"
+                  loop="1"
+                  poster="images/content/more-block.jpg"
+                  muted
+                >
+                  <source src="images/content/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </li>
+          </ul>
+
+          <button
+            class="swiper-button-prev"
+            type="button"
+            aria-label="Предыдущий"
+          ></button>
+          <button
+            class="swiper-button-next"
+            type="button"
+            aria-label="Следующий"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--projects-videos">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="projects-block">
+        <h2 class="projects-block__title">Видеогалерея</h2>
+        <ul class="projects-block__list">
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+          <li class="projects-block__item">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/more-block.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--projects">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="projects-block">
+        <h2 class="projects-block__title">Проекты</h2>
+        <ul class="projects-block__list">
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+          <li class="projects-block__item">
+            <article class="projects-card">
+              <a class="projects-card__top" href="#">
+                <img src="images/content/project.jpg" alt="Проект" />
+              </a>
+              <h3 class="projects-card__title">
+                <a href="#">Название проекта</a>
+              </h3>
+              <address class="projects-card__address">
+                Москва, Название улицы 10
+              </address>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reviews">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="reviews-block">
+        <h2 class="reviews-block__title">Отзывы</h2>
+
+        <div class="reviews-block__slider">
+          <div class="slider-thumbs">
+            <div class="slider-thumbs__nav">
+              <div class="slider-thumbs__nav-wrap swiper" id="slider-nav">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                  <li class="swiper-slide slider-nav__slide">
+                    <img
+                      src="images/content/reviews-slider/1.jpg"
+                      alt="Слайд №1"
+                    />
+                  </li>
+                </ul>
+              </div>
+
+              <div class="slider-thumbs__nav-control">
+                <button
+                  class="swiper-button-prev"
+                  type="button"
+                  aria-label="Следующий"
+                ></button>
+                <button
+                  class="swiper-button-next"
+                  type="button"
+                  aria-label="Предыдущий"
+                ></button>
+              </div>
+            </div>
+
+            <div class="slider-thumbs__main swiper" id="slider-main">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    src="images/content/reviews-slider/1.jpg"
+                    alt="Слайд №1"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <h1 class="visually-hidden">Главная</h1>
 
@@ -946,24 +1581,34 @@
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              Шкаф роллетный в паркинг, квартиру
-              <span> или загородный дом</span>
+              <span class="hero__title-left">
+                Шкаф <br />
+                роллетный
+              </span>
+              <span class="hero__title-right">
+                в паркинг, квартиру <br />
+                или загородный дом
+              </span>
             </h2>
-
-            <a class="hero__link" href="#">подробнее</a>
           </div>
+          <a class="hero__link" href="#">подробнее</a>
         </div>
       </li>
       <li
-        class="hero__slide hero__slide--second swiper-slide"
+        class="hero__slide hero__slide--second hero__slide--second swiper-slide"
         style="background-image: url('images/content/hero-slider/slider/2.jpg')"
       >
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              <span> НиКакого общения!</span>
-              -10% на расчет через калькулятор и оплату через <br />
-              сайт без замера в день обращения
+              <span class="hero__title-left">
+                НиКакого общения! <br />
+                <small class="hero__title-percent"> -10%</small>
+              </span>
+              <span class="hero__title-right">
+                на расчет через калькулятор и оплату через <br />
+                сайт без замера в день обращения
+              </span>
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -977,9 +1622,14 @@
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              -15% на ВСЕ дополнительные аксесуары <br />
-              при одновременном заказе с изделием <br />
-              при олпате онлайн без замера в день обращения
+              <span class="hero__title-left">
+                <small class="hero__title-percent"> -15%</small>
+                на ВСЕ дополнительные аксесуары
+              </span>
+              <span class="hero__title-right">
+                при одновременном заказе с изделием <br />
+                при олпате онлайн без замера в день обращения
+              </span>
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -993,8 +1643,14 @@
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              -15% на онлайн оплату и самовывоз <br />
-              изделия со склада
+              <span class="hero__title-left">
+                <small class="hero__title-percent"> -15%</small>
+                на онлайн оплату
+              </span>
+              <span class="hero__title-right">
+                и самовывоз <br />
+                изделия со склада
+              </span>
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -1008,8 +1664,9 @@
         <div class="container">
           <div class="hero__offer">
             <h2 class="hero__title">
-              <span>Ничего лишнего только полки!</span> 10 типовых констуркций
-              по уникальным ценам с полками до 2,5 метров
+              <span>Ничего лишнего только полки!</span>
+              10 типовых констуркций по уникальным ценам
+              <span> с полками до 2,5 метров</span>
             </h2>
 
             <a class="hero__link" href="#">подробнее</a>
@@ -1116,7 +1773,12 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <a
+              class="product-card__btn product-card__btn--individual btn btn-individual"
+              href="#"
+            >
+              индивидуальные решения
+            </a>
           </div>
         </article>
       </li>
@@ -1167,7 +1829,7 @@
               <h3 class="product-card__title">садоводам и любителям</h3>
             </div>
 
-            <a class="product-card__btn btn" href="#">Узнать больше</a>
+            <a class="product-card__btn btn" href="#">перейти в каталог</a>
           </div>
         </article>
       </li>
@@ -1181,7 +1843,7 @@
               <h3 class="product-card__title">свой погребок</h3>
             </div>
 
-            <a class="product-card__btn btn" href="#">Узнать больше</a>
+            <a class="product-card__btn btn" href="#">перейти в каталог</a>
           </div>
         </article>
       </li>
@@ -1195,7 +1857,7 @@
               <h3 class="product-card__title">АВТОЛЮБИТЕЛЯМ</h3>
             </div>
 
-            <a class="product-card__btn btn" href="#">Узнать больше</a>
+            <a class="product-card__btn btn" href="#">перейти в каталог</a>
           </div>
         </article>
       </li>
@@ -1211,7 +1873,7 @@
               </h3>
             </div>
 
-            <a class="product-card__btn btn" href="#">Узнать больше</a>
+            <a class="product-card__btn btn" href="#">перейти в каталог</a>
           </div>
         </article>
       </li>
@@ -1253,9 +1915,14 @@
           <a class="product-card__top" href="#">
             <img src="images/content/products/5.jpg" alt="1" />
           </a>
-          <div class="product-card__body product-card__body--aic">
+          <div class="product-card__body">
             <div class="product-card__left">
               <h3 class="product-card__title">МАТЕРИАЛ СТЕН</h3>
+
+              <p class="product-card__text">
+                Используем только качественные материалы. Являемся офицаильными
+                дилерами GrandLine
+              </p>
             </div>
 
             <a class="product-card__btn btn" href="#"> перейти в каталог </a>
@@ -1272,6 +1939,9 @@
               <h3 class="product-card__title">
                 МАТЕРИАЛ ВНУТРЕННЕГО НАПОЛНЕНИЯ
               </h3>
+              <p class="product-card__text">
+                Закупаем длинномерами и изготавливаем все сами
+              </p>
             </div>
 
             <a class="product-card__btn btn" href="#"> перейти в каталог </a>
@@ -1286,6 +1956,8 @@
           <div class="product-card__body product-card__body--aic">
             <div class="product-card__left">
               <h3 class="product-card__title">РОЛЛЕТНАЯ СИСТЕМА</h3>
+
+              <p class="product-card__text">Используем продукцию компании Алютех. Являемся авторизованными дилерами</p>
             </div>
 
             <a class="product-card__btn btn" href="#"> перейти в каталог </a>
@@ -1300,6 +1972,8 @@
           <div class="product-card__body product-card__body--aic">
             <div class="product-card__left">
               <h3 class="product-card__title">СОБЕРИ САМ</h3>
+
+              <p class="product-card__text">Мы производители - все наши изделия можно собрать самостоятельно</p>
             </div>
 
             <a class="product-card__btn btn" href="#"> перейти в каталог </a>
@@ -1348,7 +2022,7 @@
           </a>
           <div class="product-card__body">
             <div class="product-card__left">
-              <h3 class="product-card__title">ОСТАВЬТЕ МЕСТО ДЛЯ ФАНТАЗИИ</h3>
+              <h3 class="product-card__title">СТЕЛЛАЖНЫЕ СИСТЕМЫ</h3>
               <p class="product-card__text">
                 Для клиентов кому интересны только стеллажи. Мы делаем
                 стеллажные констукрции любых размеров и форм. Рабоатем, в том
@@ -1359,7 +2033,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1370,7 +2046,7 @@
           </a>
           <div class="product-card__body">
             <div class="product-card__left">
-              <h3 class="product-card__title">ОСТАВЬТЕ МЕСТО ДЛЯ ФАНТАЗИИ</h3>
+              <h3 class="product-card__title">Роллетные системы Autech</h3>
               <p class="product-card__text">
                 Мы авторизованные диллеры производителя роллетных систем Алютех.
                 Закупаем длинномерами и делаем в нужный разме. Срок изготовления
@@ -1378,7 +2054,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1389,7 +2067,7 @@
           </a>
           <div class="product-card__body">
             <div class="product-card__left">
-              <h3 class="product-card__title">ОСТАВЬТЕ МЕСТО ДЛЯ ФАНТАЗИИ</h3>
+              <h3 class="product-card__title">Роллетные системы для торговых центро</h3>
               <p class="product-card__text">
                 Стальные роллетные системы шириной до 12 метров и высотой до 6
                 метров. Профиль - сплошной или перфарированный. Покраска - в
@@ -1397,7 +2075,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1408,14 +2088,16 @@
           </a>
           <div class="product-card__body">
             <div class="product-card__left">
-              <h3 class="product-card__title">ОСТАВЬТЕ МЕСТО ДЛЯ ФАНТАЗИИ</h3>
+              <h3 class="product-card__title">Прозрачные роллетные системы</h3>
               <p class="product-card__text">
                 Идеальное решениие для интереьеров со смыслов. Теперь в беседке
                 или на веранде уютно станет в любую погоду.
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1467,7 +2149,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1487,7 +2171,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1506,7 +2192,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1524,7 +2212,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-more" href="#">
+              узнать больше
+            </button>
           </div>
         </article>
       </li>
@@ -1575,7 +2265,9 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-reviews" href="#">
+              ОТЗЫВЫ
+            </button>
           </div>
         </article>
       </li>
@@ -1593,14 +2285,29 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <button class="product-card__btn btn btn-photos" href="#">
+              фотогалерея
+            </button>
           </div>
         </article>
       </li>
       <li class="catalog__item">
         <article class="product-card">
-          <a class="product-card__top" href="#">
-            <img src="images/content/products/19.jpg" alt="1" />
+          <a class="product-card__top">
+            <div class="video">
+              <video
+                class="video__img video-js vjs-big-play-centered"
+                id="videoPlayer"
+                preload="none"
+                loop="1"
+                poster="images/content/products/19.jpg"
+                muted
+                data-setup="{}"
+                controls
+              >
+                <source src="images/content/video.mp4" type="video/mp4" />
+              </video>
+            </div>
           </a>
           <div class="product-card__body">
             <div class="product-card__left">
@@ -1611,7 +2318,7 @@
               </p>
             </div>
 
-            <a class="product-card__btn btn" href="#"> перейти в каталог </a>
+            <a class="product-card__btn btn btn-video" href="#"> смотреть </a>
           </div>
         </article>
       </li>
@@ -1673,7 +2380,7 @@
           class="production-card"
           style="background-image: url('images/content/production/1.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <button class="card-link btn-more-2" type="button"></button>
           <h3 class="production-card__title">
             Автоматическая система пожаротушения
           </h3>
@@ -1685,9 +2392,7 @@
           style="background-image: url('images/content/production/2.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            Защитные элементы
-          </h3>
+          <h3 class="production-card__title">Защитные элементы</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1696,9 +2401,7 @@
           style="background-image: url('images/content/production/3.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            Подъемник багажника THULE
-          </h3>
+          <h3 class="production-card__title">Подъемник багажника THULE</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1707,9 +2410,7 @@
           style="background-image: url('images/content/production/4.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            ВЕЛОЛИФТ
-          </h3>
+          <h3 class="production-card__title">ВЕЛОЛИФТ</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1718,9 +2419,7 @@
           style="background-image: url('images/content/production/5.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            УПРАВЛЕНИЕ С ТЕЛЕФОНА
-          </h3>
+          <h3 class="production-card__title">УПРАВЛЕНИЕ С ТЕЛЕФОНА</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1729,9 +2428,7 @@
           style="background-image: url('images/content/production/6.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            ВИДЕОНАБЛЮДЕНИЕ
-          </h3>
+          <h3 class="production-card__title">ВИДЕОНАБЛЮДЕНИЕ</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1740,9 +2437,7 @@
           style="background-image: url('images/content/production/7.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            ОСВЕЩЕНИЕ ОТ АКБ И 220V
-          </h3>
+          <h3 class="production-card__title">ОСВЕЩЕНИЕ ОТ АКБ И 220V</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1751,9 +2446,7 @@
           style="background-image: url('images/content/production/8.jpg')"
         >
           <a class="card-link" href="#"></a>
-          <h3 class="production-card__title">
-            ГЕРМЕТИЗАЦИЯ
-          </h3>
+          <h3 class="production-card__title">ГЕРМЕТИЗАЦИЯ</h3>
         </article>
       </li>
       <li class="production__item">
@@ -1763,8 +2456,7 @@
         >
           <a class="card-link" href="#"></a>
           <h3 class="production-card__title">
-            АВТОМАТИЗАЦИЯ РОЛЛЕТНОЙ
-СИСТЕМЫ
+            АВТОМАТИЗАЦИЯ РОЛЛЕТНОЙ СИСТЕМЫ
           </h3>
         </article>
       </li>
@@ -1805,7 +2497,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/1.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <a class="card-link" href="contacts.html" target="_blank"></a>
           <h3 class="production-card__title">МОСКВА и МОСКОВСКАЯ ОБЛАСТЬ</h3>
         </article>
       </li>
@@ -1814,7 +2506,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/2.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <a class="card-link" href="contacts.html" target="_blank"></a>
           <h3 class="production-card__title">
             САНКТ-ПЕТЕРБУРГ и Ленинградская область
           </h3>
@@ -1825,7 +2517,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/3.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <a class="card-link" href="contacts.html" target="_blank"></a>
           <h3 class="production-card__title">ЕКАТЕРИНБУРГ</h3>
         </article>
       </li>
@@ -1834,7 +2526,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/4.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <a class="card-link" href="contacts.html" target="_blank"></a>
           <h3 class="production-card__title">ИВАНОВО</h3>
         </article>
       </li>
@@ -1843,7 +2535,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/5.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <button class="card-link btn-cooperation" type="button"></button>
           <h3 class="production-card__title">
             ПРИГЛАШАЕМ <br />
             К СОТРУДНИЧЕСТВУ
@@ -1855,7 +2547,7 @@
           class="production-card"
           style="background-image: url('images/content/offices/6.jpg')"
         >
-          <a class="card-link" href="#"></a>
+          <button class="card-link btn-cooperation" type="button"></button>
           <h3 class="production-card__title">
             ПРИГЛАШАЕМ <br />
             К СОТРУДНИЧЕСТВУ
@@ -1881,7 +2573,7 @@
               <a class="footer__link" href="#">Киндер</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Крутыш</a>
+              <a class="footer__link" href="#">Крепыш</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#">S</a>
@@ -1920,22 +2612,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__col">
-        <span class="footer__name"
-          >Металлбокс <br />
-          контракт</span
-        >
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="tel:+74951250598"
-              >+7 (495) 125-05-98</a
-            >
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">corp@металлбокс.рф</a>
-          </li>
-        </ul>
-      </div>
+
       <div class="footer__col footer__col--socials">
         <span class="footer__name">Следите за нами</span>
         <div class="footer__socials socials">
@@ -2030,6 +2707,8 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.0/video.min.js" integrity="sha512-K4iKTKq1qwm75WIsJkvci8Vccyw9SxOeb6za+RDLvCg/+oIYg/74PNSmoXLfF6ezSVbxeiiDsY66qfSvcrC85Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- JS -->
 <script src="js/main.min.js"></script>

@@ -528,8 +528,8 @@ svg {
     height: 100%;
     width: 100%;
     padding: 160px 0;
-    @include adaptive-value('padding-top', 160, 130, 1);
-    @include adaptive-value('padding-bottom', 160, 100, 1);
+    @include adaptive-value('padding-top', 180, 80, 1);
+    @include adaptive-value('padding-bottom', 100, 50, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -550,7 +550,7 @@ svg {
   }
 
   &__offer {
-    max-height: 310px;
+    max-height: 750px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -558,14 +558,15 @@ svg {
     justify-content: space-between;
 
     @include breakpointsMaxW($bp-576) {
-      max-height: 350px;
+      max-height: 450px;
     }
   }
 
   &__title {
     @include fz34();
     text-transform: none;
-    @include adaptive-value('margin-bottom', 20, 15, 1);
+    // @include adaptive-value('margin-bottom', 20, 15, 1);
+    margin-bottom: 5px;
   }
 
   &__text {
@@ -595,8 +596,9 @@ svg {
   &__btn {
     border-radius: 27px;
     position: relative;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    // padding-top: 10px;
+    // padding-bottom: 12px;
+    height: 42px;
     background-image: linear-gradient(0deg, #896a4b -24%, #a1876f 126%);
     box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 26px;
@@ -617,19 +619,19 @@ svg {
       transition: 300ms ease;
     }
 
-    &:hover {
-      color: var(--color-dark);
+    // &:hover {
+    //   color: var(--color-dark);
 
-      &::before {
-        transform: scaleX(1);
-      }
-    }
+    //   &::before {
+    //     transform: scaleX(1);
+    //   }
+    // }
 
     &--cart {
       font-size: 17px;
       font-weight: 500;
       color: #2f2f2f;
-      padding-left: 60px;
+      // padding-left: 60px;
       background: var(--color-white);
       transition: 300ms ease;
 
@@ -646,26 +648,24 @@ svg {
         transition: 300ms ease;
       }
 
-      &:hover {
-        color: var(--color-white);
-      }
-
-      &:hover {
-        &::after {
-          background-color: var(--color-white);
-        }
-      }
-
       &::after {
         @include elDef();
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         top: 50%;
         left: 40px;
         transform: translateY(-50%);
-        @include maskImage(url('../images/icons/cart.svg'), contain);
+        @include maskImage(url('../images/cart.png'), contain);
         background-color: #292929;
       }
+
+      // &:hover {
+      //   color: var(--color-white);
+
+      //   &::after {
+      //     background-color: var(--color-white);
+      //   }
+      // }
     }
   }
 
@@ -692,6 +692,7 @@ svg {
     display: flex;
     align-items: center;
     gap: 45px;
+    justify-content: center;
 
     @include breakpointsMaxW($bp-container) {
       gap: calc(20px + (45 - 20) * ((100vw - 991px) / (1310 - 991)));
