@@ -619,13 +619,13 @@ svg {
       transition: 300ms ease;
     }
 
-    // &:hover {
-    //   color: var(--color-dark);
+    &:hover {
+      color: var(--color-dark);
 
-    //   &::before {
-    //     transform: scaleX(1);
-    //   }
-    // }
+      &::before {
+        transform: scaleX(1);
+      }
+    }
 
     &--cart {
       font-size: 17px;
@@ -659,13 +659,13 @@ svg {
         background-color: #292929;
       }
 
-      // &:hover {
-      //   color: var(--color-white);
+      &:hover {
+        color: var(--color-white);
 
-      //   &::after {
-      //     background-color: var(--color-white);
-      //   }
-      // }
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
     }
   }
 
