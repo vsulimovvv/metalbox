@@ -984,14 +984,6 @@ svg {
   -o-transition: 300ms ease;
   transition: 300ms ease;
 }
-.catalog-section__btn:hover {
-  color: var(--color-dark);
-}
-.catalog-section__btn:hover::before {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-}
 .catalog-section__btn--cart {
   font-size: 17px;
   font-weight: 500;
@@ -1033,12 +1025,6 @@ svg {
   -webkit-mask: url("../images/cart.png") no-repeat center/contain;
           mask: url("../images/cart.png") no-repeat center/contain;
   background-color: #292929;
-}
-.catalog-section__btn--cart:hover {
-  color: var(--color-white);
-}
-.catalog-section__btn--cart:hover::after {
-  background-color: var(--color-white);
 }
 .catalog-section__down-btn {
   position: absolute;
