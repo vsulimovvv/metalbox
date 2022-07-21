@@ -7065,6 +7065,7 @@ input[type=file] {
   padding-left: 930px;
   z-index: 1;
   padding-left: max(880px, 75%);
+  margin-top: 30px;
 }
 @media (max-width: 1310px) {
   .product__info {

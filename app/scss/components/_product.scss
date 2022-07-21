@@ -136,6 +136,7 @@
     padding-left: 930px;
     z-index: 1;
     padding-left: max(880px, calc((150%) / 2));
+    margin-top: 30px;
 
     @include breakpointsMaxW(1310px) {
       min-width: 350px;
