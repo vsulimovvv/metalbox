@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
+  // videojs(document.querySelector('.video'));
+
   // * ==== Dropdown
   document.addEventListener('click', (e) => {
     const isDropdownButton = e.target.matches('[data-dropdown-button]');
@@ -402,11 +404,7 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.btn-reviews', '.popup--reviews', '.popup__close');
     bindModal('.btn-photos', '.popup--projects', '.popup__close');
     bindModal('.btn-cooperation', '.popup--cooperation', '.popup__close');
-    bindModal(
-      '.btn-video',
-      '.popup--projects-videos',
-      '.popup__close'
-    );
+    bindModal('.btn-video', '.popup--projects-videos', '.popup__close');
   })();
 
   // * ===== Toggle Tabs
@@ -414,37 +412,39 @@ window.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelectorAll(headerSelector);
     const tab = document.querySelectorAll(tabSelector);
     const content = document.querySelectorAll(contentSelector);
-    if (header) {
-      hideTabContent();
-      showTabContent();
-      function hideTabContent() {
-        content.forEach((item) => {
-          item.classList.remove('active');
-        });
-        tab.forEach((item) => {
-          item.classList.remove(activeClass);
-        });
-      }
-      function showTabContent(i = 0) {
-        content[i].classList.add('active');
-        tab[i].classList.add(activeClass);
-      }
-      header.forEach((item) => {
-        if (item) {
-          item.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-              tab.forEach((item, i) => {
-                if (target == item || target.parentNode == item) {
-                  hideTabContent();
-                  showTabContent(i);
-                }
-              });
-            }
+    header.forEach((el) => {
+      if (header) {
+        hideTabContent();
+        showTabContent();
+        function hideTabContent() {
+          content.forEach((item) => {
+            item.classList.remove('active');
+          });
+          tab.forEach((item) => {
+            item.classList.remove(activeClass);
           });
         }
-      });
-    }
+        function showTabContent(i = 0) {
+          content[i].classList.add('active');
+          tab[i].classList.add(activeClass);
+        }
+        header.forEach((item) => {
+          if (item) {
+            item.addEventListener('click', (e) => {
+              const target = e.target;
+              if (target.classList.contains(tabSelector.replace(/\./, ''))) {
+                tab.forEach((item, i) => {
+                  if (target == item || target.parentNode == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+    });
   }
   someTabs('.tabs', '.tabs-btn', '.tabs-content', 'tabs-btn--active');
   someTabs(
