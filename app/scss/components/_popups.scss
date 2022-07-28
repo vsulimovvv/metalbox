@@ -577,6 +577,7 @@
           margin-bottom: 14px;
           display: block;
           transition: 400ms ease;
+          cursor: pointer;
 
           @include adaptive-value('height', 145, 110, 1);
 

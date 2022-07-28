@@ -2957,6 +2957,7 @@ input[type=file] {
   -webkit-transition: 400ms ease;
   -o-transition: 400ms ease;
   transition: 400ms ease;
+  cursor: pointer;
   height: 145px;
 }
 @media (max-width: 1150px) {
