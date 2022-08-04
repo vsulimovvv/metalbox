@@ -710,7 +710,7 @@ svg {
     color: #d1d1d0;
 
     &:hover,
-    &--active {
+    &.is--active {
       font-weight: 700;
       color: #ffffff;
     }

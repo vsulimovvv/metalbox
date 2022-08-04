@@ -1647,39 +1647,42 @@
       </nav>
     </div>
   </div>
-
   <div class="header__bottom">
-    <nav class="menu">
-      <ul class="menu__list">
+    <nav class="menu js--navigate">
+      <ul class="menu__list js--navigate-items">
         <li class="menu__item">
-          <a class="menu__link" href="#size-child">Киндер</a>
+          <a class="menu__link js--navigate-link is--active" href="#size-child"
+            >Киндер</a
+          >
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-baby">Малыш</a>
+          <a class="menu__link js--navigate-link" href="#size-baby">Малыш</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-cool">Крепыш</a>
+          <a class="menu__link js--navigate-link" href="#size-cool">Крепыш</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-s">S</a>
+          <a class="menu__link js--navigate-link" href="#size-s">S</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-m">M</a>
+          <a class="menu__link js--navigate-link" href="#size-m">M</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-l">L</a>
+          <a class="menu__link js--navigate-link" href="#size-l">L</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-xl">XL</a>
+          <a class="menu__link js--navigate-link" href="#size-xl">XL</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-2xl">2XL</a>
+          <a class="menu__link js--navigate-link" href="#size-2xl">2XL</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-fat">Толстяк</a>
+          <a class="menu__link js--navigate-link" href="#size-fat">Толстяк</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#size-neighbors">2 Соседа </a>
+          <a class="menu__link js--navigate-link" href="#size-neighbors"
+            >2 Соседа
+          </a>
         </li>
       </ul>
     </nav>
@@ -1690,8 +1693,8 @@
       <main class="main">
         <div class="sections">
           <section
-            class="catalog-section catalog-section--child active"
-            id="size-child"
+            class="catalog-section catalog-section--child active is--scrolled js--scrollify"
+            data-section-name="size-child"
             style="background-image: url('images/content/hero-slider/1.jpg')"
           >
             <div class="catalog-section__wrapper catalog-section__wrapper--top">
@@ -1721,8 +1724,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--baby"
-            id="size-baby"
+            class="catalog-section catalog-section--baby is--scrolled js--scrollify"
+            data-section-name="size-baby"
             style="background-image: url('images/content/hero-slider/2.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1752,8 +1755,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--cool"
-            id="size-cool"
+            class="catalog-section catalog-section--cool is--scrolled js--scrollify"
+            data-section-name="size-cool"
             style="background-image: url('images/content/hero-slider/3.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1782,8 +1785,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--s"
-            id="size-s"
+            class="catalog-section catalog-section--s is--scrolled js--scrollify"
+            data-section-name="size-s"
             style="background-image: url('images/content/hero-slider/4.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1813,8 +1816,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--m"
-            id="size-m"
+            class="catalog-section catalog-section--m is--scrolled js--scrollify"
+            data-section-name="size-m"
             style="background-image: url('images/content/hero-slider/5.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1844,8 +1847,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--l"
-            id="size-l"
+            class="catalog-section catalog-section--l is--scrolled js--scrollify"
+            data-section-name="size-l"
             style="background-image: url('images/content/hero-slider/6.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1875,8 +1878,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--xl"
-            id="size-xl"
+            class="catalog-section catalog-section--xl is--scrolled js--scrollify"
+            data-section-name="size-xl"
             style="background-image: url('images/content/hero-slider/7.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1906,8 +1909,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--2xl"
-            id="size-2xl"
+            class="catalog-section catalog-section--2xl is--scrolled js--scrollify"
+            data-section-name="size-2xl"
             style="background-image: url('images/content/hero-slider/8.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1923,7 +1926,10 @@
                   <button class="catalog-section__btn" type="button">
                     Тех. характеристики
                   </button>
-                  <button class="catalog-section__btn catalog-section__btn--cart" type="button">
+                  <button
+                    class="catalog-section__btn catalog-section__btn--cart"
+                    type="button"
+                  >
                     От 54 500 Р
                   </button>
                 </div>
@@ -1934,8 +1940,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--fat"
-            id="size-fat"
+            class="catalog-section catalog-section--fat is--scrolled js--scrollify"
+            data-section-name="size-fat"
             style="background-image: url('images/content/hero-slider/9.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1965,8 +1971,8 @@
           </section>
 
           <section
-            class="catalog-section catalog-section--neighbors"
-            id="size-neighbors"
+            class="catalog-section catalog-section--neighbors is--scrolled js--scrollify"
+            data-section-name="size-neighbors"
             style="background-image: url('images/content/hero-slider/10.jpg')"
           >
             <div class="catalog-section__wrapper">
@@ -1996,7 +2002,8 @@
       </main>
 
       <foter
-        class="footer footer--catalog catalog-section catalog-section--footer"
+        class="footer footer--catalog catalog-section catalog-section--footer js--footer"
+        data-section-name="footer"
       >
         <div class="container container--1280">
           <div class="footer__top">

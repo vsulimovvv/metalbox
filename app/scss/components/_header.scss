@@ -161,7 +161,7 @@
       display: flex;
       margin: 0 auto;
 
-      @include breakpointsMinW($bp-container){
+      @include breakpointsMinW($bp-container) {
         margin: 0;
       }
 
@@ -596,42 +596,4 @@
       }
     }
   }
-}
-
-.header.scroll-header.header--catalog {
-  // .header__cart {
-  //   background-color: transparent !important;
-
-  //   &::after {
-  //     background-color: var(--color-white);
-  //   }
-
-  //   .header__cart-left {
-  //     &::after,
-  //     &::before {
-  //       background-color: var(--color-white);
-  //     }
-  //   }
-
-  //   .header__cart-right {
-  //     &::after,
-  //     &::before {
-  //       background-color: var(--color-white);
-  //     }
-  // }
-  // }
-  // .header__logo-other {
-  //   display: none;
-  // }
-  // .header__phone {
-  //   display: none;
-  // }
-  // .header__toggle {
-  //   padding-right: 0 ;
-  //   width: 40px ;
-
-  //   &::after {
-  //     display: none;
-  //   }
-  // }
 }

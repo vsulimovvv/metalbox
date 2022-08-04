@@ -134,51 +134,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  $.scrollify({
-    section: '.catalog-section',
-    sectionName: 'section-name',
-    interstitialSection: '',
-    easing: 'easeOutExpo',
-    scrollbars: true,
-    standardScrollElements: '',
-    setHeights: true,
-    overflowScroll: true,
-    updateHash: true,
-    touchScroll: true,
-    scrollSpeed: 100,
-    offset: 0,
-    before: function () {},
-    after: function () {
-      var $current = $.scrollify.current();
-      $('.catalog-section').removeClass('active');
-      $current.addClass('active');
-    },
-  });
-
-  //* Scroll Section Active Link *//
-  const sections = document.querySelectorAll('section[id]');
-
-  function scrollActive() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach((current) => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 50;
-      sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-          .querySelector('.menu a[href*=' + sectionId + ']')
-          .classList.add('menu__link--active');
-      } else {
-        document
-          .querySelector('.menu a[href*=' + sectionId + ']')
-          .classList.remove('menu__link--active');
-      }
-    });
-  }
-  window.addEventListener('scroll', scrollActive);
-
   (function verticalSlider() {
     let mySwiperNav = new Swiper('#slider-nav', {
       slidesPerView: 'auto',
@@ -221,6 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelectorAll('.more-block__slider');
@@ -317,6 +273,70 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // * Scroll
+  $(function () {
+    'use strict';
+
+    const elements = {
+      scrollify: $('.js--scrollify'),
+      navigate: $('.js--navigate'),
+      navigateItems: $('.js--navigate-items'),
+      navigateLink: $('.js--navigate-link'),
+    };
+
+    elements.navigateItems.on('click', '.js--navigate-link', (ev) => {
+      ev.preventDefault();
+
+      const $this = $(ev.currentTarget);
+      const hash = $this.attr('href');
+
+      $.scrollify.move(hash);
+    });
+
+    $('.catalog-section__down-btn').on('click', (ev) => {
+      ev.preventDefault();
+
+      const $this = $(ev.currentTarget);
+      const hash = $this.attr('href');
+
+      $.scrollify.move(hash);
+    });
+
+    $.scrollify({
+      section: '.js--scrollify',
+      sectionName: 'section-name',
+      overflowScroll: false,
+      setHeights: true,
+      scrollSpeed: 100,
+      interstitialSection: '.footer',
+      standardScrollElements: '.footer',
+
+      before(index, sections) {
+        const ref = sections[index].data('section-name');
+
+        if (ref === 'footer') {
+          elements.navigate.addClass('is--inactive');
+        } else {
+          elements.navigate.removeClass('is--inactive');
+        }
+
+        elements.navigateLink
+          .parent()
+          .siblings()
+          .find('.js--navigate-link')
+          .removeClass('is--active');
+        elements.navigateLink.eq(index).addClass('is--active');
+      },
+      after: function (index, sections) {
+        // var ref = sections[index].data('section-name');
+        var $current = $.scrollify.current();
+        $('.catalog-section').removeClass('active');
+        $current.addClass('active');
+      },
+      afterRender() {},
+    });
+  });
+
   //* Change Background Header
   function scrollHeader() {
     const nav = document.querySelector('header');
@@ -334,6 +354,30 @@ window.addEventListener('DOMContentLoaded', () => {
   if (window.pageYOffset >= 50) {
     header.classList.add('scroll-header');
   }
+
+  //* Scroll Section Active Link *//
+  // const sections = document.querySelectorAll('section[id]');
+
+  // function scrollActive() {во
+  //   const scrollY = window.pageYOffset;
+
+  //   sections.forEach((current) => {
+  //     const sectionHeight = current.offsetHeight;
+  //     const sectionTop = current.offsetTop - 50;
+  //     sectionId = current.getAttribute('id');
+
+  //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+  //       document
+  //         .querySelector('.menu a[href*=' + sectionId + ']')
+  //         .classList.add('menu__link--active');
+  //     } else {
+  //       document
+  //         .querySelector('.menu a[href*=' + sectionId + ']')
+  //         .classList.remove('menu__link--active');
+  //     }
+  //   });
+  // }
+  // window.addEventListener('scroll', scrollActive);
 
   // * ===== Show Menu
   (function showMenu() {

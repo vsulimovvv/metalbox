@@ -1076,7 +1076,7 @@ svg {
   font-weight: 400;
   color: #d1d1d0;
 }
-.menu__link:hover, .menu__link--active {
+.menu__link:hover, .menu__link.is--active {
   font-weight: 700;
   color: #ffffff;
 }
