@@ -43,6 +43,10 @@ body {
   &--100 {
     max-width: 100%;
     padding-right: 40px;
+
+    @include breakpointsMaxW($bp-576){
+      padding-right: 15px;
+    }
   }
 }
 

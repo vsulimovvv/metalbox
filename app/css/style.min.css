@@ -286,6 +286,11 @@ body.no-scroll {
   max-width: 100%;
   padding-right: 40px;
 }
+@media (max-width: 576px) {
+  .container--100 {
+    padding-right: 15px;
+  }
+}
 
 .logo {
   width: 210px;
@@ -7463,6 +7468,68 @@ input[type=file] {
   line-height: 17px;
   font-weight: 300;
   color: #757575;
+  text-align: center;
+}
+
+.tabs-sizes__text {
+  font-size: 13px;
+  font-weight: 300;
+  color: #8d8d8d;
+  text-align: center;
+  max-width: 290px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.tabs-sizes__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 340px;
+  width: 100%;
+  gap: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .tabs-sizes__inputs {
+    gap: 7px;
+  }
+}
+.tabs-sizes__input label {
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #313131;
+}
+.tabs-sizes__input input {
+  width: 100%;
+  border: 1px solid rgba(193, 193, 193, 0.53);
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 300;
+  color: #7c7c7c;
+  padding: 10px 20px;
+}
+.tabs-sizes__input input::-webkit-input-placeholder {
+  text-align: center;
+}
+.tabs-sizes__input input::-moz-placeholder {
+  text-align: center;
+}
+.tabs-sizes__input input:-ms-input-placeholder {
+  text-align: center;
+}
+.tabs-sizes__input input::-ms-input-placeholder {
+  text-align: center;
+}
+.tabs-sizes__input input::placeholder {
   text-align: center;
 }
 

@@ -460,7 +460,7 @@
       font-weight: 300;
       width: 50%;
       position: relative;
-      
+
       &::after {
         @include elDef();
         background-color: #d5d5d5;
@@ -486,5 +486,56 @@
     font-weight: 300;
     color: #757575;
     text-align: center;
+  }
+}
+
+.tabs-sizes {
+  &__text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #8d8d8d;
+    text-align: center;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 340px;
+    width: 100%;
+    gap: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @include breakpointsMaxW($bp-576) {
+      gap: 7px;
+    }
+  }
+
+  &__input {
+    label {
+      font-size: 12px;
+      line-height: 28px;
+      font-weight: 300;
+      color: #313131;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid rgba(193, 193, 193, 0.53);
+      border-radius: 3px;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 300;
+      color: #7c7c7c;
+      padding: 10px 20px;
+
+      &::placeholder {
+        text-align: center;
+      }
+    }
   }
 }
