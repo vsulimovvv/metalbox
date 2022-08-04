@@ -273,70 +273,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // * Scroll
-  $(function () {
-    'use strict';
-
-    const elements = {
-      scrollify: $('.js--scrollify'),
-      navigate: $('.js--navigate'),
-      navigateItems: $('.js--navigate-items'),
-      navigateLink: $('.js--navigate-link'),
-    };
-
-    elements.navigateItems.on('click', '.js--navigate-link', (ev) => {
-      ev.preventDefault();
-
-      const $this = $(ev.currentTarget);
-      const hash = $this.attr('href');
-
-      $.scrollify.move(hash);
-    });
-
-    $('.catalog-section__down-btn').on('click', (ev) => {
-      ev.preventDefault();
-
-      const $this = $(ev.currentTarget);
-      const hash = $this.attr('href');
-
-      $.scrollify.move(hash);
-    });
-
-    $.scrollify({
-      section: '.js--scrollify',
-      sectionName: 'section-name',
-      overflowScroll: false,
-      setHeights: true,
-      scrollSpeed: 100,
-      interstitialSection: '.footer',
-      standardScrollElements: '.footer',
-
-      before(index, sections) {
-        const ref = sections[index].data('section-name');
-
-        if (ref === 'footer') {
-          elements.navigate.addClass('is--inactive');
-        } else {
-          elements.navigate.removeClass('is--inactive');
-        }
-
-        elements.navigateLink
-          .parent()
-          .siblings()
-          .find('.js--navigate-link')
-          .removeClass('is--active');
-        elements.navigateLink.eq(index).addClass('is--active');
-      },
-      after: function (index, sections) {
-        // var ref = sections[index].data('section-name');
-        var $current = $.scrollify.current();
-        $('.catalog-section').removeClass('active');
-        $current.addClass('active');
-      },
-      afterRender() {},
-    });
-  });
-
   //* Change Background Header
   function scrollHeader() {
     const nav = document.querySelector('header');
@@ -497,4 +433,69 @@ window.addEventListener('DOMContentLoaded', () => {
     '.tabs-map-content',
     'tabs-map-btn--active'
   );
+
+  // * Scroll
+  (function scroll() {
+    const sections = document.querySelector('.sections');
+    if (sections) {
+      const elements = {
+        scrollify: $('.js--scrollify'),
+        navigate: $('.js--navigate'),
+        navigateItems: $('.js--navigate-items'),
+        navigateLink: $('.js--navigate-link'),
+      };
+
+      elements.navigateItems.on('click', '.js--navigate-link', (ev) => {
+        ev.preventDefault();
+
+        const $this = $(ev.currentTarget);
+        const hash = $this.attr('href');
+
+        $.scrollify.move(hash);
+      });
+
+      $('.catalog-section__down-btn').on('click', (ev) => {
+        ev.preventDefault();
+
+        const $this = $(ev.currentTarget);
+        const hash = $this.attr('href');
+
+        $.scrollify.move(hash);
+      });
+
+      $.scrollify({
+        section: '.js--scrollify',
+        sectionName: 'section-name',
+        overflowScroll: false,
+        setHeights: true,
+        scrollSpeed: 100,
+        interstitialSection: '.footer',
+        standardScrollElements: '.footer',
+
+        before(index, sections) {
+          const ref = sections[index].data('section-name');
+
+          if (ref === 'footer') {
+            elements.navigate.addClass('is--inactive');
+          } else {
+            elements.navigate.removeClass('is--inactive');
+          }
+
+          elements.navigateLink
+            .parent()
+            .siblings()
+            .find('.js--navigate-link')
+            .removeClass('is--active');
+          elements.navigateLink.eq(index).addClass('is--active');
+        },
+        after: function (index, sections) {
+          // var ref = sections[index].data('section-name');
+          var $current = $.scrollify.current();
+          $('.catalog-section').removeClass('active');
+          $current.addClass('active');
+        },
+        afterRender() {},
+      });
+    }
+  })();
 });
