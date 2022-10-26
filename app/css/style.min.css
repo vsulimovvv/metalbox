@@ -7018,10 +7018,31 @@ input[type=file] {
           transform: translateX(10px);
   right: max(15px, (100% - 460px) / 2);
 }
+@media (max-width: 1250px) {
+  .product .swiper-button-next {
+    right: max(15px, (100% - 350px) / 2);
+  }
+}
+@media (max-width: 1150px) {
+  .product .swiper-button-next {
+    right: max(15px, (100% - 250px) / 2);
+  }
+}
 .product .swiper-button-prev {
   -webkit-transform: translateX(-10px);
       -ms-transform: translateX(-10px);
           transform: translateX(-10px);
+  left: max(15px, (100% - 1400px) / 2);
+}
+@media (max-width: 1640px) {
+  .product .swiper-button-prev {
+    left: max(15px, (100% - 1100px) / 2);
+  }
+}
+@media (max-width: 1500px) {
+  .product .swiper-button-prev {
+    left: max(15px, (100% - 1000px) / 2);
+  }
 }
 .product:hover .swiper-button-next,
 .product:hover .swiper-button-prev {

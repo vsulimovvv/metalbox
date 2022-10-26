@@ -35,7 +35,6 @@
     width: 100%;
     min-width: 0;
     position: relative;
-    // max-width: 780px;
     max-width: max(880px, calc((150%) / 2));
     position: absolute;
     height: 100%;
@@ -74,10 +73,27 @@
   .swiper-button-next {
     transform: translateX(10px);
     right: max(15px, calc((100% - 460px) / 2));
+
+    @include breakpointsMaxW($bp-container-big) {
+      right: max(15px, calc((100% - 350px) / 2));
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      right: max(15px, calc((100% - 250px) / 2));
+    }
   }
 
   .swiper-button-prev {
     transform: translateX(-10px);
+    left: max(15px, calc((100% - 1400px) / 2));
+
+    @include breakpointsMaxW(1640px) {
+      left: max(15px, calc((100% - 1100px) / 2));
+    }
+
+    @include breakpointsMaxW(1500px) {
+      left: max(15px, calc((100% - 1000px) / 2));
+    }
   }
 
   &:hover {
