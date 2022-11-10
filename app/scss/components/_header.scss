@@ -66,9 +66,16 @@
   }
 
   .header__logo-small,
-  .big-btn,
-  .discount-badge {
+  .big-btn {
     display: none;
+  }
+
+  .discount-badge {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
   }
 
   &.scroll-header {
@@ -156,10 +163,20 @@
       }
     }
 
+    .discount-badge {
+      position: static;
+
+      clip: initial;
+      width: initial;
+      height: initial;
+      margin: initial;
+    }
+
     .big-btn,
     .discount-badge {
       display: flex;
       margin: 0 auto;
+      min-width: 0;
 
       @include breakpointsMinW($bp-container) {
         margin: 0;

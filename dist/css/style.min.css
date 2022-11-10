@@ -4138,9 +4138,15 @@ input[type=file] {
   border-bottom: 1px dashed var(--color-dark);
 }
 .header .header__logo-small,
-.header .big-btn,
-.header .discount-badge {
+.header .big-btn {
   display: none;
+}
+.header .discount-badge {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 .header.scroll-header {
   background-color: var(--color-white);
@@ -4216,12 +4222,20 @@ input[type=file] {
     display: block;
   }
 }
+.header.scroll-header .discount-badge {
+  position: static;
+  clip: initial;
+  width: initial;
+  height: initial;
+  margin: initial;
+}
 .header.scroll-header .big-btn,
 .header.scroll-header .discount-badge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  min-width: 0;
 }
 @media (min-width: 1150px) {
   .header.scroll-header .big-btn,

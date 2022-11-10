@@ -193,14 +193,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // * ===== Slider
   (function sliderDiscount() {
-    const sliderEl = document.querySelector('.discount-badge__slider');
-    new Swiper(sliderEl, {
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      cssMode: true,
-      loop: true,
+    const sliderEl = document.querySelectorAll('.discount-badge__slider');
+    sliderEl.forEach((el) => {
+      console.log(el);
+
+      new Swiper(el, {
+        slidesPerView: 1,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        speed: 1000,
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        loop: true,
+      });
     });
   })();
 
